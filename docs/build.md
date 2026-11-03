@@ -1,54 +1,73 @@
 ---
-title: Build documentation
-nav_order: 3
+title: Build your system
+nav_order: 4
 permalink: /docs/build/
 ---
-# Build documentation
+# Build your system
 
-<span class="status-pill">Draft · Assembly not documented</span>
+<span class="status-pill">Draft · Reference build under development</span>
 
-A record of what goes into the station and how the finished hardware is put together.
+Turn a documented electrical configuration into a physical installation. Start with your [power and reserve requirements]({{ '/docs/sizing/' | relative_url }}), then choose an arrangement that fits your site.
 
-<div class="placeholder-note">This is a documentation outline, not an assembly procedure. Add reviewed instructions and drawings before using it for a build.</div>
+<div class="placeholder-note">This page is the outline for a future build guide. Reviewed drawings, component selections, assembly steps, and commissioning instructions are not yet available.</div>
 
-## Bill of materials
+## Choose a physical arrangement
 
-| Item | Part / model | Quantity | Source | Status |
-|:---|:---|:---|:---|:---|
-| Solar module | TBD | TBD | TBD | Not selected here |
-| Power management | TBD | TBD | TBD | Not selected here |
-| Energy storage | TBD | TBD | TBD | Not selected here |
-| Enclosure & mounting | TBD | TBD | TBD | Not selected here |
-| Protection & wiring | TBD | TBD | TBD | Not selected here |
+These are options to document and evaluate, not approved installation designs. Each needs its own structural, environmental, and electrical review.
 
-[Download the editable parts-list template (CSV)]({{ '/assets/downloads/parts-list-template.csv' | relative_url }}). Keep the published table and source parts list consistent when updating them.
-
-## Drawings & files
-
-| Document | Revision | File |
+| Arrangement | What the guide will discuss | Documentation status |
 |:---|:---|:---|
-| Electrical schematic | TBD | Not yet uploaded |
-| Mechanical assembly | TBD | Not yet uploaded |
-| CAD source and neutral-format export | TBD | Not yet uploaded |
+| Pole-mounted array and equipment enclosure | Pole and foundation, panel mount, box attachment, access, and cable routing | First reference build planned |
+| Ground or freestanding frame | Footprint, anchoring, panel orientation, exposure, and service access | Option to evaluate |
+| Wall or existing structure | Attachment, structural suitability, shading, and equipment access | Option to evaluate |
+| Separate array and equipment enclosure | Placement flexibility, cable distance, routing, and enclosure environment | Option to evaluate |
 
-Upload files under `assets/downloads/` and replace the entries above with links. Include revision identifiers in filenames.
+The array, battery, and electronics do not necessarily have to share the same mount. Their placement must still meet the requirements of the selected components and reviewed installation design.
 
-## Assembly record
+## Parts and drawings
 
-For each reviewed assembly step, add:
+Use the electrical and mechanical parts associated with the **same design release**. The [version guide]({{ '/docs/versions/' | relative_url }}) explains how these will be kept together.
 
-1. The task and required tools.
-2. The relevant drawing and revision.
-3. A photo or diagram showing the result.
-4. Inspection criteria and the person who checked them.
+| Package | Contents | Availability |
+|:---|:---|:---|
+| Electrical parts | Array, charge controller, storage, output conversion, protection, and wiring | TBD |
+| Pole-mount parts | Pole, foundation, mount, fasteners, and attachment details | TBD |
+| Equipment enclosure | Box, internal layout, environmental provisions, and hardware | TBD |
+| Drawings | Schematic, mechanical drawings, CAD sources, and readable exports | Not yet published |
 
-## As-built configuration
+[Download the parts-list template (CSV)]({{ '/assets/downloads/parts-list-template.csv' | relative_url }}). This is an unfilled template, not a shopping list.
 
-**Hardware revision:** TBD  
-**Assembly date:** TBD  
-**Firmware revision, if applicable:** TBD  
-**Differences from the design:** [Record substitutions or changes and the reason for each.]
+## Pole-mounted reference build
 
-## Build issues
+This will be the first complete walkthrough. Each stage will include the required parts and tools, an annotated drawing or photo, reviewed instructions, and inspection criteria.
 
-[Record problems encountered, fixes, and any follow-up work. Link to a project update when useful.]
+### 1. Plan the site and layout
+
+[Add the reviewed site requirements, component locations, orientation, access clearances, and applicable installation constraints.]
+
+### 2. Build the pole and panel mount
+
+[Add the structural design, foundation details, mounting drawings, specified hardware, and assembly instructions.]
+
+### 3. Assemble the equipment enclosure
+
+[Add the enclosure selection, component layout, attachment methods, environmental provisions, and service access.]
+
+### 4. Install components and route connections
+
+[Add the reviewed electrical schematic, identified connectors, cable specifications and routing, isolation, and inspection steps.]
+
+### 5. Inspect and commission
+
+[Add the reviewed pre-energization checklist, commissioning procedure, acceptance criteria, and troubleshooting references.]
+
+## Record your completed build
+
+Save the design release, selected configuration, installed part models, drawing revisions, and any deviations. The reference build's [test results]({{ '/docs/testing/' | relative_url }}) apply to its stated configuration and conditions; modified builds need their own evaluation.
+
+**Your design release:** TBD  
+**Your electrical configuration:** TBD  
+**Your mounting arrangement:** TBD  
+**Changes from the reference build:** TBD
+
+Continue to [operation & maintenance]({{ '/docs/operation/' | relative_url }}).

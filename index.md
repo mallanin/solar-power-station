@@ -1,43 +1,58 @@
 ---
-title: Project overview
+title: Start here
 nav_order: 1
-description: Start here for the solar power station senior design project.
+description: Understand, size, and build your own OpenPowerBox solar power system.
 ---
 <div class="hero">
-  <div class="eyebrow">Senior design / Open documentation</div>
-  <h1>Solar power.<br>Documented together.</h1>
-  <p class="intro">The project notebook for our solar power station. Explore the design, follow the build, and see what we learn along the way.</p>
-  <span class="status-pill">Documentation starter · Draft</span>
+  <div class="eyebrow">OpenPowerBox / A guide for builders</div>
+  <h1>Your power needs.<br>Your solar build.</h1>
+  <p class="intro">A guide to building a solar power system around what you want to run and how much reserve you need. Understand the design, choose your capacity, and find a physical setup that fits your site.</p>
+  <a class="btn btn-primary" href="{{ '/docs/sizing/' | relative_url }}">Start with your power needs →</a>
+  <a class="btn" href="{{ '/docs/system-design/' | relative_url }}">Explore the system</a>
 </div>
 
-<div class="placeholder-note"><strong>Work in progress.</strong> This site currently contains placeholders. Project specifications, design choices, and performance results have not been entered or verified.</div>
+<div class="placeholder-note"><strong>Current design: Draft.</strong> This is the documentation framework for a future buildable design. Component selections, output ratings, sizing recommendations, and assembly instructions are still being developed.</div>
 
-## The project
+## Why OpenPowerBox?
 
-**Purpose:** [Describe who will use the station, where it will be installed, and the need it addresses.]
+The aim is a solar power system you can understand, reproduce, and maintain. The guide will explain how the parts work together, how to choose capacity for your loads, and how to adapt the physical installation to your location.
 
-**Team:** [Add team members and roles.]  
-**Sponsor:** [Add sponsor name and project contact.]  
-**Current phase:** [Add the actual project phase and next milestone.]
+- **Start with what you need to power.** Plan around your devices, their daily use, and the reserve you want when sunlight is limited.
+- **Choose a suitable physical build.** Keep the electrical design and the mounting arrangement distinct. A pole-mounted installation will be the first reference build.
+- **Know what supports a claim.** Find the design target, the tested configuration, and the measurements behind each published capability.
 
-<figure class="system-figure">
-  <img src="{{ '/assets/images/system-overview.svg' | relative_url }}" alt="Illustrative energy path: sunlight enters a solar array, then a power management stage, then connected loads. A battery exchanges energy with power management. This is a concept placeholder, not a wiring diagram.">
-  <figcaption>Concept placeholder · Replace with the approved system architecture.</figcaption>
-</figure>
+## What can it power?
 
-## Explore the documentation
+The reference configuration will make these capabilities explicit. Targets describe the design intent; measured results describe what a particular build demonstrated under stated conditions. **All values are currently TBD.**
+
+| Capability | Reference design target | Measured result |
+|:---|:---|:---|
+| Continuous output — how much can run at once | TBD W | [Not tested]({{ '/docs/testing/#output-power' | relative_url }}) |
+| Startup / surge output — brief peak demand | TBD W for TBD duration | [Not tested]({{ '/docs/testing/#output-power' | relative_url }}) |
+| Usable stored energy — available battery reserve | TBD Wh | [Not tested]({{ '/docs/testing/#storage-and-runtime' | relative_url }}) |
+| Runtime — time powering a specified load | TBD hours at TBD W | [Not tested]({{ '/docs/testing/#storage-and-runtime' | relative_url }}) |
+| Solar energy collected per day | TBD Wh/day at a stated site and season | [Not tested]({{ '/docs/testing/#solar-generation' | relative_url }}) |
+| Supported outputs and voltage | TBD | [Verification pending]({{ '/docs/testing/#output-power' | relative_url }}) |
+
+**Example loads:** [Add devices, quantities, operating hours, and startup requirements after the reference design is specified.]
+
+A battery capacity alone does not establish runtime, and a panel's rated power is not a promise of daily energy. The [sizing guide]({{ '/docs/sizing/' | relative_url }}) will connect your load profile and location to the required components.
+
+## From your needs to your build
 
 <div class="doc-grid">
-  <a class="doc-card" href="{{ '/docs/system-design/' | relative_url }}"><span class="number">01 / UNDERSTAND</span><strong>System design →</strong><span class="summary">Requirements, architecture, and the reasoning behind our decisions.</span></a>
-  <a class="doc-card" href="{{ '/docs/build/' | relative_url }}"><span class="number">02 / BUILD</span><strong>Build documentation →</strong><span class="summary">Parts, drawings, assembly records, and the as-built configuration.</span></a>
-  <a class="doc-card" href="{{ '/docs/testing/' | relative_url }}"><span class="number">03 / VERIFY</span><strong>Testing & results →</strong><span class="summary">Test methods, measured performance, and what still needs validation.</span></a>
-  <a class="doc-card" href="{{ '/docs/operation/' | relative_url }}"><span class="number">04 / USE</span><strong>Operation & maintenance →</strong><span class="summary">A home for reviewed operating procedures and maintenance guidance.</span></a>
+  <a class="doc-card" href="{{ '/docs/sizing/' | relative_url }}"><span class="number">01 / SIZE</span><strong>Size your system →</strong><span class="summary">Define your loads and reserve. Work toward an appropriate battery, solar array, and power conversion setup.</span></a>
+  <a class="doc-card" href="{{ '/docs/system-design/' | relative_url }}"><span class="number">02 / UNDERSTAND</span><strong>System design →</strong><span class="summary">See the architecture, component interfaces, and the reasons behind the electrical design.</span></a>
+  <a class="doc-card" href="{{ '/docs/build/' | relative_url }}"><span class="number">03 / BUILD</span><strong>Build your system →</strong><span class="summary">Choose a mounting arrangement, gather the matching parts, and follow the reference build.</span></a>
+  <a class="doc-card" href="{{ '/docs/testing/' | relative_url }}"><span class="number">04 / VERIFY</span><strong>Testing & results →</strong><span class="summary">Compare intended capabilities with measured results, test conditions, and limitations.</span></a>
 </div>
 
-## Latest from the team
+After assembly, use [operation & maintenance]({{ '/docs/operation/' | relative_url }}) for the instructions associated with your design version.
 
-**November 3, 2026 — Documentation home established.** The starter structure is ready for the team to add project material. [Read the first update →]({{ '/updates/2026-11-03-documentation-starter/' | relative_url }})
+## Choose a consistent design version
 
-## Make an update
+The current documentation is a **working draft**, not a released hardware design. Future releases will keep the sizing assumptions, parts, drawings, build instructions, and test evidence together. [How versions and history work →]({{ '/docs/versions/' | relative_url }})
 
-Use **Edit this page on GitHub** below any page to propose a change. **View page history** shows earlier revisions. Start with the [editing guide]({{ '/docs/contributing/' | relative_url }}) if this is your first update.
+## About the project
+
+OpenPowerBox began as a solar power station senior design project. [Team, sponsor, and project background to be added.] The documentation is being shaped for people who want to build their own system.

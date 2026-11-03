@@ -1,11 +1,11 @@
 ---
 title: Editing guide
-nav_order: 7
+nav_order: 9
 permalink: /docs/contributing/
 ---
 # Editing guide
 
-Keep the project documentation useful with small, clear updates.
+Keep OpenPowerBox useful to builders with small, clear updates.
 
 ## Edit an existing page
 
@@ -72,7 +72,7 @@ Date: YYYY-MM-DD
 [Action, owner, and target date.]
 ```
 
-Add a link and summary to `updates/index.md`, then update the **Latest from the team** section in `index.md`.
+Add a link and summary to `updates/index.md`. Keep development notes separate from the builder-facing instructions; use the [version guide]({{ '/docs/versions/' | relative_url }}) for the planned release convention.
 
 ## View or restore an earlier version
 

@@ -1,6 +1,6 @@
-# Solar Power Station
+# OpenPowerBox
 
-The documentation website for a senior design solar power station project.
+A builder-facing guide to understanding, sizing, assembling, verifying, and maintaining a solar power system. Originated as a senior design project.
 
 **Read the docs:** https://mallanin.github.io/solar-power-station/
 
@@ -17,7 +17,7 @@ See [the editing guide](docs/contributing.md) for page formatting, file uploads,
 | Content | Source |
 | --- | --- |
 | Homepage | `index.md` |
-| Design, build, testing, operation | `docs/` |
+| Architecture, sizing, build, testing, operation, versions | `docs/` |
 | Project updates | `updates/` |
 | Images and files | `assets/` |
 | Site title, repo links, address | `_config.yml` |

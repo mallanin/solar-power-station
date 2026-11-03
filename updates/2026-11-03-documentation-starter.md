@@ -2,6 +2,7 @@
 title: Documentation home established
 parent: Project updates
 nav_order: 1
+nav_exclude: true
 permalink: /updates/2026-11-03-documentation-starter/
 ---
 <div class="eyebrow">Project update / November 3, 2026</div>

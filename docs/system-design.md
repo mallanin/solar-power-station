@@ -5,47 +5,57 @@ permalink: /docs/system-design/
 ---
 # System design
 
-<span class="status-pill">Draft · Awaiting project inputs</span>
+<span class="status-pill">Current design: Draft</span>
 
-The requirements, architecture, and decisions that define the station.
+Understand what each subsystem does and how the electrical system fits together. Use [Size your system]({{ '/docs/sizing/' | relative_url }}) to establish your capacity needs, then [Build your system]({{ '/docs/build/' | relative_url }}) for mounting, enclosure, and physical assembly.
 
-<div class="placeholder-note">All entries below are prompts. No component selection or design has been approved through this documentation.</div>
-
-## Requirements
-
-| ID | Requirement | Target | Verification |
-|:---|:---|:---|:---|
-| R-01 | [Required output and supported loads] | TBD | [Link to test] |
-| R-02 | [Energy capacity or runtime] | TBD | [Link to test] |
-| R-03 | [Site and environmental conditions] | TBD | [Review or test] |
-| R-04 | [Size, weight, and accessibility constraints] | TBD | [Inspection] |
-| R-05 | [Budget and maintenance constraints] | TBD | [Review] |
+<div class="placeholder-note">The architecture below is illustrative. Component selections, interfaces, ratings, and protection details have not been specified or verified.</div>
 
 ## System architecture
 
-![Illustrative energy flow from sunlight through solar array and power management to loads, with battery storage connected to power management. Concept only.]({{ '/assets/images/system-overview.svg' | relative_url }})
+![Illustrative energy path from sunlight through a solar array and power management to loads, with battery storage connected to power management. Concept only, not a wiring diagram.]({{ '/assets/images/system-overview.svg' | relative_url }})
 
-*Concept placeholder, not a wiring diagram.* Replace this illustration with the reviewed architecture and identify each subsystem's purpose and interfaces.
+The final architecture will identify the solar input, charge control, battery storage, output conversion, and protection components. The combined “power management” block above will be replaced by the actual design.
 
-## Electrical design
+| Subsystem | What the design needs to explain | Reference component |
+|:---|:---|:---|
+| Solar input | Array configuration and input operating range | TBD |
+| Charge control | Compatibility with the array and battery | TBD |
+| Battery storage | Chemistry, usable capacity, management, and operating limits | TBD |
+| Output conversion | Supported output types, continuous load, and surge capability | TBD |
+| Protection & isolation | Reviewed protection, disconnects, grounding, and connection requirements | TBD |
+| Monitoring | What the user can measure or observe | TBD |
 
-[Add the approved schematic, component ratings, protection strategy, and design calculations. Identify drawing revision and review status.]
+## Reference electrical configuration
 
-## Mechanical design
+This will be the specific combination behind the [capabilities on the first page]({{ '/' | relative_url }}). Alternative configurations will need their own documented limits and validation.
 
-[Add enclosure, mounting, layout, materials, environmental considerations, and links to CAD exports.]
+| Design item | Value / document |
+|:---|:---|
+| System voltage | TBD |
+| Array and charge controller | TBD |
+| Battery and usable reserve | TBD |
+| Output conversion and supported loads | TBD |
+| Electrical schematic and revision | Not yet published |
+| Compatible parts list | [Parts template]({{ '/docs/build/#parts-and-drawings' | relative_url }}) |
+| Supporting evidence | [Testing & results]({{ '/docs/testing/' | relative_url }}) |
 
-## Decision log
+## Why these choices?
 
-Record why a choice was made, including rejected alternatives and supporting evidence.
+[Explain each major selection in plain language: the need it meets, alternatives considered, trade-offs, and supporting calculations or manufacturer documentation.]
 
-| Date | Decision | Reason / evidence | Status |
-|:---|:---|:---|:---|
-| TBD | [Decision title] | [Rationale and source] | Proposed |
+| Decision | Rationale | Status |
+|:---|:---|:---|
+| [Component or architecture choice] | [Evidence and trade-off] | Proposed |
 
-## Open questions
+## Scaling the design
 
-- [What is still unknown?]
-- [Who will resolve it, and by which milestone?]
+The [sizing guide]({{ '/docs/sizing/' | relative_url }}) will show how different loads and reserve requirements affect the battery, array, and output conversion. Changing one component can affect compatibility, protection, wiring, and thermal requirements. A larger component is not automatically a compatible substitution.
 
-Continue to [build documentation]({{ '/docs/build/' | relative_url }}) or [testing & results]({{ '/docs/testing/' | relative_url }}).
+[Add the supported configuration range and the reviewed combinations before recommending substitutions.]
+
+## Electrical design versus physical setup
+
+The electrical architecture describes how power is collected, stored, controlled, and delivered. The physical build describes how those components are supported, enclosed, accessed, and routed at a site.
+
+The first documented physical setup will be a [pole-mounted reference build]({{ '/docs/build/#pole-mounted-reference-build' | relative_url }}). Other arrangements will be described separately, with their own mounting and enclosure considerations. Changing the mounting arrangement still requires checking cable runs, weather exposure, heat, and component access.

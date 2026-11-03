@@ -1,6 +1,7 @@
 ---
 title: Project updates
-nav_order: 6
+nav_order: 8
+nav_exclude: true
 has_children: true
 permalink: /updates/
 ---
