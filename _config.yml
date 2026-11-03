@@ -1,0 +1,35 @@
+title: Solar Power Station
+description: An open project notebook for a senior design solar power station.
+theme: just-the-docs
+url: https://mallanin.github.io
+baseurl: /solar-power-station
+repository: mallanin/solar-power-station
+permalink: pretty
+color_scheme: solar
+search_enabled: true
+heading_anchors: true
+back_to_top: true
+back_to_top_text: Back to top
+aux_links:
+  View on GitHub:
+    - https://github.com/mallanin/solar-power-station
+aux_links_new_tab: false
+gh_edit_link: true
+gh_edit_link_text: Edit this page on GitHub
+gh_edit_repository: https://github.com/mallanin/solar-power-station
+gh_edit_branch: main
+gh_edit_view_mode: edit
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE-NOTE.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+  - .github/

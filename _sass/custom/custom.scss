@@ -1,0 +1,24 @@
+.site-title { font-size: 1.15rem !important; font-weight: 750; letter-spacing: -.025em; }
+.main-content h1 { font-weight: 750; letter-spacing: -.035em; }
+.main-content h2 { font-weight: 650; letter-spacing: -.02em; }
+.main-content { line-height: 1.65; }
+.eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: #68766b; }
+.hero { padding: 1.6rem 0 1.1rem; }
+.hero h1 { max-width: 560px; font-size: clamp(2.2rem, 5vw, 3.1rem) !important; line-height: 1.12; margin: .65rem 0 1rem; }
+.hero .intro { max-width: 590px; font-size: 1.08rem; color: #526159; }
+.status-pill { display: inline-block; font-size: .72rem; font-weight: 650; padding: .25rem .65rem; border: 1px solid #d8e4d8; border-radius: 30px; background: #f1f6ed; color: #385b36; }
+.placeholder-note { border-left: 3px solid #c89b3a; background: #faf7ed; padding: .85rem 1rem; margin: 1.25rem 0 1.8rem; font-size: .88rem; color: #605136; }
+.doc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 1.25rem 0 2rem; }
+.doc-card { display: block; padding: 1.1rem 1.15rem; border: 1px solid #e0e7df; border-radius: 8px; background: #fff; text-decoration: none !important; transition: border-color .15s, background .15s; }
+.doc-card:hover { border-color: #729582; background: #f8faf6; }
+.doc-card:focus-visible { outline: 3px solid #24684e; outline-offset: 3px; }
+.doc-card .number { display: block; font-size: .7rem; font-weight: 650; color: #78877b; margin-bottom: .4rem; }
+.doc-card strong { display: block; font-size: 1rem; color: #173c31; margin-bottom: .35rem; }
+.doc-card .summary { display: block; font-size: .85rem; color: #5d6a61; line-height: 1.5; }
+.system-figure { background: #f5f7f4; border: 1px solid #e0e7df; border-radius: 8px; padding: 1rem; margin: 1.5rem 0; }
+.system-figure img { display: block; width: 100%; }
+.system-figure figcaption { font-size: .75rem; color: #617064; padding: .65rem .25rem 0; }
+.page-tools { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .8rem; }
+.site-footer-note { font-size: .75rem; color: #68766b; }
+.main-content table { min-width: 0; width: 100%; }
+@media (max-width: 600px) { .doc-grid { grid-template-columns: 1fr; } .hero { padding-top: .8rem; } }
