@@ -61,7 +61,7 @@ Nominal stored energy is **12.8 V × 50 Ah = 640 Wh**. Dividing by 15 W gives **
 
 **Solar input and battery reserve make the system resilient through changing weather.** Clouds and rain reduce generation, but useful solar input can still extend runtime. Sustained dark weather can eventually exhaust the reserve.
 
-As a regional rainy-day reference, our analysis of **NASA POWER data near San Luis Obispo for 2016–2025** found about **1.5 peak-sun hours per day** across 76 December–February days with at least 10 mm of rain. That is sunlight on a horizontal surface, not a prediction for our tilted panel or every storm. [Data and calculation method →]({{ '/docs/testing/#winter-weather-reference' | relative_url }})
+As a regional rainy-day reference, our analysis of **NASA POWER data near San Luis Obispo for 2016–2025** found about **1.5 peak-sun hours per day** across 76 December–February days with at least 10 mm of rain. That is sunlight on a horizontal surface, not a prediction for our tilted panel or every storm. [Download the winter weather data (CSV) →]({{ '/assets/downloads/slo-winter-solar-2016-2025.csv' | relative_url }})
 
 Using the full **640 Wh nominal battery reserve** and a **15 W continuous load**:
 
