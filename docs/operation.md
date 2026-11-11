@@ -37,7 +37,7 @@ Wear safety glasses and closed-toe footwear. Use work gloves for metalwork, suit
 
 ## Initial startup
 
-Complete the [mounting checks]({{ '/docs/build/#pole-mounted-reference-build' | relative_url }}) before electrical setup. The controller and USB output module should already be wired. Work on one battery terminal at a time using insulated tools.
+Complete the mounting checks in the [user manual]({{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}) before electrical setup. The controller and USB output module should already be wired. Work on one battery terminal at a time using insulated tools.
 
 ### Connect the battery first
 
