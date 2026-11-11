@@ -20,7 +20,7 @@ description: Build affordable off-grid power for property networks, monitoring, 
 Useful projects don't stop where the power cable ends. As networks, sensors, and automation move into fields, gardens, and remote corners of a property, they need a dependable source of moderate power. OpenPowerBox makes that power something you can build, understand, and adapt using standard components.
 
 <div class="application-grid">
-<div><span class="eyebrow">Connect</span><h3 id="connect-a-property">A network across your property</h3><p>Power compatible wireless nodes at multiple locations to connect cameras and sensors across a farm, large garden, or worksite.</p></div>
+<div><span class="eyebrow">Connect</span><h3 id="connect-a-property">A network across your property</h3><p>Power compatible wireless mesh nodes at multiple locations to connect cameras and sensors across a farm, large garden, or worksite.</p></div>
 <div><span class="eyebrow">Monitor</span><h3 id="monitor-what-matters">An eye on what matters</h3><p>Watch crops, wildlife, equipment, or an entrance. Add weather, soil-moisture, or tank-level sensing to understand what's happening on site.</p></div>
 <div><span class="eyebrow">Control</span><h3 id="automate-a-remote-task">Automation out in the field</h3><p>Operate an irrigation valve, trigger a gate controller, or explore a small DC pump that runs only when needed, with the right output hardware.</p></div>
 <div><span class="eyebrow">Illuminate</span><h3 id="light-a-remote-spot">Light where it's useful</h3><p>Run modest LED lighting at a remote shed, garden, or campsite. Timers and motion sensors help put the energy where—and when—you need it.</p></div>
