@@ -128,12 +128,12 @@ We chose Victron for its monitoring tools, documentation, and our confidence in 
 
 The architecture is adaptable. These examples explain the direction of change and have **not been validated as complete builds**.
 
-<div class="table-wrapper"><table class="configuration-table"><thead><tr><th scope="col">Configuration</th><th scope="col">Nominal storage</th><th scope="col">What changes</th><th scope="col">Why choose it?</th></tr></thead><tbody>
+<table class="configuration-table"><thead><tr><th scope="col">Configuration</th><th scope="col">Nominal storage</th><th scope="col">What changes</th><th scope="col">Why choose it?</th></tr></thead><tbody>
 <tr class="reference-configuration"><th scope="row">Reference: 200 W + 50 Ah</th><td>640 Wh</td><td>Our current build</td><td>Our sweet spot for the listed uses: useful power, reserve, and a practical component cost.</td></tr>
 <tr><th scope="row">Smaller: 100 W + 25 Ah</th><td>320 Wh</td><td>Smaller, potentially cheaper, and easier to handle and install.</td><td>Lighter loads or fewer operating hours, with less solar generation and reserve.</td></tr>
 <tr><th scope="row">More reserve: 200 W + 100 Ah</th><td>1,280 Wh</td><td>About twice the storage; the same solar input.</td><td>Better resilience, with greater cost and potentially a larger enclosure.</td></tr>
 <tr><th scope="row">More power and reserve: 400 W + 100 Ah</th><td>1,280 Wh</td><td>About twice the solar capacity and storage.</td><td>Larger sustained loads and, with upgraded output components, larger peak loads.</td></tr>
-</tbody></table></div>
+</tbody></table>
 
 All battery capacities above assume 12.8 V. Adding a larger battery to a 200 W panel increases resilience, but further increases are likely to bring diminishing reliability improvements at greater cost: the same panel still has to replenish the reserve.
 
