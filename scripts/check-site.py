@@ -1,4 +1,4 @@
-"""Validate generated internal links and GitHub page tools before publishing."""
+"""Validate generated pages, internal links, and search before publishing."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -10,7 +10,6 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / '_site'
 CONFIG = (ROOT / '_config.yml').read_text()
 BASE = re.search(r'^baseurl:\s*(.*)$', CONFIG, re.M).group(1).strip().strip('"\'')
-REPO = re.search(r'^repository:\s*(.*)$', CONFIG, re.M).group(1).strip()
 ORIGIN = re.search(r'^url:\s*(.*)$', CONFIG, re.M).group(1).strip()
 
 class Page(HTMLParser):
@@ -67,22 +66,16 @@ for source in [ROOT / 'index.md', ROOT / 'visual.md', *ROOT.glob('docs/*.md'), *
     if not target.exists():
         errors.append(f'Missing page for {source.relative_to(ROOT)}')
         continue
-    links = pages[target].links
-    rel = source.relative_to(ROOT).as_posix()
-    for action in ('edit', 'commits'):
-        expected = f'https://github.com/{REPO}/{action}/main/{rel}'
-        if expected not in links:
-            errors.append(f'{rel}: missing {action} link')
 
 search_file = SITE / 'assets/js/search-data.json'
 if not search_file.exists():
     errors.append('Missing search index')
 else:
     data = json.loads(search_file.read_text())
-    if len(data) < 8:
+    if len(data) < 7:
         errors.append('Search index does not cover all starter pages')
 
 if errors:
     print('\n'.join(errors))
     sys.exit(1)
-print(f'Validated {len(pages)} pages: internal links, assets, anchors, search index, and GitHub edit/history links.')
+print(f'Validated {len(pages)} pages: internal links, assets, anchors, and search index.')

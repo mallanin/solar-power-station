@@ -14,11 +14,7 @@ aux_links:
   View on GitHub:
     - https://github.com/mallanin/solar-power-station
 aux_links_new_tab: false
-gh_edit_link: true
-gh_edit_link_text: Edit this page on GitHub
-gh_edit_repository: https://github.com/mallanin/solar-power-station
-gh_edit_branch: main
-gh_edit_view_mode: edit
+gh_edit_link: false
 defaults:
   - scope:
       path: ""

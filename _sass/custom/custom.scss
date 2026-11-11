@@ -18,8 +18,6 @@
 .system-figure { background: #f5f7f4; border: 1px solid #e0e7df; border-radius: 8px; padding: 1rem; margin: 1.5rem 0; }
 .system-figure img { display: block; width: 100%; }
 .system-figure figcaption { font-size: .75rem; color: #617064; padding: .65rem .25rem 0; }
-.page-tools { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .8rem; }
-.site-footer-note { font-size: .75rem; color: #68766b; }
 .main-content table { min-width: 0; width: 100%; }
 @media (max-width: 600px) { .doc-grid { grid-template-columns: 1fr; } .hero { padding-top: .8rem; } }
 /* Shared documentation and the two homepage introductions. */
