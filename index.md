@@ -1,58 +1,51 @@
 ---
 title: Start here
 nav_order: 1
-description: Understand, size, and build your own OpenPowerBox solar power system.
+description: Practical, open documentation for building affordable off-grid solar power.
 ---
-<div class="hero">
+<nav class="edition-switch" aria-label="Homepage versions"><span>Explore two introductions</span><a aria-current="page" href="{{ '/' | relative_url }}">Practical</a><a href="{{ '/visual/' | relative_url }}">Visual</a></nav>
+<div class="hero practical-hero">
   <div class="eyebrow">OpenPowerBox / A guide for builders</div>
-  <h1>Your power needs.<br>Your solar build.</h1>
-  <p class="intro">A guide to building a solar power system around what you want to run and how much reserve you need. Understand the design, choose your capacity, and find a physical setup that fits your site.</p>
-  <a class="btn btn-primary" href="{{ '/docs/sizing/' | relative_url }}">Start with your power needs →</a>
-  <a class="btn" href="{{ '/docs/system-design/' | relative_url }}">Explore the system</a>
+  <h1>Small loads.<br>Independent power.</h1>
+  <p class="intro">Build an affordable solar + battery station for the devices you want to run beyond the reach of an outlet. Understand the energy budget, choose your capacity, and follow a documented pole-mounted build.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="{{ '/docs/system-design/' | relative_url }}">Explore the system →</a><a class="btn" href="{{ '/docs/build/' | relative_url }}">Read the build guide</a></div>
 </div>
 
-<div class="placeholder-note"><strong>Current design: Draft.</strong> This is the documentation framework for a future buildable design. Component selections, output ratings, sizing recommendations, and assembly instructions are still being developed.</div>
+<div class="spec-strip" aria-label="Reference build specifications"><div><strong>15 W</strong><span>continuous design target</span></div><div><strong>200 W</strong><span>rated solar panel</span></div><div><strong>640 Wh</strong><span>nominal battery storage</span></div></div>
 
-## Why OpenPowerBox?
+## Why build it yourself?
 
-The aim is a solar power system you can understand, reproduce, and maintain. The guide will explain how the parts work together, how to choose capacity for your loads, and how to adapt the physical installation to your location.
+A camera at a remote gate. A weather station in a field. A small network where running a power cable is impractical. These devices need modest power, but they need it reliably, through the night and between sunny periods. Check the device's input requirements: the current reference output is USB-C, so a PoE device needs a separately designed interface.
 
-- **Start with what you need to power.** Plan around your devices, their daily use, and the reserve you want when sunlight is limited.
-- **Choose a suitable physical build.** Keep the electrical design and the mounting arrangement distinct. A pole-mounted installation will be the first reference build.
-- **Know what supports a claim.** Find the design target, the tested configuration, and the measurements behind each published capability.
+OpenPowerBox brings standard components together with an accessible explanation of how they work. The aim is to make this class of outdoor power easier to reproduce, repair, and adapt—and to keep the parts cost visible.
 
-## What can it power?
+**Budget for the whole build.** Our original target was roughly $400, excluding the pole. A current retail check plus allowances for the mount and small parts comes to **about $525–625**, before tax, shipping, tools, and labor. See the [itemized budget and commercial comparisons]({{ '/docs/cost/' | relative_url }}).
 
-The reference configuration will make these capabilities explicit. Targets describe the design intent; measured results describe what a particular build demonstrated under stated conditions. **All values are currently TBD.**
+## Built around an energy balance
 
-| Capability | Reference design target | Measured result |
-|:---|:---|:---|
-| Continuous output — how much can run at once | TBD W | [Not tested]({{ '/docs/testing/#output-power' | relative_url }}) |
-| Startup / surge output — brief peak demand | TBD W for TBD duration | [Not tested]({{ '/docs/testing/#output-power' | relative_url }}) |
-| Usable stored energy — available battery reserve | TBD Wh | [Not tested]({{ '/docs/testing/#storage-and-runtime' | relative_url }}) |
-| Runtime — time powering a specified load | TBD hours at TBD W | [Not tested]({{ '/docs/testing/#storage-and-runtime' | relative_url }}) |
-| Solar energy collected per day | TBD Wh/day at a stated site and season | [Not tested]({{ '/docs/testing/#solar-generation' | relative_url }}) |
-| Supported outputs and voltage | TBD | [Verification pending]({{ '/docs/testing/#output-power' | relative_url }}) |
+At the 15 W design load, a full day uses **360 Wh**. The 200 W panel is sized to cover that demand and put energy back into the battery during useful sun. The battery carries the load overnight and through periods of low solar production.
 
-**Example loads:** [Add devices, quantities, operating hours, and startup requirements after the reference design is specified.]
+The team reports **roughly 40 hours of battery runtime under its test load**. The detailed test conditions still need to accompany that result; it is not a guarantee of 40 hours for every device or season. [Read the evidence and limits]({{ '/docs/testing/' | relative_url }}).
 
-A battery capacity alone does not establish runtime, and a panel's rated power is not a promise of daily energy. The [sizing guide]({{ '/docs/sizing/' | relative_url }}) will connect your load profile and location to the required components.
+Continuous operation is the goal: collect enough energy over time, keep a reserve for low-sun periods, and recover before the reserve runs out. The [design explanation]({{ '/docs/system-design/#the-daily-energy-balance' | relative_url }}) walks through that logic, including cloudy weather.
 
-## From your needs to your build
+## Understand it. Size it. Build it.
 
-<div class="doc-grid">
-  <a class="doc-card" href="{{ '/docs/sizing/' | relative_url }}"><span class="number">01 / SIZE</span><strong>Size your system →</strong><span class="summary">Define your loads and reserve. Work toward an appropriate battery, solar array, and power conversion setup.</span></a>
-  <a class="doc-card" href="{{ '/docs/system-design/' | relative_url }}"><span class="number">02 / UNDERSTAND</span><strong>System design →</strong><span class="summary">See the architecture, component interfaces, and the reasons behind the electrical design.</span></a>
-  <a class="doc-card" href="{{ '/docs/build/' | relative_url }}"><span class="number">03 / BUILD</span><strong>Build your system →</strong><span class="summary">Choose a mounting arrangement, gather the matching parts, and follow the reference build.</span></a>
-  <a class="doc-card" href="{{ '/docs/testing/' | relative_url }}"><span class="number">04 / VERIFY</span><strong>Testing & results →</strong><span class="summary">Compare intended capabilities with measured results, test conditions, and limitations.</span></a>
+<div class="guide-list">
+<a href="{{ '/docs/system-design/' | relative_url }}"><span class="guide-index">01</span><span><strong>System design & methodology</strong><span>How solar input, storage, and output work together—and what can scale.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/sizing/' | relative_url }}"><span class="guide-index">02</span><span><strong>Size your system</strong><span>Explore load, sunshine, and reserve with a simple energy calculator.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/build/' | relative_url }}"><span class="guide-index">03</span><span><strong>Build your system</strong><span>Meet the components, prepare the mount, and install the reference station.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/operation/' | relative_url }}"><span class="guide-index">04</span><span><strong>Operation & maintenance</strong><span>Start, monitor, shut down, troubleshoot, and care for the station.</span></span><span aria-hidden="true">→</span></a>
 </div>
 
-After assembly, use [operation & maintenance]({{ '/docs/operation/' | relative_url }}) for the instructions associated with your design version.
+## A reference build, with room to grow
 
-## Choose a consistent design version
+The current design pairs one 200 W panel with a 12.8 V, 50 Ah LiFePO4 battery and a Victron SmartSolar MPPT 75/15 controller. A larger battery can increase reserve; a larger array can improve recharge. Each change has consequences for the controller, protection, enclosure, and mount. Our [scaling examples]({{ '/docs/system-design/#scaling-the-architecture' | relative_url }}) explain the principle without presenting untested combinations as finished designs.
 
-The current documentation is a **working draft**, not a released hardware design. Future releases will keep the sizing assumptions, parts, drawings, build instructions, and test evidence together. [How versions and history work →]({{ '/docs/versions/' | relative_url }})
+<div class="reading-note"><strong>Current documentation:</strong> a working guide for the reference prototype. Installation and operating content comes from the team's reviewed user manual. The final fabrication drawings, protection schedule, and complete test records are still being assembled. <a href="{{ '/docs/versions/' | relative_url }}">See what is documented →</a></div>
 
 ## About the project
 
-OpenPowerBox began as a solar power station senior design project. [Team, sponsor, and project background to be added.] The documentation is being shaped for people who want to build their own system.
+OpenPowerBox began as a Cal Poly Mechanical Engineering senior design project by **Milo Goehring, George Konoval, Christopher Teo, and Joseph Phrachanhsay**, with sponsor **Eric Brigham**. The goal is practical, open documentation for people who want to build and maintain their own small off-grid power system.
+
+[Download the user manual (PDF)]({{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}) · [Testing & results]({{ '/docs/testing/' | relative_url }}) · [Source and page history](https://github.com/mallanin/solar-power-station)

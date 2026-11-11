@@ -1,0 +1,13 @@
+Group,Item,Quantity,Low_USD,High_USD,Basis,Checked,Source
+Major,200W HQST panel,1,119.99,119.99,Listed sale price,2026-11-10,https://hqsolarpower.com/products/hqst-200w-16bb-n-type-high-efficiency-monocrystalline-solar-panel
+Major,50Ah VEVOR battery,1,125.9,125.9,Cost example; compatibility requires review,2026-11-10,https://www.vevor.com/s/lithium-deep-cycle-batteries
+Major,SmartSolar 75/15,1,68.79,68.79,Listed price,2026-11-10,https://commongroundmarine.com/products/victron-energy-scc075015060r-victron-smartsolar-mppt-75-15-solar-charge-controller
+Major,16x16x8 steel enclosure,1,73.9,73.9,Listed price; check stock,2026-11-10,https://www.vevor.com/electrical-enclosure-c_10749/vevor-16x16x8-carbon-steel-electrical-enclosure-wall-mount-junction-box-ip65-p_010557357451
+Allowance,Aluminum frame,as required,50,80,Planning allowance; not a supplier quote,2026-11-10,
+Allowance,Mounts and fasteners,as required,20,35,Planning allowance; not a supplier quote,2026-11-10,
+Allowance,USB output and cable,as required,15,25,Planning allowance; not a supplier quote,2026-11-10,
+Allowance,Wiring and terminations,as required,20,35,Planning allowance; not a supplier quote,2026-11-10,
+Allowance,Protection and isolation,as required,15,25,Planning allowance; not a supplier quote,2026-11-10,
+Allowance,Sealing and strain relief,as required,10,20,Planning allowance; not a supplier quote,2026-11-10,
+Allowance,Internal supports,as required,5,15,Planning allowance; not a supplier quote,2026-11-10,
+Total,Excludes pole/foundation/tax/shipping/tools/labor/load/test equipment/contingency,,523.58,623.58,Indicative budget,,

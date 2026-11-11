@@ -1,0 +1,16 @@
+const assert = require('node:assert/strict');
+const energy = require('../assets/js/energy-model.js');
+const base = {load:15,panel:200,batteryAh:50,sunHours:3,delivery:.75};
+const r = energy(base);
+assert.equal(r.demand,360);
+assert.equal(r.solar,450);
+assert.equal(r.balance,90);
+assert.ok(Math.abs(r.reserveHours-34.1333333333)<1e-8);
+assert.equal(energy({...base,sunHours:0}).balance,-360);
+assert.equal(energy({...base,sunHours:2.4}).balance,0);
+assert.equal(energy({...base,batteryAh:100}).reserveHours,2*r.reserveHours);
+assert.equal(energy({...base,panel:400}).solar,2*r.solar);
+assert.equal(energy({...base,load:30}).reserveHours,r.reserveHours/2);
+assert.throws(()=>energy({...base,load:0}),RangeError);
+assert.throws(()=>energy({...base,sunHours:NaN}),RangeError);
+console.log('Energy model passed: demand, harvest, reserve, zero sun, break-even, scaling, invalid inputs.');

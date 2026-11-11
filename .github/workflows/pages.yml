@@ -23,6 +23,8 @@ jobs:
         run: bundle exec jekyll build --trace
         env:
           JEKYLL_ENV: production
+      - name: Check energy calculator
+        run: node scripts/check-energy.cjs
       - name: Check generated pages and links
         run: python3 scripts/check-site.py
       - uses: actions/upload-pages-artifact@v5

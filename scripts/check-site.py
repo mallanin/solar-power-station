@@ -60,7 +60,7 @@ for path, page in pages.items():
             if unquote(url.fragment) not in dest.ids:
                 errors.append(f'{path.relative_to(SITE)}: missing anchor {link}')
 
-for source in [ROOT / 'index.md', *ROOT.glob('docs/*.md'), *ROOT.glob('updates/*.md')]:
+for source in [ROOT / 'index.md', ROOT / 'visual.md', *ROOT.glob('docs/*.md'), *ROOT.glob('updates/*.md')]:
     text = source.read_text()
     permalink = re.search(r'^permalink:\s*(.+)$', text, re.M)
     target = SITE / permalink.group(1).strip('/').strip() / 'index.html' if permalink else SITE / 'index.html'

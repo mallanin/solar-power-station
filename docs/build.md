@@ -1,73 +1,68 @@
 ---
 title: Build your system
-nav_order: 4
+nav_order: 5
 permalink: /docs/build/
 ---
-# Build your system
+<div class="eyebrow">03 / Build</div>
+# Build the reference station
 
-<span class="status-pill">Draft · Reference build under development</span>
+The reference station has two main assemblies: a solar panel on an aluminum frame, and an enclosure containing the battery, controller, and USB output hardware. Both attach to an existing suitable pole.
 
-Turn a documented electrical configuration into a physical installation. Start with your [power and reserve requirements]({{ '/docs/sizing/' | relative_url }}), then choose an arrangement that fits your site.
-
-<div class="placeholder-note">This page is the outline for a future build guide. Reviewed drawings, component selections, assembly steps, and commissioning instructions are not yet available.</div>
-
-## Choose a physical arrangement
-
-These are options to document and evaluate, not approved installation designs. Each needs its own structural, environmental, and electrical review.
-
-| Arrangement | What the guide will discuss | Documentation status |
-|:---|:---|:---|
-| Pole-mounted array and equipment enclosure | Pole and foundation, panel mount, box attachment, access, and cable routing | First reference build planned |
-| Ground or freestanding frame | Footprint, anchoring, panel orientation, exposure, and service access | Option to evaluate |
-| Wall or existing structure | Attachment, structural suitability, shading, and equipment access | Option to evaluate |
-| Separate array and equipment enclosure | Placement flexibility, cable distance, routing, and enclosure environment | Option to evaluate |
-
-The array, battery, and electronics do not necessarily have to share the same mount. Their placement must still meet the requirements of the selected components and reviewed installation design.
+Read [system design]({{ '/docs/system-design/' | relative_url }}) first, then use the [parts budget]({{ '/docs/cost/' | relative_url }}) to understand the material categories. This page covers the assembly sequence and the reviewed mounting procedure. Exact fabrication dimensions and the final wiring/protection schedule still need to be reconciled into a complete build package.
 
 ## Parts and drawings
 
-Use the electrical and mechanical parts associated with the **same design release**. The [version guide]({{ '/docs/versions/' | relative_url }}) explains how these will be kept together.
-
-| Package | Contents | Availability |
+| Assembly | Main parts | Reference information |
 |:---|:---|:---|
-| Electrical parts | Array, charge controller, storage, output conversion, protection, and wiring | TBD |
-| Pole-mount parts | Pole, foundation, mount, fasteners, and attachment details | TBD |
-| Equipment enclosure | Box, internal layout, environmental provisions, and hardware | TBD |
-| Drawings | Schematic, mechanical drawings, CAD sources, and readable exports | Not yet published |
+| Solar | 200 W panel, aluminum frame, panel attachment hardware, pole fixture | Current prototype uses aluminum; earlier CAD shows a wood support |
+| Equipment enclosure | Box, internal mounts, battery retention, seals, glands, rear mounting fixtures | Keep the battery secure and the controller accessible |
+| Electrical | 50 Ah LiFePO4 battery, SmartSolar 75/15, USB-C converter, wiring and protection | Use a single reviewed configuration; final wire gauges and protection ratings are not yet published here |
+| Site | Suitable 4–6 inch pole and foundation | Supplied by the builder; outside the parts budget |
 
-[Download the parts-list template (CSV)]({{ '/assets/downloads/parts-list-template.csv' | relative_url }}). This is an unfilled template, not a shopping list.
+<div class="photo-pair"><figure><img src="{{ '/assets/images/aluminum-frame.jpg' | relative_url }}" alt="Team fabricating the aluminum frame behind the solar panel" loading="lazy"><figcaption>Aluminum frame fabrication on the reference prototype.</figcaption></figure><figure><img src="{{ '/assets/images/enclosure-mount.jpeg' | relative_url }}" alt="Rear enclosure mounting brackets and pole attachment" loading="lazy"><figcaption>The enclosure has its own mounting fixtures.</figcaption></figure></div>
+
+## Prepare the two assemblies
+
+### 1. Confirm the component layout
+
+Check the actual panel mounting holes and dimensions, battery size and terminal locations, controller clearance, USB module mounting, and enclosure access. Arrange components so the battery cannot shift, wires avoid sharp edges, and the door closes without pinching cables.
+
+### 2. Fabricate the panel support
+
+Measure, cut, drill, and deburr the aluminum members using the final drawing for the selected panel. Fit the panel using its manufacturer's mounting provisions. Use compatible bolts, washers, and locking nuts; address corrosion where different metals meet.
+
+The older assembly document carries dimensions over from a wood concept and does not fully define the aluminum section and joints. It is not a sufficient fabrication drawing for the current frame. The next documentation release needs a dimensioned frame drawing, joint details, and a complete hardware list.
+
+### 3. Prepare the enclosure
+
+Fit the internal component supports and battery retention, then install the rear pole-mount fixtures. Protect cable penetrations with the appropriate glands or grommets and seal exterior fastener holes. Leave controller ventilation and service access clear. A modified enclosure does not automatically retain the unmodified box's advertised ingress rating.
+
+### 4. Complete the electrical assembly
+
+Have a person competent in low-voltage DC assembly follow the reviewed schematic for the selected parts. Confirm polarity, wire sizing, termination, circuit protection, isolation, and strain relief before connecting energy sources. Keep PV isolated during wiring work. The functional diagram on the design page does not specify these construction details.
+
+The following mounting and startup procedures assume the controller and output module are already wired, as in the [user manual]({{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}).
 
 ## Pole-mounted reference build
 
-This will be the first complete walkthrough. Each stage will include the required parts and tools, an annotated drawing or photo, reviewed instructions, and inspection criteria.
+Before lifting, have a helper or suitable lifting support, the supplied mounting bands, and a Phillips screwdriver or drill/driver. Work in calm, dry conditions with the battery leads and solar plugs disconnected. Read the [safety essentials]({{ '/docs/operation/#safety-essentials' | relative_url }}).
 
-### 1. Plan the site and layout
+1. **Choose the position.** Use a stable 4–6 inch pole with clear sunlight, safe enclosure access, and clearance below the panel. In the Northern Hemisphere, face the panel toward true south year-round. Keep the supplied tilt and avoid shade, especially with the low winter sun. Check that the pole and foundation can support the assemblies and local wind loading.
+2. **Attach the enclosure first.** Support the box at the chosen height. Seat both rear brackets against the pole, wrap and engage both bands, and keep cables clear. Snug the clamps with the Phillips tool and finish firmly by hand. With a drill/driver, use a low clutch setting and finish with a screwdriver; do not use impact mode or overtighten.
+3. **Attach the panel assembly.** With a helper supporting the frame, position its bracket above the enclosure and secure its own mounting band. Tighten firmly by hand and keep supporting it until secure.
+4. **Check before connecting.** Neither assembly should slip or rotate during a gentle hand check. Confirm that the door opens freely and cables have slack and remain clear of sharp edges and clamps. This check does not establish a wind-load rating.
 
-[Add the reviewed site requirements, component locations, orientation, access clearances, and applicable installation constraints.]
+## Start and check the station
 
-### 2. Build the pole and panel mount
+Follow the complete [startup procedure]({{ '/docs/operation/#initial-startup' | relative_url }}): **battery first, wait at least 10 seconds, then solar**. Confirm a normal controller state, solar input when sunlight is available, and operation of a compatible device. Support cables and close the enclosure.
 
-[Add the structural design, foundation details, mounting drawings, specified hardware, and assembly instructions.]
+Record the installed models, battery/controller settings, drawing revision, protection details, and any changes from the reference configuration. Use the [operation guide]({{ '/docs/operation/' | relative_url }}) for normal use and shutdown.
 
-### 3. Assemble the equipment enclosure
+## What remains to finish the build package
 
-[Add the enclosure selection, component layout, attachment methods, environmental provisions, and service access.]
+- Dimensioned aluminum-frame drawings and verified joint/fastener details.
+- An as-built electrical schematic with wire gauges, fuse ratings, disconnects, and connector identification.
+- Exact part numbers and quantities matched to the installed prototype.
+- The test evidence and environmental limits for that configuration.
 
-### 4. Install components and route connections
-
-[Add the reviewed electrical schematic, identified connectors, cable specifications and routing, isolation, and inspection steps.]
-
-### 5. Inspect and commission
-
-[Add the reviewed pre-energization checklist, commissioning procedure, acceptance criteria, and troubleshooting references.]
-
-## Record your completed build
-
-Save the design release, selected configuration, installed part models, drawing revisions, and any deviations. The reference build's [test results]({{ '/docs/testing/' | relative_url }}) apply to its stated configuration and conditions; modified builds need their own evaluation.
-
-**Your design release:** TBD  
-**Your electrical configuration:** TBD  
-**Your mounting arrangement:** TBD  
-**Changes from the reference build:** TBD
-
-Continue to [operation & maintenance]({{ '/docs/operation/' | relative_url }}).
+These gaps concern fabrication and repeatability. The reviewed owner manual already documents mounting the prepared assemblies, startup, day-to-day use, shutdown, and maintenance.

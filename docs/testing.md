@@ -1,72 +1,55 @@
 ---
 title: Testing & results
-nav_order: 5
+nav_order: 6
 permalink: /docs/testing/
 ---
+<div class="eyebrow">Evidence from the reference build</div>
 # Testing & results
 
-<span class="status-pill">Draft · No results published</span>
+The goal is to connect each performance statement to the configuration, method, and conditions behind it. This first pass separates the team's reported result, manufacturer specifications, and planning calculations.
 
-The evidence behind the [capabilities on the first page]({{ '/' | relative_url }}). Every result will identify the design version, exact configuration, method, and conditions so you can judge whether it applies to your build.
+## At a glance
 
-<div class="placeholder-note">No measured performance or pass/fail claims have been published. All capability targets remain TBD. A design target is not a verified result.</div>
-
-## Claims and evidence
-
-| Capability | Intended target | Measured result | Evidence |
-|:---|:---|:---|:---|
-| Continuous and surge output | TBD W / duration | Not tested | [Output power](#output-power) |
-| Usable energy and runtime | TBD Wh / hours at a specified load | Not tested | [Storage and runtime](#storage-and-runtime) |
-| Daily solar generation | TBD Wh/day at a stated site and season | Not tested | [Solar generation](#solar-generation) |
-| Physical installation and environmental suitability | TBD | Not evaluated | [Physical build](#physical-build) |
-
-## Output power
-
-**Design release and configuration:** TBD  
-**Target continuous output:** TBD W  
-**Target surge output and duration:** TBD  
-**Supported outputs / voltage:** TBD  
-**Measured results:** Not available
-
-[Add load type, duration, electrical measurements, operating conditions, limits, raw data, and the reviewed test method.]
+| Item | Current statement | Evidence status |
+|:---|:---|:---|
+| Battery runtime under load | Approximately 40 hours, reported by the project team | Test conditions and original measurement record pending publication |
+| Continuous device power | 15 W design target | Full output/thermal verification record pending publication |
+| Battery energy | 640 Wh nominal: 12.8 V × 50 Ah | Nameplate calculation, not delivered energy |
+| Solar generation | 200 W panel rating | Actual daily harvest varies by site, season and weather |
+| Charge controller efficiency | 98% peak in manufacturer specifications | Component specification, not measured end-to-end efficiency |
+| Outdoor autonomy | Sustained operation is the design goal | No reviewed multi-day California field record published here yet |
 
 ## Storage and runtime
 
-**Design release and battery configuration:** TBD  
-**Nominal battery energy:** TBD Wh  
-**Target usable delivered energy:** TBD Wh  
-**Specified load profile:** TBD  
-**Target runtime:** TBD hours  
-**Measured results:** Not available
+The team reports about 40 hours of battery-only operation under its test load. A no-solar endurance test is useful because it isolates the stored-energy reserve from the changing solar resource.
 
-[Add starting and ending conditions, actual load, temperature, conversion losses, test duration, and raw data. Do not extend a measured runtime to different loads without explaining the method.]
+The project test procedure calls for a fully charged battery, a defined load on the controller's load output, no solar input, logging voltage/current and temperature, and ending at low-voltage disconnect. The intended test load is 15 W. The actual run still needs its exact load profile and measurement point documented before the reported duration can be treated as a 15 W USB-output rating.
 
-## Solar generation
+**To complete the result:** publish the original instrument readings, test date, starting charge state, battery/controller settings, actual average power, ambient and battery temperature, end condition, and whether power was measured before or after the USB converter. A resistive load's power can change as voltage falls, so duration alone does not establish constant-power performance.
 
-**Design release and array configuration:** TBD  
-**Site, orientation, shading, and season:** TBD  
-**Target daily energy:** TBD Wh/day under stated assumptions  
-**Measured results:** Not available
+For context, the ideal nameplate calculation is **640 Wh ÷ 15 W = 42.7 hours** before conversion losses, self-consumption, temperature effects, or cutoff. It is a calculation, not a substitute for the test.
 
-[Add the measurement period, weather conditions, energy measurement location, data gaps, and method. Distinguish modeled estimates from field measurements.]
+## Output power
+
+The current owner guide uses a **15 W continuous design target**. A USB module's advertised maximum rating does not establish the assembled station's supported continuous power.
+
+The completed record should identify the output voltage/profile, connected load, measured voltage and current at the device, duration, temperature rise, and protection behavior. Device compatibility also matters: USB-C connector shape alone does not guarantee a matching power profile.
+
+## Solar generation and California conditions
+
+Battery endurance answers “How long can storage carry the load?” Outdoor testing answers “Does solar restore the energy fast enough over time?” Both are needed.
+
+For a California field result, record the location, dates, panel orientation and tilt, shading, actual load, solar energy collected each day, controller history, and any interruptions. Include low-sun periods and the recovery afterward. The current [energy-balance examples]({{ '/docs/system-design/#the-daily-energy-balance' | relative_url }}) show the method without claiming those scenarios are measured weather.
 
 ## Physical build
 
-**Mounting arrangement and drawing revision:** TBD  
-**Review / inspection criteria:** TBD  
-**Evidence:** Not available
+The mount, enclosure, cable entries, and internal assembly need their own evidence. Electrical endurance does not establish a wind rating or prove that the modified enclosure remains waterproof. The project has thermal, ingress-protection, and electrical bench-test procedures in Teams; completed results have not yet been incorporated into this public guide.
 
-[Add the reviews and inspections supporting the installation. Electrical output tests alone do not establish structural or environmental suitability.]
+## Read each number in context
 
-## How to read a result
+- **Design target:** what the system aims to deliver.
+- **Team-reported result:** a result communicated by the project team, with the supporting record still to be published.
+- **Manufacturer specification:** a limit or rating for an individual component.
+- **Planning estimate:** a calculation with stated assumptions, useful for comparing scenarios.
 
-- **Target:** what a configuration is intended to deliver.
-- **Estimate:** what a calculation or model predicts under stated assumptions.
-- **Measured:** what an identified build delivered in an actual test.
-- **Limitations:** what remains unknown or does not transfer to other conditions.
-
-## Test record template
-
-For each test, record the objective, acceptance criterion, design release, component configuration, conditions, equipment, reviewed method, raw measurements with units, uncertainty where applicable, outcome, limitations, and reviewer.
-
-[Attach complete test records and datasets here as they become available.]
+Source for the controller's peak efficiency: [Victron SmartSolar specifications](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/technical-specifications.html). Project inputs: the reviewed user manual, battery endurance procedure, and team update of November 10, 2026.

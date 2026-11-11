@@ -22,3 +22,90 @@
 .site-footer-note { font-size: .75rem; color: #68766b; }
 .main-content table { min-width: 0; width: 100%; }
 @media (max-width: 600px) { .doc-grid { grid-template-columns: 1fr; } .hero { padding-top: .8rem; } }
+/* Shared documentation and the two homepage introductions. */
+.main-content h2 { margin-top: 2.3rem; }
+.main-content h3 { margin-top: 1.7rem; }
+.main-content a:not(.btn):focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #b57c20; outline-offset: 3px; }
+.edition-switch { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; padding: .65rem .8rem; background: #f4f6f1; border: 1px solid #e0e7df; border-radius: 7px; margin: .3rem 0 1.7rem; font-size: .78rem; }
+.edition-switch span { margin-right: auto; color: #53665b; }
+.edition-switch a { padding: .3rem .7rem; border-radius: 4px; text-decoration: none; }
+.edition-switch a[aria-current=page] { color: #fff; background: #244f3e; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.5rem 0 .6rem; }
+.practical-hero h1 { font-size: clamp(2.4rem, 6vw, 3.5rem) !important; }
+.practical-hero .intro { font-size: 1.1rem; line-height: 1.7; }
+.spec-strip { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid #ccd9cd; border-bottom: 1px solid #ccd9cd; margin: 1.25rem 0 2rem; }
+.spec-strip div { padding: 1.15rem .9rem 1.2rem 0; }
+.spec-strip strong { display: block; font-size: 1.8rem; letter-spacing: -.04em; color: #214d3a; }
+.spec-strip span { display: block; font-size: .74rem; color: #526159; }
+.guide-list { margin: 1.4rem 0 2rem; border-top: 1px solid #dce4da; }
+.guide-list>a { display: grid; grid-template-columns: 2rem 1fr 1rem; gap: .8rem; align-items: start; padding: 1.05rem .2rem; border-bottom: 1px solid #dce4da; text-decoration: none; }
+.guide-list>a:hover { background: #f7f9f3; }
+.guide-index { font-size: .76rem; color: #6b7c6d; padding-top: .15rem; }
+.guide-list strong { display: block; font-size: 1rem; }
+.guide-list span span { display: block; font-size: .85rem; color: #5b6960; margin-top: .25rem; }
+.reading-note { padding: 1rem 1.2rem; background: #f3f6f0; border-left: 3px solid #708b5d; font-size: .87rem; margin: 2rem 0; }
+.visual-hero { padding: 2.4rem 2.2rem 0; background: #173f32; color: #ecf3e9; border-radius: 12px; overflow: hidden; }
+.visual-hero .eyebrow { color: #bcd5a2; }
+.visual-hero h1 { color: #f8faee; font-size: clamp(2.8rem,6vw,4rem) !important; line-height: 1.05; margin: 1rem 0; letter-spacing: -.045em; }
+.visual-hero>p { color: #d7e4d6; max-width: 32rem; font-size: 1.1rem; line-height: 1.65; }
+.visual-hero>.btn { margin: .7rem 0 2rem; background: #daeab8; color: #163d2f; border: 0; box-shadow: none; }
+.hero-flow { border-top: 1px solid #52715c; display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: 1.3rem 0 1.5rem; }
+.hero-flow>span { color: #edf4e7; font-weight: 600; font-size: .95rem; }
+.hero-flow span span { display: block; font-size: .7rem; color: #b9cdb8; margin-top: .25rem; font-weight: 400; }
+.hero-flow b { color: #a3c485; }
+.visual-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.8rem; align-items: center; margin: 2.8rem 0; }
+.visual-intro h2 { margin: .7rem 0 1rem; line-height: 1.25; font-size: 1.7rem; }
+.visual-intro p { font-size: .92rem; }
+.visual-intro figure { margin: 0; }
+.visual-intro img { width: 100%; height: auto; border-radius: 9px; border: 1px solid #dce3d9; }
+.main-content figcaption { font-size: .73rem; line-height: 1.5; color: #647263; margin-top: .6rem; }
+.energy-story { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin: 1.4rem 0; }
+.energy-story>div { border-top: 3px solid #c0cf9e; padding: 1rem 0; }
+.energy-story strong { display: block; font-size: 2rem; color: #234f3b; letter-spacing: -.04em; }
+.energy-story p { font-size: .8rem; margin: .4rem 0; }
+.energy-story .eyebrow { font-size: .65rem; }
+.cost-feature { background: #f1f3e7; border-radius: 9px; padding: 1.6rem 1.8rem; margin: 2.4rem 0; }
+.cost-feature h2 { margin-top: .6rem; }
+.power-path { display: flex; align-items: center; gap: .6rem; margin: 1.5rem 0; flex-wrap: wrap; padding: 1.1rem; background: #f1f5ed; border-radius: 8px; font-size: .85rem; }
+.power-path>span { flex: 1; min-width: 80px; text-align: center; color: #254d38; font-weight: 650; }
+.power-path small { font-weight: 400; color: #5e6f5c; }
+.equation { padding: 1rem 1.2rem; background: #f1f5ed; border-left: 3px solid #759361; border-radius: 0 6px 6px 0; margin: 1.4rem 0; font-variant-numeric: tabular-nums; font-size: 1.05rem; }
+.equation small { font-size: .8rem; }
+.photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin: 1.5rem 0; }
+.photo-pair figure { margin: 0; }
+.photo-pair img { display: block; width: 100%; height: 270px; object-fit: cover; border-radius: 7px; }
+.quick-order { display: grid; grid-template-columns: 1fr 1fr; margin: 1.5rem 0; gap: .6rem; }
+.quick-order>div { padding: 1rem; background: #edf3e7; border-radius: 7px; }
+.quick-order span { display: block; text-transform: uppercase; font-size: .68rem; letter-spacing: .08em; color: #5a7353; margin-bottom: .35rem; }
+.quick-order strong { display: block; font-size: .85rem; color: #274d38; }
+.energy-calculator { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #cddacb; border-radius: 10px; margin: 1.5rem 0; overflow: hidden; }
+.calculator-inputs { padding: 1.5rem; display: flex; flex-direction: column; background: #fafbf7; }
+.calculator-inputs label { font-size: .83rem; font-weight: 650; margin: .85rem 0 .5rem; color: #294f3b; }
+.calculator-inputs label:first-child { margin-top: 0; }
+.calculator-inputs output { float: right; padding-left: .5rem; font-weight: 400; }
+.calculator-inputs input[type=range] { width: 100%; margin: .3rem 0 .6rem; accent-color: #2e6549; cursor: pointer; min-height: 25px; }
+.calculator-inputs select { width: 100%; padding: .7rem .5rem; border: 1px solid #b7c8b5; border-radius: 5px; background: white; color: #35443e; font-size: .85rem; }
+.calculator-results { padding: 1.5rem; background: #eaf1e2; font-variant-numeric: tabular-nums; }
+.calc-primary>span { text-transform: uppercase; letter-spacing: .09em; font-size: .68rem; color: #4d6845; }
+.calc-primary>strong { display: block; font-size: 2rem; letter-spacing: -.05em; color: #234b32; margin: .4rem 0; }
+.calc-primary p { font-size: .8rem; margin: .3rem 0 1.2rem; min-height: 3.7em; }
+.calculator-results dl>div { display: flex; gap: .6rem; justify-content: space-between; border-bottom: 1px solid #c7d6c1; padding: .6rem 0; font-size: .78rem; }
+.calculator-results dt { font-weight: 400; }
+.calculator-results dd { margin: 0; font-weight: 650; text-align: right; }
+.calc-warning { font-size: .75rem; border-top: 1px solid #bfcfb7; padding-top: 1rem; margin-top: 1.2rem; line-height: 1.55; }
+.energy-calculator[data-balance=deficit] .calculator-results { background: #fbefdc; }
+.energy-calculator[data-balance=deficit] .calc-primary>strong { color: #874718; }
+@media (max-width: 600px) {
+  .visual-hero { padding: 1.6rem 1.2rem 0; }
+  .visual-intro, .energy-calculator, .quick-order { grid-template-columns: 1fr; }
+  .visual-intro figure { max-width: 300px; margin: 0 auto; }
+  .edition-switch span { width: 100%; margin-bottom: .3rem; }
+  .spec-strip strong { font-size: 1.55rem; }
+  .spec-strip span { font-size: .66rem; }
+  .energy-story { gap: .7rem; }
+  .energy-story strong { font-size: 1.5rem; }
+  .cost-feature { padding: 1.2rem; }
+  .photo-pair img { height: 200px; }
+  .hero-flow>span { font-size: .8rem; }
+  .hero-flow span span { font-size: .65rem; }
+}

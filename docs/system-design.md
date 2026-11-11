@@ -3,59 +3,80 @@ title: System design
 nav_order: 2
 permalink: /docs/system-design/
 ---
-# System design
+<div class="eyebrow">01 / Understand</div>
+# Small loads, sustained by solar
 
-<span class="status-pill">Current design: Draft</span>
+The design starts with a simple aim: keep a modest electrical load running where a permanent power connection is impractical. Solar harvest covers daily use and restores the battery; stored energy carries the load when sunlight cannot.
 
-Understand what each subsystem does and how the electrical system fits together. Use [Size your system]({{ '/docs/sizing/' | relative_url }}) to establish your capacity needs, then [Build your system]({{ '/docs/build/' | relative_url }}) for mounting, enclosure, and physical assembly.
+## The reference configuration
 
-<div class="placeholder-note">The architecture below is illustrative. Component selections, interfaces, ratings, and protection details have not been specified or verified.</div>
-
-## System architecture
-
-![Illustrative energy path from sunlight through a solar array and power management to loads, with battery storage connected to power management. Concept only, not a wiring diagram.]({{ '/assets/images/system-overview.svg' | relative_url }})
-
-The final architecture will identify the solar input, charge control, battery storage, output conversion, and protection components. The combined “power management” block above will be replaced by the actual design.
-
-| Subsystem | What the design needs to explain | Reference component |
+| Subsystem | Current reference | Purpose |
 |:---|:---|:---|
-| Solar input | Array configuration and input operating range | TBD |
-| Charge control | Compatibility with the array and battery | TBD |
-| Battery storage | Chemistry, usable capacity, management, and operating limits | TBD |
-| Output conversion | Supported output types, continuous load, and surge capability | TBD |
-| Protection & isolation | Reviewed protection, disconnects, grounding, and connection requirements | TBD |
-| Monitoring | What the user can measure or observe | TBD |
+| Generation | One nominal 200 W solar panel | Collect energy while sunlight is available |
+| Charge control | Victron SmartSolar MPPT 75/15 | Manage solar charging and provide a protected load path |
+| Storage | 12.8 V, 50 Ah LiFePO4 battery | Store a nominal 640 Wh |
+| Output | Regulated USB-C module | Supply a compatible device; 15 W continuous design target |
+| Physical installation | Aluminum panel support and equipment enclosure on an existing 4–6 inch pole | Support, protect, and provide access to the components |
 
-## Reference electrical configuration
+<div class="power-path"><span>Solar panel</span><b aria-hidden="true">→</b><span>MPPT controller<br><small>↕ Battery storage</small></span><b aria-hidden="true">→</b><span>USB-C module</span><b aria-hidden="true">→</b><span>Your device</span></div>
 
-This will be the specific combination behind the [capabilities on the first page]({{ '/' | relative_url }}). Alternative configurations will need their own documented limits and validation.
+The controller manages the solar input. Its load output feeds the USB module, which provides the device's required voltage profile. The battery shares the DC system: it charges when energy is available and supplies energy when solar input falls short. This is a functional diagram, not a wiring schematic.
 
-| Design item | Value / document |
-|:---|:---|
-| System voltage | TBD |
-| Array and charge controller | TBD |
-| Battery and usable reserve | TBD |
-| Output conversion and supported loads | TBD |
-| Electrical schematic and revision | Not yet published |
-| Compatible parts list | [Parts template]({{ '/docs/build/#parts-and-drawings' | relative_url }}) |
-| Supporting evidence | [Testing & results]({{ '/docs/testing/' | relative_url }}) |
+## The daily energy balance
 
-## Why these choices?
+**Power is a rate. Energy is what accumulates over time.** A 15 W continuous load consumes:
 
-[Explain each major selection in plain language: the need it meets, alternatives considered, trade-offs, and supporting calculations or manufacturer documentation.]
+<div class="equation">15 W × 24 h = <strong>360 Wh per day</strong></div>
 
-| Decision | Rationale | Status |
-|:---|:---|:---|
-| [Component or architecture choice] | [Evidence and trade-off] | Proposed |
+The panel does not supply 200 W all day. A useful first estimate multiplies panel rating by *equivalent peak-sun hours* and a delivery factor for real-world losses. Peak-sun hours describe the day's total sunlight as equivalent hours at full reference intensity; they are not simply daylight hours.
 
-## Scaling the design
+For an **illustrative 3 peak-sun-hour day** with **75% overall delivery**:
 
-The [sizing guide]({{ '/docs/sizing/' | relative_url }}) will show how different loads and reserve requirements affect the battery, array, and output conversion. Changing one component can affect compatibility, protection, wiring, and thermal requirements. A larger component is not automatically a compatible substitution.
+<div class="equation">200 W × 3 h × 0.75 = <strong>450 Wh per day</strong><br><small>450 Wh harvested − 360 Wh used = 90 Wh of daily energy margin</small></div>
 
-[Add the supported configuration range and the reviewed combinations before recommending substitutions.]
+The 75% factor is a planning assumption, not a measured station efficiency. It represents combined effects such as panel temperature, wiring, conversion, storage, and other losses. At this assumption, daily break-even is **2.4 peak-sun hours**. Additional margin is needed to recover after cloudy days.
 
-## Electrical design versus physical setup
+| Illustrative solar resource | Energy available at 75% delivery | Balance against a 15 W continuous load |
+|:---|---:|---:|
+| 1 peak-sun hour/day | 150 Wh/day | 210 Wh/day deficit |
+| 2 peak-sun hours/day | 300 Wh/day | 60 Wh/day deficit |
+| 3 peak-sun hours/day | 450 Wh/day | 90 Wh/day margin |
+| 5 peak-sun hours/day | 750 Wh/day | 390 Wh/day margin |
 
-The electrical architecture describes how power is collected, stored, controlled, and delivered. The physical build describes how those components are supported, enclosed, accessed, and routed at a site.
+These are scenarios, not measured California weather. A positive daily balance indicates replenishment potential; a full battery, charge taper, hourly timing, and other limits can reduce how much surplus is stored.
 
-The first documented physical setup will be a [pole-mounted reference build]({{ '/docs/build/#pole-mounted-reference-build' | relative_url }}). Other arrangements will be described separately, with their own mounting and enclosure considerations. Changing the mounting arrangement still requires checking cable runs, weather exposure, heat, and component access.
+## What the battery contributes
+
+Nominal stored energy is **12.8 V × 50 Ah = 640 Wh**. Dividing by 15 W gives **42.7 hours before losses or discharge limits**. The team reports approximately 40 hours in its battery-runtime test; the precise load, cutoff, temperatures, and measurement point still need to be published alongside it. [Test status →]({{ '/docs/testing/' | relative_url }})
+
+Reserve and recharge work together. A larger battery buys more time during a deficit, but cannot make up for a panel that consistently harvests less than the load consumes. A larger panel can restore reserve faster, provided the controller and battery can accept the power.
+
+## California weather and long-term operation
+
+The goal is sustained off-grid operation under suitable site and weather conditions. Winter sun, coastal fog, shade, and consecutive storm days matter more than a statewide average. Some energy may be collected under cloud, but a storm does not guarantee enough energy to keep the battery charged.
+
+For a real installation, evaluate the location, panel orientation, shading, winter resource, and several low-sun days in sequence. Then check both the deepest reserve drawdown and the time needed to recover while the load stays on. A positive annual total alone does not establish uninterrupted operation.
+
+[PVWatts](https://pvwatts.nlr.gov/) can help investigate the local solar resource. It models grid-connected PV; its output is not an off-grid battery-autonomy prediction. Battery storage, cutoff, and hourly load still need separate treatment.
+
+## Why MPPT?
+
+Maximum power point tracking adjusts the panel's operating point to harvest available power as conditions change. Victron lists **98% peak controller efficiency**. This is a manufacturer peak specification—not a measured 98% efficiency for the complete station, and not the fraction of sunlight converted into electricity. [Controller specifications](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/technical-specifications.html)
+
+## Scaling the architecture
+
+The architecture is adaptable; the current parts are not unlimited. These examples explain the direction of change and have **not been validated as complete builds**.
+
+| Concept | Nominal storage | What changes | What needs checking |
+|:---|---:|:---|:---|
+| Reference: 200 W panel + 50 Ah battery | 640 Wh | Current prototype configuration | Published reference limits and test evidence |
+| More reserve: 200 W + 100 Ah at 12.8 V | 1,280 Wh | About twice the nominal storage; same solar harvest | Battery compatibility, charging limits, enclosure fit, weight, wiring and protection; recovery from empty takes longer |
+| More harvest and reserve: 400 W + 100 Ah at 12.8 V | 1,280 Wh | About twice the rated array and storage | Larger suitable controller, array connection design, battery acceptance, wiring, protection, heat, and a mount for the added area and weight |
+
+The **75/15** supports 15 A maximum battery charge current and 220 W nominal PV power on a 12 V system, with a 75 V maximum PV open-circuit voltage and 15 A PV short-circuit-current limit. More connected panel wattage can be clipped; it does not remove those electrical limits. Use a suitably sized controller when designing to capture a 400 W array's output. [Victron limits and oversizing notes](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/technical-specifications.html)
+
+For example, the current [HQST panel listing](https://hqsolarpower.com/products/hqst-200w-16bb-n-type-high-efficiency-monocrystalline-solar-panel) specifies 11.04 A short-circuit current. Two in parallel would be about 22.08 A before tolerance, above the 75/15's 15 A limit. A series arrangement has different voltage constraints, including cold-weather voltage. Neither arrangement is an approved upgrade here.
+
+A 100 Ah battery at 12.8 V stores **1.28 kWh**, a measure of energy. It does not by itself turn this into a 1,000 W output system. The USB module, connections, wiring, protection, and thermal design still determine supported load power.
+
+[Explore the sizing calculator →]({{ '/docs/sizing/' | relative_url }}) · [Build the reference station →]({{ '/docs/build/' | relative_url }})
