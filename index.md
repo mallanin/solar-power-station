@@ -22,9 +22,9 @@ OpenPowerBox brings reliable, moderate-scale power to networks, monitoring, auto
 
 <div class="application-grid">
 <div><span class="eyebrow">Connect</span><h3 id="connect-a-property">A network across your property</h3><p>Power wireless mesh nodes at multiple locations to connect cameras and sensors across large properties, farms, and remote worksites.</p></div>
-<div><span class="eyebrow">Monitor</span><h3 id="monitor-what-matters">An eye on what matters</h3><p>Watch crops, wildlife, equipment, or an entrance. Add weather, soil-moisture, or tank-level sensing to understand what's happening on site.</p></div>
+<div><span class="eyebrow">Monitor</span><h3 id="monitor-what-matters">Video monitoring</h3><p>Watch crops, wildlife, equipment, or an entrance. Add weather, soil-moisture, or tank-level sensing to understand what's happening on site.</p></div>
 <div><span class="eyebrow">Control</span><h3 id="automate-a-remote-task">Automation out in the field</h3><p>Operate motorized valves, trigger a gate controller, or run a sump pump.</p></div>
-<div id="light-a-remote-spot"><span class="eyebrow">Technology</span><h3 id="technology-in-the-field">Bring technology into the field</h3><p>Set up a drone charging station, bring satellite internet to a remote site, or run a local AI model for on-site processing.</p></div>
+<div id="light-a-remote-spot"><span class="eyebrow">Technology</span><h3 id="technology-in-the-field">Off-grid technology</h3><p>Set up a drone charging station, bring satellite internet to a remote site, or run a local AI model for on-site processing.</p></div>
 </div>
 
 Built for a wide range of devices, the system has a **15 W+ continuous power design target** and **100 W+ intermittent output demonstrated in our pump tests**. USB-C is our reference output; regulated DC or PoE can be designed in for other devices. <a href="{{ '/docs/system-design/#applications-and-output-options' | relative_url }}">Applications and output options →</a>
