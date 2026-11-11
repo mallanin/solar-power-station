@@ -80,6 +80,7 @@ Use **View page history** below a page to see its commits. Open a commit to insp
 
 ## Before publishing an update
 
+- When homepage wording changes, review the linked design, cost, testing, and operation sections for consistency. Keep section anchors stable or retain an alias for old links; check the actual destinations as well as the link labels.
 - Replace prompts only with actual project information.
 - Mark proposed, reviewed, built, and tested work accurately.
 - Include units, drawing revisions, and evidence for results.

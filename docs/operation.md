@@ -59,11 +59,17 @@ The owner setup uses the supplied leads; it does not require opening the control
 ## Day-to-day operation
 
 1. **Inspect.** Look for loose mounts, cracked glass, damaged cables, an open door, water, or unusual odor. If anything is abnormal, keep the load disconnected and use [troubleshooting](#troubleshooting).
-2. **Connect a compatible device.** Check its voltage and power requirements against the output label. The station's continuous design target is 15 W. Fully seat a compatible, approved USB-C cable; do not force connectors or attach an inverter, bare-wire adapter, or unapproved splitter.
+2. **Connect a compatible device.** Check its voltage and power requirements against the output label. The station's continuous design target is 15 W+; use the installed output's rating to determine device compatibility. Fully seat a compatible, approved USB-C cable; do not force connectors or attach an inverter, bare-wire adapter, or unapproved splitter.
 3. **Confirm operation.** Check the device's power/charging indicator. Keep the cable supported and away from pinch points, the ground, and standing water. Close the enclosure and unused port covers.
 4. **Monitor.** Use VictronConnect to check charging state, solar input, battery voltage, load current, and errors.
 5. **Let charging run automatically.** Leave solar connected during normal use. Sunlight supports the load and battery charging; stored energy supplies the load when sunlight is insufficient. Reduce unnecessary loads during extended cloudy weather.
 6. **Finish with the device.** Shut it down normally and unplug its USB cable by the connector body. The station may remain charging; this is not a full electrical shutdown.
+
+### Automatic recovery after low battery
+
+During a prolonged solar shortfall, the controller can disconnect its load output to protect the battery. With automatic load reconnection configured, output resumes when solar charging restores the battery above the configured reconnect threshold. The threshold depends on the selected load-control mode. [Victron load-output settings](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/configuration-and-settings.html)
+
+Restoring output power does not guarantee that every connected device restarts itself. Check the device's power-return behavior when commissioning an unattended installation, along with the installed battery's BMS recovery behavior. This recovery description concerns low-battery shutdown; damage or a persistent fault requires inspection.
 
 ## Read the controller status
 

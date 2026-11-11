@@ -12,8 +12,9 @@ We connect each performance statement to the configuration, method, and conditio
 
 | Item | Current statement | Evidence status |
 |:---|:---|:---|
-| Battery runtime under load | Approximately 40 hours under a 16 W continuous test load | Project-reported result; original readings and complete measurement conditions pending publication |
-| Continuous device power | 15 W design target | Full output/thermal verification record pending publication |
+| Battery runtime under load | Approximately 40 hours under a 16 W continuous test load, with no solar input | Project-reported result; original readings and complete measurement conditions pending publication |
+| Continuous device power | 15 W+ design target | Full output/thermal verification record pending publication |
+| Intermittent output | 100 W+ in pump testing | Project-reported result; pump model, output path, duration, and readings pending publication |
 | Battery energy | 640 Wh nominal: 12.8 V × 50 Ah | Nameplate calculation, not delivered energy |
 | Solar generation | 200 W panel rating | Actual daily harvest varies by site, season and weather |
 | Charge controller efficiency | 98% peak in manufacturer specifications | Component specification, not measured end-to-end efficiency |
@@ -33,9 +34,9 @@ At the reported test load, **16 W × 40 h is about 640 Wh**. Because the duratio
 
 ## Output power
 
-The current owner guide uses a **15 W continuous design target**. Short higher-power tasks are a useful extension of the architecture, but no complete-system surge rating is published yet. A USB module's advertised maximum rating does not establish the assembled station's supported continuous or peak power.
+The current design target is **15 W+ continuous power**. We have also demonstrated **100 W+ intermittent loads in pump testing**, as reported in the November 10 project update. That test is the basis for the homepage's intermittent-power statement. It does not define a maximum surge rating or establish the rating of every output interface; the reference user manual covers the USB-C configuration.
 
-The completed record should identify the output voltage/profile, connected load, measured voltage and current at the device, duration, temperature rise, and protection behavior. Device compatibility also matters: USB-C connector shape alone does not guarantee a matching power profile.
+The completed pump-test record should identify the pump model, supply/interface, output voltage, measured running and startup current, duration and duty cycle, temperature rise, and protection behavior. Those details establish which configuration supplied the pump and distinguish its running demand from startup surge. Device compatibility also matters: USB-C connector shape alone does not guarantee a matching power profile.
 
 ## Solar generation and California conditions
 

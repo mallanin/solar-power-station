@@ -15,7 +15,7 @@ The design starts with a simple aim: keep useful equipment running where a perma
 | Generation | One nominal 200 W solar panel | Collect energy while sunlight is available |
 | Charge control | Victron SmartSolar MPPT 75/15 | Manage solar charging and provide a protected load path |
 | Storage | 12.8 V, 50 Ah LiFePO4 battery | Store a nominal 640 Wh |
-| Output | Regulated USB-C module | Supply a compatible device; 15 W continuous design target |
+| Output | Regulated USB-C module | Supply a compatible device; 15 W+ continuous design target. Separate pump testing has demonstrated 100 W+ intermittent loads. |
 | Physical installation | Aluminum panel support and equipment enclosure on an existing 4–6 inch pole | Support, protect, and provide access to the components |
 
 <div class="power-path"><span>Solar panel</span><b aria-hidden="true">→</b><span>MPPT controller<br><small>↕ Battery storage</small></span><b aria-hidden="true">→</b><span>USB-C module</span><b aria-hidden="true">→</b><span>Your device</span></div>
@@ -54,7 +54,7 @@ Reserve and recharge work together. A larger battery buys more time during a def
 
 ## San Luis Obispo winter and storm reserve
 
-The reference system targets sustained **15 W operation in San Luis Obispo**, including reserve for nighttime and low-sun periods. A well-positioned panel has useful winter generation; the question is how much energy arrives during a particular sequence of days.
+The reference system has a **15 W+ continuous design target**. The calculations below evaluate a **15 W draw in San Luis Obispo**, including reserve for nighttime and low-sun periods. A well-positioned panel has useful winter generation; the question is how much energy arrives during a particular sequence of days.
 
 As a first regional estimate, historical **NREL 1961–1990 data for nearby Santa Maria** gives about **4.5 peak-sun hours/day in December** and **4.6 in January** for a south-facing surface tilted at the local latitude, about 35°. At a steeper 50° tilt, both months average about 4.9 hours/day. These are monthly averages, including cloudy days, from a nearby station—not a new simulation of our installation. [NREL solar-resource tables, Santa Maria](https://pages.mtu.edu/~jstallen/courses/MEEM4200/lectures/solar/NREL_TP-463-5607_1994.pdf)
 
@@ -62,7 +62,7 @@ Using December's 4.5-hour value and our **assumed 75% overall delivery** gives:
 
 <div class="equation">200 W × 4.5 h × 0.75 = <strong>675 Wh/day</strong><br><small>675 Wh available − 360 Wh used = 315 Wh/day of average recovery potential</small></div>
 
-This is the basis for the homepage's winter estimate. Actual harvest changes with shading, orientation, panel temperature, conversion losses, battery acceptance, and weather. Our 3-hour calculator default is an adjustable scenario, not the local winter average.
+This is the energy basis for the homepage's continuous-power explanation. Actual harvest changes with shading, orientation, panel temperature, conversion losses, battery acceptance, and weather. Our 3-hour calculator default is an adjustable scenario, not the local winter average.
 
 ### What happens during a storm?
 
@@ -84,9 +84,11 @@ For a specific site, use recent hourly weather and record the actual panel orien
 
 ## Continuous energy and short bursts
 
-**15 W is the continuous energy design target, not a published peak-output rating.** An intermittent task can draw more power while using less energy across a day. For example, a hypothetical 60 W task running for 10 minutes uses only **10 Wh**. Add that to an 8 W background load running all day and the total is **202 Wh/day**—although the supply must support **68 W simultaneously**, plus any startup demand.
+The system has a **15 W+ continuous power design target**, and we have demonstrated **100 W+ intermittent loads in pump testing**. These describe different operating patterns: a load that runs around the clock sets the daily energy requirement, while a brief task can use much higher power. [Pump-test record →]({{ '/docs/testing/#output-power' | relative_url }})
 
-That example is an energy calculation, not an approval to connect a 60 W device to the reference station. Higher-power use requires an output converter, controller load path, wiring, protection, battery, and thermal design rated for the combined steady and starting current. A pump or motor can draw much more current at startup or stall. Battery capacity alone does not establish the system's surge capability.
+For example, a **100 W task running for 10 minutes uses 16.7 Wh**. Add an 8 W background load running all day and the total is **208.7 Wh/day**. The output path must support **108 W simultaneously**, plus startup demand. This is a scheduling example, separate from the measured pump test.
+
+Match the converter, load path, wiring, protection, and battery to the combined running and starting current. A pump or motor can draw much more current at startup or stall. The pump test's interface, duration, and current trace are needed to transfer that result to another build; 100 W+ is the reported intermittent result, not a measured upper limit.
 
 ## Applications and output options
 
@@ -94,12 +96,14 @@ USB-C is the reference interface. The same solar-and-storage architecture can be
 
 | Application | A useful project | What to include in the design |
 |:---|:---|:---|
-| Property-wide networking | Several independently powered mesh nodes or wireless bridges linking a farm, garden, or worksite | Each node's radio and attached loads; antenna placement, terrain, coverage, and the correct DC or PoE interface. A mesh still needs an internet uplink if internet access is required. |
+| Property-wide networking | Several independently powered mesh nodes or wireless bridges linking a large property, farm, or remote worksite | Each node's radio and attached loads; antenna placement, terrain, coverage, and the correct DC or PoE interface. A mesh still needs an internet uplink if internet access is required. |
 | Camera and wildlife monitoring | Crop observation, a remote entrance, equipment security, or a wildlife/timelapse camera | Night illumination, recording and network equipment, and their combined consumption. The camera's rating alone is not the whole installation's load. |
 | Weather, soil, and water sensing | A weather station, soil-moisture gateway, tank-level reporting, or an early leak/flood alert | Sensor and radio demand, transmission frequency, enclosures, and the response needed if connectivity or power is lost. |
-| Irrigation and access control | A latching irrigation valve, a small actuator, or a signal to a separately powered gate/pump controller | Valve voltage and pulse driver, relay isolation, startup current, and an appropriate default state after a fault. Powering a control signal is different from powering the motor. |
-| Small DC pumping | Occasional water transfer or a small drainage pump | Measured running and startup/stall current, runtime, converter and switch ratings. Household AC sump pumps are not an established capability of this build. |
-| Remote lighting | Modest LED lighting at a shed, garden, campsite, or work area | Night length and duty cycle. An illustrative 10 W light used for six hours consumes 60 Wh; include sensor/controller use too. |
+| Irrigation and access control | Motorized valves, irrigation control, or a gate-controller trigger | Valve voltage and driver, relay isolation, startup current, and an appropriate default state after a fault. Powering a control signal is different from powering the motor. |
+| Sump pumping | Intermittent sump-pump operation or water transfer | Pump voltage, measured running and startup/stall current, duty cycle, and converter/switch ratings. Our reported pump tests reached 100 W+; select the output path for the actual pump. |
+| Drone charging | A field charging station for a drone's flight batteries | Charger input profile, energy per charge, number of charges per day, and other simultaneous loads. A charging station does not imply an autonomous landing or battery-handling system. |
+| Field computing and communications | Satellite internet, on-site image recognition, or a local AI model | The complete equipment load, its operating schedule, and the appropriate DC or USB power profile; see the examples below. |
+| Remote lighting | LED lighting at a shed, campsite, or work area | Night length and duty cycle. An illustrative 10 W light used for six hours consumes 60 Wh; include sensor/controller use too. |
 
 The component landscape supports these uses. For example, Ubiquiti specifies **4 W maximum** for the [G5 Turret Ultra camera](https://techspecs.ui.com/unifi/wifi/uvc-g5-turret-ultra); a compatible PoE supply and recording/network infrastructure are still needed. Hunter documents how a [DC latching irrigation solenoid uses a short pulse](https://www.hunterirrigation.com/support/node-using-dc-latching-solenoids-battery-controllers), making intermittent valve control an attractive energy pattern. Neither example is a tested plug-in accessory for our USB-C output.
 
