@@ -14,10 +14,14 @@ This is the working documentation for the OpenPowerBox reference prototype. It b
 | System design | Reference components, energy balance, and scaling concepts | Validated alternative configurations |
 | Build | Assembly overview and reviewed mounting procedure | Final aluminum drawings, exact parts, and as-built wiring/protection schedule |
 | Operation | Startup, normal use, shutdown, storage, troubleshooting, and maintenance from the reviewed manual | Updates as the hardware changes |
-| Cost | Current retail examples and explicit small-parts allowances | Reconciled as-built purchases and exact quantities |
+| Cost | Roughly $500 working estimate, pending component tables, and one commercial comparison | Fill in component prices and allowances; review the retained budget worksheet against the final tables |
 | Testing | Roughly 40-hour battery-only runtime at 16 W, 100 W+ pump operation, multi-device demonstration, 97% controller efficiency, and regional winter weather analysis | Verification of future hardware changes and new operating conditions |
 
 The practical homepage is the selected direction. The earlier [visual introduction]({{ '/visual/' | relative_url }}) remains as a design reference; both link to the same hardware guide. The homepage's finished-unit photo is pending.
+
+### Cost-page revision · November 10, 2026
+
+The major-component prices and fabrication allowances were reset to **pending** while the sourcing list is revised. The working estimate remains roughly $500. The existing **budget worksheet was retained and still contains the earlier pricing snapshot**; double-check its part choices, quantities, totals, tax, and shipping against the completed tables before treating it as the current budget.
 
 ## Prototype revisions and hardware releases
 
