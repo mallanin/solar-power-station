@@ -6,7 +6,7 @@ description: Practical, open documentation for building affordable off-grid sola
 <nav class="edition-switch" aria-label="Homepage versions"><span>Explore two introductions</span><a aria-current="page" href="{{ '/' | relative_url }}">Practical</a><a href="{{ '/visual/' | relative_url }}">Visual</a></nav>
 <div class="hero practical-hero">
   <div class="eyebrow">OpenPowerBox / A guide for builders</div>
-  <h1>Small loads.<br>Independent power.</h1>
+  <h1 id="small-loads-independent-power">Small loads.<br>Independent power.</h1>
   <p class="intro">Build an affordable solar + battery station for the devices you want to run beyond the reach of an outlet. Understand the energy budget, choose your capacity, and follow a documented pole-mounted build.</p>
   <div class="hero-actions"><a class="btn btn-primary" href="{{ '/docs/system-design/' | relative_url }}">Explore the system →</a><a class="btn" href="{{ '/docs/build/' | relative_url }}">Read the build guide</a></div>
 </div>

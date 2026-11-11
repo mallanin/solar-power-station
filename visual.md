@@ -8,14 +8,14 @@ description: Another introduction to the same OpenPowerBox documentation.
 <nav class="edition-switch" aria-label="Homepage versions"><span>Explore two introductions</span><a href="{{ '/' | relative_url }}">Practical</a><a aria-current="page" href="{{ '/visual/' | relative_url }}">Visual</a></nav>
 <div class="visual-hero">
 <div class="eyebrow">OpenPowerBox / A guide for builders</div>
-<h1>Power beyond<br>the outlet.</h1>
+<h1 id="power-beyond-the-outlet">Power beyond<br>the outlet.</h1>
 <p>Keep useful things running in places the grid doesn't reach. An affordable solar + battery system, explained from the first watt to the finished build.</p>
 <a class="btn" href="{{ '/docs/system-design/' | relative_url }}">See how it works →</a>
 <div class="hero-flow" aria-label="Sunlight collected by the panel, managed by the controller, stored in the battery, and supplied to a device"><span>Collect<span>200 W solar</span></span><b aria-hidden="true">→</b><span>Store<span>640 Wh nominal</span></span><b aria-hidden="true">→</b><span>Power<span>15 W design load</span></span></div>
 </div>
 
 <div class="visual-intro">
-<div><div class="eyebrow">The reference station</div><h2>Ordinary components.<br>A useful system.</h2><p>A solar panel, a battery, a charge controller, and a protected output. The value is in how they work together—and in having the information to build, understand, and maintain the result.</p><p>The current build mounts to an existing pole and supplies compatible USB-C devices. Cameras, sensors, and small networking projects are the intended applications, subject to their input requirements.</p><a href="{{ '/docs/build/' | relative_url }}">Meet the build →</a></div>
+<div><div class="eyebrow">The reference station</div><h2 id="ordinary-components">Ordinary components.<br>A useful system.</h2><p>A solar panel, a battery, a charge controller, and a protected output. The value is in how they work together—and in having the information to build, understand, and maintain the result.</p><p>The current build mounts to an existing pole and supplies compatible USB-C devices. Cameras, sensors, and small networking projects are the intended applications, subject to their input requirements.</p><a href="{{ '/docs/build/' | relative_url }}">Meet the build →</a></div>
 <figure><img src="{{ '/assets/images/reference-cad.jpg' | relative_url }}" alt="Project CAD overview with a panel above an enclosure on a pole" width="770" height="996"><figcaption>Project CAD overview from the user manual. The earlier wood support shown here has since been replaced with an aluminum frame.</figcaption></figure>
 </div>
 
@@ -27,7 +27,7 @@ Sunlight powers the load and replenishes the reserve. The battery carries it thr
 
 [Walk through the energy balance]({{ '/docs/system-design/#the-daily-energy-balance' | relative_url }}) · [Review the test status]({{ '/docs/testing/' | relative_url }})
 
-<div class="cost-feature"><span class="eyebrow">Make the cost visible</span><h2>Build with a parts budget.</h2><p>The original target was roughly $400. Our first current retail budget is <strong>about $525–625</strong> for components, the mount, and small parts, excluding the pole, tax, shipping, tools, and labor.</p><p>Commercial packages for similar remote-power applications can exceed $1,000, with different capacities, outputs, and support. See exactly what goes into the comparison.</p><a href="{{ '/docs/cost/' | relative_url }}">Parts, prices & comparisons →</a></div>
+<div class="cost-feature"><span class="eyebrow">Make the cost visible</span><h2 id="build-with-a-parts-budget">Build with a parts budget.</h2><p>The original target was roughly $400. Our first current retail budget is <strong>about $525–625</strong> for components, the mount, and small parts, excluding the pole, tax, shipping, tools, and labor.</p><p>Commercial packages for similar remote-power applications can exceed $1,000, with different capacities, outputs, and support. See exactly what goes into the comparison.</p><a href="{{ '/docs/cost/' | relative_url }}">Parts, prices & comparisons →</a></div>
 
 ## Make it fit your project
 
