@@ -1,8 +1,8 @@
 title: OpenPowerBox
 description: Practical, open documentation for affordable off-grid solar power.
 theme: just-the-docs
-url: https://mallanin.github.io
-baseurl: /solar-power-station
+url: https://openpowerbox.com
+baseurl: ""
 repository: mallanin/solar-power-station
 permalink: pretty
 color_scheme: solar

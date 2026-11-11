@@ -2,7 +2,7 @@
 
 A builder-facing guide to understanding, sizing, assembling, verifying, and maintaining a solar power system. Originated as a senior design project.
 
-**Read the docs:** https://mallanin.github.io/solar-power-station/
+**Read the docs:** https://openpowerbox.com/
 
 ## Current status
 
@@ -30,7 +30,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Visit `http://localhost:4000/solar-power-station/`.
+Visit `http://localhost:4000/`.
 
 ## Validation
 
