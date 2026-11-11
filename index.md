@@ -5,7 +5,7 @@ description: Build reliable off-grid power for networks, monitoring, automation,
 ---
 <div class="hero practical-hero home-hero">
 <div class="home-hero-copy">
-  <div class="eyebrow">Open Powerbox</div>
+  <div class="eyebrow">OpenPowerBox</div>
   <span id="build-beyond-the-outlet"></span>
   <h1 id="reliable-power-for-any-need">Reliable power<br>for any need.</h1>
   <p class="intro">Create a solar power station for any use case, anywhere. This open documentation covers the system design and build of an affordable, battery-backed station for networks, monitoring, and automation.</p>
