@@ -124,6 +124,15 @@ We measured **97% efficiency from electrical input to output through the Victron
 
 We chose Victron for its monitoring tools, documentation, and our confidence in the brand. Built-in Bluetooth connects the SmartSolar controller to **VictronConnect**, where we can inspect solar input, battery voltage and charging, load current, and operating history. That visibility makes setup and troubleshooting easier. [Victron monitoring features](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/monitoring.html)
 
+## Solar panel frame
+
+For pole mounting, the solar panel needs a support frame. We built both wood and aluminum versions.
+
+<div class="frame-comparison">
+<figure class="documentation-photo" aria-label="Photo placeholder: wood solar panel frame"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Wood frame</strong><span>Photo pending</span></div><figcaption>The wood design is affordable and simple to manufacture. It is heavier, less elegant, and likely to have a shorter service life outdoors.</figcaption></figure>
+<figure class="documentation-photo" aria-label="Photo placeholder: aluminum solar panel frame"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Aluminum frame</strong><span>Photo pending</span></div><figcaption>The aluminum design is lighter, more elegant, and likely to last longer outdoors, but takes more assembly.</figcaption></figure>
+</div>
+
 ## Scaling the architecture
 
 The architecture is adaptable. These examples explain the direction of change and have **not been validated as complete builds**.
