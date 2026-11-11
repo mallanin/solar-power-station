@@ -4,9 +4,9 @@ nav_order: 2
 permalink: /docs/system-design/
 ---
 <div class="eyebrow">01 / Understand</div>
-# Small loads, sustained by solar
+# Useful power, sustained by solar
 
-The design starts with a simple aim: keep a modest electrical load running where a permanent power connection is impractical. Solar harvest covers daily use and restores the battery; stored energy carries the load when sunlight cannot.
+The design starts with a simple aim: keep useful equipment running where a permanent power connection is impractical. Networks, monitoring, lighting, and automation need an energy supply that fits the job. Solar harvest covers daily use and restores the battery; stored energy carries the load when sunlight cannot.
 
 ## The reference configuration
 
@@ -41,23 +41,77 @@ The 75% factor is a planning assumption, not a measured station efficiency. It r
 | 1 peak-sun hour/day | 150 Wh/day | 210 Wh/day deficit |
 | 2 peak-sun hours/day | 300 Wh/day | 60 Wh/day deficit |
 | 3 peak-sun hours/day | 450 Wh/day | 90 Wh/day margin |
+| 4.5 peak-sun hours/day | 675 Wh/day | 315 Wh/day margin |
 | 5 peak-sun hours/day | 750 Wh/day | 390 Wh/day margin |
 
 These are scenarios, not measured California weather. A positive daily balance indicates replenishment potential; a full battery, charge taper, hourly timing, and other limits can reduce how much surplus is stored.
 
 ## What the battery contributes
 
-Nominal stored energy is **12.8 V × 50 Ah = 640 Wh**. Dividing by 15 W gives **42.7 hours before losses or discharge limits**. The team reports approximately 40 hours in its battery-runtime test; the precise load, cutoff, temperatures, and measurement point still need to be published alongside it. [Test status →]({{ '/docs/testing/' | relative_url }})
+Nominal stored energy is **12.8 V × 50 Ah = 640 Wh**. Dividing by 15 W gives **42.7 hours before losses or discharge limits**. We found roughly **40 hours under a 16 W continuous test load**. The original readings and measurement conditions will accompany the published test record. [Our runtime test →]({{ '/docs/testing/#storage-and-runtime' | relative_url }})
 
 Reserve and recharge work together. A larger battery buys more time during a deficit, but cannot make up for a panel that consistently harvests less than the load consumes. A larger panel can restore reserve faster, provided the controller and battery can accept the power.
 
-## California weather and long-term operation
+## San Luis Obispo winter and storm reserve
 
-The goal is sustained off-grid operation under suitable site and weather conditions. Winter sun, coastal fog, shade, and consecutive storm days matter more than a statewide average. Some energy may be collected under cloud, but a storm does not guarantee enough energy to keep the battery charged.
+The reference system targets sustained **15 W operation in San Luis Obispo**, including reserve for nighttime and low-sun periods. A well-positioned panel has useful winter generation; the question is how much energy arrives during a particular sequence of days.
 
-For a real installation, evaluate the location, panel orientation, shading, winter resource, and several low-sun days in sequence. Then check both the deepest reserve drawdown and the time needed to recover while the load stays on. A positive annual total alone does not establish uninterrupted operation.
+As a first regional estimate, historical **NREL 1961–1990 data for nearby Santa Maria** gives about **4.5 peak-sun hours/day in December** and **4.6 in January** for a south-facing surface tilted at the local latitude, about 35°. At a steeper 50° tilt, both months average about 4.9 hours/day. These are monthly averages, including cloudy days, from a nearby station—not a new simulation of our installation. [NREL solar-resource tables, Santa Maria](https://pages.mtu.edu/~jstallen/courses/MEEM4200/lectures/solar/NREL_TP-463-5607_1994.pdf)
+
+Using December's 4.5-hour value and our **assumed 75% overall delivery** gives:
+
+<div class="equation">200 W × 4.5 h × 0.75 = <strong>675 Wh/day</strong><br><small>675 Wh available − 360 Wh used = 315 Wh/day of average recovery potential</small></div>
+
+This is the basis for the homepage's winter estimate. Actual harvest changes with shading, orientation, panel temperature, conversion losses, battery acceptance, and weather. Our 3-hour calculator default is an adjustable scenario, not the local winter average.
+
+### What happens during a storm?
+
+Reserve bridges a shortfall; sunlight during a storm can reduce that shortfall. For a transparent planning example, use **512 Wh of load-deliverable reserve**, or 80% of nominal battery energy, starting from a fully charged battery:
+
+| Illustrative conditions, not measured storm data | Harvest at 75% delivery | Daily shortfall at 15 W | Approximate time to use 512 Wh reserve |
+|:---|---:|---:|---:|
+| No useful solar | 0 Wh/day | 360 Wh/day | 1.4 days / 34 hours |
+| 1 peak-sun hour each day | 150 Wh/day | 210 Wh/day | 2.4 days |
+| 2 peak-sun hours each day | 300 Wh/day | 60 Wh/day | 8.5 days |
+
+The last column is simple energy arithmetic, not an hourly autonomy simulation. It assumes those conditions repeat, the reserve starts full, and the load remains at 15 W. A deeper starting discharge or lower harvest shortens endurance. The separate roughly 40-hour test at 16 W is an observed result under its own conditions, rather than this conservative allowance.
+
+After using the full 512 Wh planning reserve, the 315 Wh/day winter-average surplus would take about **1.6 days to replace it in an idealized energy balance**, while the 15 W load keeps running. Actual recovery also depends on charge timing and limits. This explains how the design can bridge low-sun weather, and why no finite battery can promise operation through storms of any duration.
+
+For a specific site, use recent hourly weather and record the actual panel orientation, shade, load, and charging history. Check both the lowest state of charge through consecutive dark days and recovery afterward. [Outdoor verification method →]({{ '/docs/testing/#solar-generation-and-california-conditions' | relative_url }})
 
 [PVWatts](https://pvwatts.nlr.gov/) can help investigate the local solar resource. It models grid-connected PV; its output is not an off-grid battery-autonomy prediction. Battery storage, cutoff, and hourly load still need separate treatment.
+
+## Continuous energy and short bursts
+
+**15 W is the continuous energy design target, not a published peak-output rating.** An intermittent task can draw more power while using less energy across a day. For example, a hypothetical 60 W task running for 10 minutes uses only **10 Wh**. Add that to an 8 W background load running all day and the total is **202 Wh/day**—although the supply must support **68 W simultaneously**, plus any startup demand.
+
+That example is an energy calculation, not an approval to connect a 60 W device to the reference station. Higher-power use requires an output converter, controller load path, wiring, protection, battery, and thermal design rated for the combined steady and starting current. A pump or motor can draw much more current at startup or stall. Battery capacity alone does not establish the system's surge capability.
+
+## Applications and output options
+
+USB-C is the reference interface. The same solar-and-storage architecture can be developed with regulated DC or a suitable PoE supply for other equipment. Match the voltage, polarity, power profile, protection, and weather sealing to the chosen device. These are application concepts to evaluate; they have not all been tested on our station.
+
+| Application | A useful project | What to include in the design |
+|:---|:---|:---|
+| Property-wide networking | Several independently powered mesh nodes or wireless bridges linking a farm, garden, or worksite | Each node's radio and attached loads; antenna placement, terrain, coverage, and the correct DC or PoE interface. A mesh still needs an internet uplink if internet access is required. |
+| Camera and wildlife monitoring | Crop observation, a remote entrance, equipment security, or a wildlife/timelapse camera | Night illumination, recording and network equipment, and their combined consumption. The camera's rating alone is not the whole installation's load. |
+| Weather, soil, and water sensing | A weather station, soil-moisture gateway, tank-level reporting, or an early leak/flood alert | Sensor and radio demand, transmission frequency, enclosures, and the response needed if connectivity or power is lost. |
+| Irrigation and access control | A latching irrigation valve, a small actuator, or a signal to a separately powered gate/pump controller | Valve voltage and pulse driver, relay isolation, startup current, and an appropriate default state after a fault. Powering a control signal is different from powering the motor. |
+| Small DC pumping | Occasional water transfer or a small drainage pump | Measured running and startup/stall current, runtime, converter and switch ratings. Household AC sump pumps are not an established capability of this build. |
+| Remote lighting | Modest LED lighting at a shed, garden, campsite, or work area | Night length and duty cycle. An illustrative 10 W light used for six hours consumes 60 Wh; include sensor/controller use too. |
+
+The component landscape supports these uses. For example, Ubiquiti specifies **4 W maximum** for the [G5 Turret Ultra camera](https://techspecs.ui.com/unifi/wifi/uvc-g5-turret-ultra); a compatible PoE supply and recording/network infrastructure are still needed. Hunter documents how a [DC latching irrigation solenoid uses a short pulse](https://www.hunterirrigation.com/support/node-using-dc-latching-solenoids-battery-controllers), making intermittent valve control an attractive energy pattern. Neither example is a tested plug-in accessory for our USB-C output.
+
+### Satellite internet and local AI
+
+**Satellite internet:** Starlink Mini is a plausible higher-load application with a suitable supply. Its product sheet lists **25–40 W average**, **12–48 V DC / 60 W input**, and a **100 W USB-PD source supporting 20 V / 5 A** for the Starlink USB-C-to-barrel cable. The supply rating is different from typical consumption. [Starlink Mini specifications](https://starlink.com/public-files/specification_sheet_mini.pdf)
+
+At an assumed 30 W average, an eight-hour session uses **240 Wh**, while continuous operation uses **720 Wh/day**. The latter exceeds the 675 Wh winter-average example above, so planned operating hours or a larger array become important. Startup, the actual DC conversion path, and any other connected loads still need validation.
+
+**Local AI:** Compact hardware can run image recognition and small language models without sending every observation to the cloud. Raspberry Pi documents local vision inference on its AI HATs and LLM/VLM support on **AI HAT+ 2**, with 8 GB of dedicated memory and models up to approximately six billion parameters. That supports applications such as detecting objects near a gate or processing camera observations on site. [Raspberry Pi AI hardware documentation](https://www.raspberrypi.com/documentation/accessories/ai-hat-plus.html)
+
+This establishes that the computing use case exists; it does not establish a 15 W rating for the complete computer. Measure the board, accelerator, camera, storage, cooling, and radio together under the intended model and duty cycle. Provide the board's required voltage/current profile—Raspberry Pi 5 specifies a **5 V / 5 A USB-C supply**—and size reserve from actual average consumption. The supply's maximum rating and an accelerator chip's power figure are not whole-system energy measurements. [Raspberry Pi 5 product brief](https://pip-assets.raspberrypi.com/categories/892-raspberry-pi-5/documents/RP-008348-DS-10-raspberry-pi-5-product-brief.pdf)
 
 ## Why MPPT?
 

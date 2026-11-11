@@ -5,7 +5,7 @@ nav_exclude: true
 search_exclude: true
 description: Another introduction to the same OpenPowerBox documentation.
 ---
-<nav class="edition-switch" aria-label="Homepage versions"><span>Explore two introductions</span><a href="{{ '/' | relative_url }}">Practical</a><a aria-current="page" href="{{ '/visual/' | relative_url }}">Visual</a></nav>
+<nav class="edition-switch" aria-label="Homepage versions"><span>Earlier design concept</span><a href="{{ '/' | relative_url }}">Current homepage →</a></nav>
 <div class="visual-hero">
 <div class="eyebrow">OpenPowerBox / A guide for builders</div>
 <h1 id="power-beyond-the-outlet">Power beyond<br>the outlet.</h1>

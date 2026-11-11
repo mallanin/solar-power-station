@@ -37,7 +37,7 @@ Change the inputs to see the trade-offs. This is a simple daily planning model, 
 - No-solar reserve uses **80% of nominal battery energy** as a separate, deliberately conservative load-deliverable allowance: 12.8 V × Ah × 0.80 ÷ load watts. This is not a prescribed battery setting or measured depth of discharge.
 - The simplified model does not simulate hourly charging/discharging, reserve recovery, full-battery curtailment, charge taper, controller clipping, seasonal sequences, or standby consumption separately. Those belong in detailed design verification.
 
-The 34.1-hour default planning result differs from the team's approximately 40-hour reported test because the model deliberately reserves more of the nameplate energy for losses and limits. Neither number replaces the exact load and conditions of the test.
+The 34.1-hour default planning result at 15 W uses a conservative 80% energy allowance. It is separate from our roughly 40-hour reported test at a 16 W continuous load; the planning assumptions and test conditions are different. [Our runtime test →]({{ '/docs/testing/#storage-and-runtime' | relative_url }})
 
 ## 1. Write down the loads
 

@@ -15,9 +15,9 @@ This is the working documentation for the OpenPowerBox reference prototype. It b
 | Build | Assembly overview and reviewed mounting procedure | Final aluminum drawings, exact parts, and as-built wiring/protection schedule |
 | Operation | Startup, normal use, shutdown, storage, troubleshooting, and maintenance from the reviewed manual | Updates as the hardware changes |
 | Cost | Current retail examples and explicit small-parts allowances | Reconciled as-built purchases and exact quantities |
-| Testing | Team-reported runtime and the method for documenting results | Original measurement record, complete conditions, and outdoor field results |
+| Testing | Our roughly 40-hour runtime result at 16 W and the method for documenting results | Original measurement record, complete conditions, and outdoor field results |
 
-The practical and visual homepages are two introductions to **the same guide**, not two hardware versions.
+The practical homepage is the selected direction. The earlier [visual introduction]({{ '/visual/' | relative_url }}) remains as a design reference; both link to the same hardware guide. The homepage's finished-unit photo is pending.
 
 ## Prototype revisions and hardware releases
 
