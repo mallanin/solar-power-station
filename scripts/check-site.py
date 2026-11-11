@@ -67,15 +67,16 @@ for source in [ROOT / 'index.md', ROOT / 'visual.md', *ROOT.glob('docs/*.md'), *
         errors.append(f'Missing page for {source.relative_to(ROOT)}')
         continue
 
-search_file = SITE / 'assets/js/search-data.json'
-if not search_file.exists():
-    errors.append('Missing search index')
-else:
-    data = json.loads(search_file.read_text())
-    if len(data) < 7:
-        errors.append('Search index does not cover all starter pages')
+if not re.search(r'^search_enabled:\s*false\s*$', CONFIG, re.M):
+    search_file = SITE / 'assets/js/search-data.json'
+    if not search_file.exists():
+        errors.append('Missing search index')
+    else:
+        data = json.loads(search_file.read_text())
+        if len(data) < 7:
+            errors.append('Search index does not cover all starter pages')
 
 if errors:
     print('\n'.join(errors))
     sys.exit(1)
-print(f'Validated {len(pages)} pages: internal links, assets, anchors, and search index.')
+print(f'Validated {len(pages)} pages: internal links, assets, anchors, and search when enabled.')

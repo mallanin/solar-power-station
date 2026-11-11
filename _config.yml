@@ -6,7 +6,7 @@ baseurl: /solar-power-station
 repository: mallanin/solar-power-station
 permalink: pretty
 color_scheme: solar
-search_enabled: true
+search_enabled: false
 heading_anchors: true
 back_to_top: true
 back_to_top_text: Back to top
