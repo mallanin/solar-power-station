@@ -5,9 +5,10 @@ description: Build reliable off-grid power for networks, monitoring, automation,
 ---
 <div class="hero practical-hero home-hero">
 <div class="home-hero-copy">
-  <div class="eyebrow">OpenPowerBox / A guide for builders</div>
-  <h1 id="build-beyond-the-outlet">Build beyond<br>the outlet.</h1>
-  <p class="intro">Put solar power to work wherever your project takes you. Build an affordable battery-backed station for networks, monitoring, and automation—with open guides to understand it, build it, and make it your own.</p>
+  <div class="eyebrow">Open Powerbox</div>
+  <span id="build-beyond-the-outlet"></span>
+  <h1 id="reliable-power-for-any-need">Reliable power<br>for any need.</h1>
+  <p class="intro">Create a solar power station for any use case, anywhere. This open documentation covers the system design and build of an affordable, battery-backed station for networks, monitoring, and automation.</p>
   <div class="home-actions"><a class="home-action-primary" href="{{ '/docs/system-design/' | relative_url }}">Explore the system <span aria-hidden="true">↗</span></a><a class="home-action-secondary" href="{{ '/docs/build/' | relative_url }}">Go to the build guide <span aria-hidden="true">→</span></a></div>
 </div>
 <figure class="unit-photo-placeholder" aria-label="Space reserved for a photograph of the completed OpenPowerBox unit"><span class="eyebrow">The completed build</span><span class="photo-placeholder-mark" aria-hidden="true">+</span><span>System image pending</span></figure>
