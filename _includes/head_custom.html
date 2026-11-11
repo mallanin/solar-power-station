@@ -1,0 +1,10 @@
+{% if page.permalink == '/docs/system-design/' %}
+<style>
+/* Keep the small comparison layout in sync with its page during frequent edits. */
+.frame-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.frame-comparison .documentation-photo { margin: 0; }
+.frame-comparison .documentation-photo>div { min-height: 220px; }
+.main-content .frame-comparison figcaption { font-size: .86rem; line-height: 1.65; margin-top: .8rem; color: #526159; }
+@media (max-width: 600px) { .frame-comparison { grid-template-columns: 1fr; gap: 1.5rem; } }
+</style>
+{% endif %}

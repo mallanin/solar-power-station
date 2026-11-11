@@ -157,10 +157,6 @@
 .documentation-photo>div>span:last-child { font-size: .78rem; }
 .documentation-photo figcaption { padding: 0 .2rem; }
 .documentation-photo-compact>div { min-height: 210px; }
-.frame-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2rem; }
-.frame-comparison .documentation-photo { margin: 0; }
-.frame-comparison .documentation-photo>div { min-height: 220px; }
-.main-content .frame-comparison figcaption { font-size: .86rem; line-height: 1.65; margin-top: .8rem; color: #526159; }
 .design-note { margin: 1.6rem 0; padding: 1.2rem 1.4rem; background: #f7f3e8; border: 1px solid #e6dfca; border-radius: 8px; color: #554f3f; font-size: .9rem; }
 .design-note p { margin: 0; }
 .design-note p+p { margin-top: .8rem; }
@@ -169,6 +165,5 @@
 .main-content .configuration-table .reference-configuration>* { background: #edf3e5; color: #244c35; }
 @media (max-width: 600px) {
   .documentation-photo>div { min-height: 205px; padding: 1rem; }
-  .frame-comparison { grid-template-columns: 1fr; gap: 1.5rem; }
   .design-note { padding: 1rem; }
 }
