@@ -34,10 +34,10 @@ Sunlight powers the load and replenishes the reserve. The battery carries it thr
 Understand the reference design first, then explore how changing the panel or battery changes the energy budget. Larger configurations are concepts to evaluate, not validated drop-in upgrades.
 
 <div class="doc-grid">
-<a class="doc-card" href="{{ '/docs/system-design/' | relative_url }}"><span class="number">01 / UNDERSTAND</span><strong>System design →</strong><span class="summary">The architecture, daily energy balance, and scaling limits.</span></a>
-<a class="doc-card" href="{{ '/docs/sizing/' | relative_url }}"><span class="number">02 / EXPLORE</span><strong>Size your system →</strong><span class="summary">Try different loads, storage capacities, and sunshine scenarios.</span></a>
-<a class="doc-card" href="{{ '/docs/build/' | relative_url }}"><span class="number">03 / MAKE</span><strong>Build your system →</strong><span class="summary">Components, mount, enclosure, and reference installation.</span></a>
-<a class="doc-card" href="{{ '/docs/operation/' | relative_url }}"><span class="number">04 / USE</span><strong>Keep it running →</strong><span class="summary">The team's manual, adapted into a practical web guide.</span></a>
+<a class="doc-card" href="{{ '/docs/system-design/' | relative_url }}"><strong>System design →</strong><span class="summary">The architecture, daily energy balance, and scaling limits.</span></a>
+<a class="doc-card" href="{{ '/docs/cost/' | relative_url }}"><strong>Parts & cost →</strong><span class="summary">Components, sourcing, and the build budget.</span></a>
+<a class="doc-card" href="{{ '/docs/build/' | relative_url }}"><strong>Build your system →</strong><span class="summary">Components, mount, enclosure, and reference installation.</span></a>
+<a class="doc-card" href="{{ '/docs/operation/' | relative_url }}"><strong>Operation & maintenance →</strong><span class="summary">The team's manual, adapted into a practical web guide.</span></a>
 </div>
 
 <div class="reading-note">A Cal Poly Mechanical Engineering senior design project. This is the same working documentation as the practical introduction. <a href="{{ '/docs/versions/' | relative_url }}">Documentation status</a> · <a href="{{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}">User manual PDF</a></div>

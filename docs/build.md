@@ -3,8 +3,8 @@ title: Build your system
 nav_order: 5
 permalink: /docs/build/
 ---
-<div class="eyebrow">03 / Build</div>
-# Build the reference station
+<span id="build-the-reference-station"></span>
+# Build your system
 
 The reference station has two main assemblies: a solar panel on an aluminum frame, and an enclosure containing the battery, controller, and USB output hardware. Both attach to an existing suitable pole.
 
@@ -43,6 +43,8 @@ Have a person competent in low-voltage DC assembly follow the reviewed schematic
 
 The following mounting and startup procedures assume the controller and output module are already wired, as in the [user manual]({{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}).
 
+<figure class="documentation-photo" aria-label="Photo placeholder: completed enclosure before mounting"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Completed electrical assembly</strong><span>Photo pending · component supports, battery retention, and finished wiring</span></div><figcaption>The assembled enclosure before it is mounted to the pole.</figcaption></figure>
+
 ## Pole-mounted reference build
 
 Before lifting, have a helper or suitable lifting support, the supplied mounting bands, and a Phillips screwdriver or drill/driver. Work in calm, dry conditions with the battery leads and solar plugs disconnected. Read the [safety essentials]({{ '/docs/operation/#safety-essentials' | relative_url }}).
@@ -51,6 +53,8 @@ Before lifting, have a helper or suitable lifting support, the supplied mounting
 2. **Attach the enclosure first.** Support the box at the chosen height. Seat both rear brackets against the pole, wrap and engage both bands, and keep cables clear. Snug the clamps with the Phillips tool and finish firmly by hand. With a drill/driver, use a low clutch setting and finish with a screwdriver; do not use impact mode or overtighten.
 3. **Attach the panel assembly.** With a helper supporting the frame, position its bracket above the enclosure and secure its own mounting band. Tighten firmly by hand and keep supporting it until secure.
 4. **Check before connecting.** Neither assembly should slip or rotate during a gentle hand check. Confirm that the door opens freely and cables have slack and remain clear of sharp edges and clamps. This check does not establish a wind-load rating.
+
+<figure class="documentation-photo documentation-photo-compact" aria-label="Photo placeholder: completed pole-mounted station"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Finished pole installation</strong><span>Photo pending · panel support, enclosure mounts, and cable routing</span></div></figure>
 
 ## Start and check the station
 

@@ -3,8 +3,8 @@ title: Operation & maintenance
 nav_order: 7
 permalink: /docs/operation/
 ---
-<div class="eyebrow">04 / Use and maintain</div>
-# Keep the station running
+<span id="keep-the-station-running"></span>
+# Operation & maintenance
 
 Use this guide with the reference station: a prewired SmartSolar 75/15, 12.8 V / 50 Ah LiFePO4 battery, solar panel, and regulated USB-C output. It adapts the team's reviewed manual for the web. Keep the [complete user manual (PDF)]({{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}) with the station.
 

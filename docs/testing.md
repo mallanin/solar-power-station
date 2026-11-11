@@ -3,56 +3,74 @@ title: Testing & results
 nav_order: 6
 permalink: /docs/testing/
 ---
-<div class="eyebrow">Evidence from the reference build</div>
 # Testing & results
 
-We connect each performance statement to the configuration, method, and conditions behind it. This page distinguishes our reported test result, manufacturer specifications, and planning calculations.
+Our testing covers battery-only endurance, controller efficiency, and equipment running from the system. The weather calculations below provide regional context for those results.
 
 ## At a glance
 
-| Item | Current statement | Evidence status |
+| Item | Result or design value | Basis |
 |:---|:---|:---|
-| Battery runtime under load | Approximately 40 hours under a 16 W continuous test load, with no solar input | Project-reported result; original readings and complete measurement conditions pending publication |
-| Continuous device power | 15 W+ design target | Full output/thermal verification record pending publication |
-| Intermittent output | 100 W+ in pump testing | Project-reported result; pump model, output path, duration, and readings pending publication |
-| Battery energy | 640 Wh nominal: 12.8 V × 50 Ah | Nameplate calculation, not delivered energy |
-| Solar generation | 200 W panel rating | Actual daily harvest varies by site, season and weather |
-| Charge controller efficiency | 98% peak in manufacturer specifications | Component specification, not measured end-to-end efficiency |
-| Outdoor autonomy | Sustained operation is the design goal | No reviewed multi-day California field record published here yet |
+| Battery runtime under load | Roughly 40 hours at a 16 W continuous load, with no solar input | Battery endurance test |
+| Continuous device power | 15 W+ design target | Reference design |
+| Intermittent output | 100 W+ in pump testing | Live pump test |
+| Combined equipment | Wi-Fi HaLow units, camera, and pump running together | Live system demonstration |
+| AC output | Inverter used to supply 120 V AC | Tested output configuration |
+| Victron controller efficiency | 97% electrical input-to-output efficiency | Live controller test |
+| Battery energy | 640 Wh nominal: 12.8 V × 50 Ah | Nameplate calculation |
+| Solar generation | 200 W panel rating | Component rating; daily energy depends on available sunlight |
 
 ## Storage and runtime
 
-We found roughly **40 hours of battery-only operation under a 16 W continuous test load**, as confirmed in our project update. A no-solar endurance test isolates the stored-energy reserve from the changing solar resource.
+We achieved roughly **40 hours of battery-only operation under a 16 W continuous test load, with no solar input**. This test isolates the battery reserve from solar generation.
 
-The written test procedure called for a fully charged battery, a defined load on the controller's load output, no solar input, logging voltage/current and temperature, and ending at low-voltage disconnect. Its original target was 15 W; the reported run used a **16 W continuous load**. The measurement point and complete readings still need to accompany the result, so it should not be treated as a verified 16 W USB-output specification.
+The electrical bench procedure uses a fully charged battery, a defined load, and no solar input, with the run ending at low-voltage disconnect. The procedure's initial target was 15 W; our reported test load was 16 W.
 
-**To complete the result:** publish the original instrument readings, test date, starting charge state, battery/controller settings, actual average power, ambient and battery temperature, end condition, and whether power was measured before or after the USB converter. A resistive load's power can change as voltage falls, so duration alone does not establish constant-power performance.
+For context, **640 Wh ÷ 15 W = 42.7 hours** is the ideal nameplate calculation before losses or discharge limits. The approximately 40-hour test is the practical result. Multiplying its rounded duration and load should not be interpreted as an exact capacity or efficiency measurement.
 
-For context, the ideal nameplate calculation is **640 Wh ÷ 15 W = 42.7 hours** before conversion losses, self-consumption, temperature effects, or cutoff. It is a calculation, not a substitute for the test.
+<span id="output-power"></span>
+## Pump and multi-device demonstration
 
-At the reported test load, **16 W × 40 h is about 640 Wh**. Because the duration is approximate and the raw readings are not yet published, this should not be used to claim an exact delivered capacity or 100% system efficiency.
+We demonstrated **100 W+ intermittent pump loads**, and ran **Wi-Fi HaLow networking units, a camera, and a pump at the same time**. We also used an inverter to provide **120 V AC** during testing.
 
-## Output power
+| Demonstration | Observed result | What it illustrates |
+|:---|:---|:---|
+| Pump operation | Intermittent demand above 100 W | Short tasks can draw substantially more than the continuous energy target |
+| Networking, camera, and pump | Equipment operating together | Ongoing monitoring and communications can share the supply with an intermittent task |
+| Inverter output | 120 V AC supplied during testing | The DC architecture can support another output type through suitable conversion hardware |
 
-The current design target is **15 W+ continuous power**. We have also demonstrated **100 W+ intermittent loads in pump testing**, as reported in the November 10 project update. That test is the basis for the homepage's intermittent-power statement. It does not define a maximum surge rating or establish the rating of every output interface; the reference user manual covers the USB-C configuration.
+These results describe the tested arrangements. For another device or combination, match the output path to the voltage, simultaneous demand, and motor starting current, then account for operating time in the daily energy budget. They do not define a universal maximum output rating.
 
-The completed pump-test record should identify the pump model, supply/interface, output voltage, measured running and startup current, duration and duty cycle, temperature rise, and protection behavior. Those details establish which configuration supplied the pump and distinguish its running demand from startup surge. Device compatibility also matters: USB-C connector shape alone does not guarantee a matching power profile.
+## Controller efficiency
+
+We measured **97% electrical input-to-output efficiency through the Victron MPPT controller** in a live test. This describes the controller's conversion of incoming electrical power.
+
+The design guide's **75% conservative planning allowance** accounts for a wider set of effects: actual panel output, wiring, controller conversion, battery storage, and the output stage. It is a planning choice, not a measured station loss, and already includes the controller stage.
 
 ## Solar generation and California conditions
 
-Battery endurance answers “How long can storage carry the load?” Outdoor testing answers “Does solar restore the energy fast enough over time?” Both are needed.
+Battery endurance answers how long storage carries a load. Solar input determines how quickly that reserve is restored. The [design guide]({{ '/docs/system-design/#the-daily-energy-balance' | relative_url }}) combines our battery result with local sunlight estimates to explain sustained operation. Weather estimates are not a field test of this station through every storm.
 
-For a field result, record the location, dates, panel orientation and tilt, shading, actual load, solar energy collected each day, controller history, and any interruptions. Include low-sun periods and recovery afterward. Our [San Luis Obispo winter estimate and storm examples]({{ '/docs/system-design/#san-luis-obispo-winter-and-storm-reserve' | relative_url }}) use historical regional solar data and explicit planning assumptions; they are not measurements of this station operating through a storm.
+### Winter weather reference
+
+We calculated a rainy-day reference from **NASA POWER daily data for 2016–2025**, requested at **35.28° N, 120.66° W**, near San Luis Obispo. This is regional gridded data, not a sensor at the prototype.
+
+- Select December, January, and February: **903 days**.
+- Define the rainy-day sample as precipitation of at least **10 mm/day**: **76 days**.
+- Average the all-sky surface solar irradiation on those days: **1.502 kWh/m²/day**, equivalent to about **1.5 peak-sun hours on a horizontal surface**.
+- The median is **1.421 peak-sun hours**, with individual days from **0.343 to 3.953**.
+
+The rainfall threshold defines this analysis sample; it is not a universal definition of a storm. These are daily averages across a regional grid, and the result is not a minimum or an estimate of sunlight on our tilted panel. Consecutive low-sun days matter more for battery reserve than the average alone. The horizontal surface also differs from the tilted-panel December average used in the design calculation.
+
+[Download the winter daily data (CSV)]({{ '/assets/downloads/slo-winter-solar-2016-2025.csv' | relative_url }}) · [NASA POWER daily data documentation](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) · [Source data request](https://power.larc.nasa.gov/api/temporal/daily/point?parameters=ALLSKY_SFC_SW_DWN,PRECTOTCORR&community=RE&longitude=-120.66&latitude=35.28&start=20160101&end=20251231&format=JSON)
 
 ## Physical build
 
-The mount, enclosure, cable entries, and internal assembly need their own evidence. Electrical endurance does not establish a wind rating or prove that the modified enclosure remains waterproof. The project has thermal, ingress-protection, and electrical bench-test procedures in Teams; completed results have not yet been incorporated into this public guide.
+The mount, enclosure, cable entries, and internal assembly have their own verification requirements. Electrical endurance does not establish a wind rating or prove that a modified enclosure retains its original ingress rating. The project includes thermal, ingress-protection, and electrical bench-test procedures in Teams.
 
 ## Read each number in context
 
-- **Design target:** what the system aims to deliver.
-- **Team-reported result:** a result communicated by the project team, with the supporting record still to be published.
-- **Manufacturer specification:** a limit or rating for an individual component.
-- **Planning estimate:** a calculation with stated assumptions, useful for comparing scenarios.
-
-Source for the controller's peak efficiency: [Victron SmartSolar specifications](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/technical-specifications.html). Project inputs: the reviewed user manual, battery endurance procedure, and team update of November 10, 2026.
+- **Live test result:** what we observed in the tested arrangement.
+- **Design target:** the intended operating capability.
+- **Nameplate value:** the component's nominal rating.
+- **Planning calculation:** an estimate using stated assumptions and weather data.

@@ -3,8 +3,8 @@ title: Parts & cost
 nav_order: 4
 permalink: /docs/cost/
 ---
-<div class="eyebrow">The parts budget</div>
-# What does it cost to build?
+<span id="what-does-it-cost-to-build"></span>
+# Parts & cost
 
 Our project estimate is that the unit can feasibly be made for **under $500 in retail components, including tax and shipping**, depending on the market, with the pole supplied separately. This covers the panel, battery, controller, enclosure, mounting materials, output, wiring, and protection. Tools, labor, and the powered equipment are separate.
 

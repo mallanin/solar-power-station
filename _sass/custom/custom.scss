@@ -38,7 +38,7 @@
 .spec-strip strong { display: block; font-size: 1.8rem; letter-spacing: -.04em; color: #214d3a; }
 .spec-strip span { display: block; font-size: .74rem; color: #526159; }
 .guide-list { margin: 1.4rem 0 2rem; border-top: 1px solid #dce4da; }
-.guide-list>a { display: grid; grid-template-columns: 2rem 1fr 1rem; gap: .8rem; align-items: start; padding: 1.05rem .2rem; border-bottom: 1px solid #dce4da; text-decoration: none; }
+.guide-list>a { display: grid; grid-template-columns: 1fr 1rem; gap: .8rem; align-items: start; padding: 1.05rem .2rem; border-bottom: 1px solid #dce4da; text-decoration: none; }
 .guide-list>a:hover { background: #f7f9f3; }
 .guide-index { font-size: .76rem; color: #6b7c6d; padding-top: .15rem; }
 .guide-list strong { display: block; font-size: 1rem; }
@@ -149,3 +149,21 @@
   .budget-callout { padding: 1.1rem; }
 }
 @media (max-width: 380px) { .application-grid { grid-template-columns: 1fr; } }
+
+/* Practical guide illustrations and design notes. */
+.documentation-photo { margin: 1.6rem 0 2rem; }
+.documentation-photo>div { min-height: 250px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .7rem; text-align: center; background: #f5f6f1; border: 1px dashed #b5c0ad; border-radius: 8px; color: #64715e; }
+.documentation-photo strong { color: #425b43; font-size: .95rem; }
+.documentation-photo>div>span:last-child { font-size: .78rem; }
+.documentation-photo figcaption { padding: 0 .2rem; }
+.documentation-photo-compact>div { min-height: 210px; }
+.design-note { margin: 1.6rem 0; padding: 1.2rem 1.4rem; background: #f7f3e8; border: 1px solid #e6dfca; border-radius: 8px; color: #554f3f; font-size: .9rem; }
+.design-note p { margin: 0; }
+.design-note p+p { margin-top: .8rem; }
+.main-content .configuration-table { min-width: 620px; }
+.configuration-table th[scope=row] { font-weight: 600; }
+.main-content .configuration-table .reference-configuration>* { background: #edf3e5; color: #244c35; }
+@media (max-width: 600px) {
+  .documentation-photo>div { min-height: 205px; padding: 1rem; }
+  .design-note { padding: 1rem; }
+}

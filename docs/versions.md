@@ -15,7 +15,7 @@ This is the working documentation for the OpenPowerBox reference prototype. It b
 | Build | Assembly overview and reviewed mounting procedure | Final aluminum drawings, exact parts, and as-built wiring/protection schedule |
 | Operation | Startup, normal use, shutdown, storage, troubleshooting, and maintenance from the reviewed manual | Updates as the hardware changes |
 | Cost | Current retail examples and explicit small-parts allowances | Reconciled as-built purchases and exact quantities |
-| Testing | Our roughly 40-hour battery-only runtime at 16 W, reported 100 W+ pump tests, and the method for documenting results | Original measurement records, pump configuration and duty cycle, and outdoor field results |
+| Testing | Roughly 40-hour battery-only runtime at 16 W, 100 W+ pump operation, multi-device demonstration, 97% controller efficiency, and regional winter weather analysis | Verification of future hardware changes and new operating conditions |
 
 The practical homepage is the selected direction. The earlier [visual introduction]({{ '/visual/' | relative_url }}) remains as a design reference; both link to the same hardware guide. The homepage's finished-unit photo is pending.
 

@@ -7,7 +7,7 @@ description: Build reliable off-grid power for networks, monitoring, automation,
 <div class="home-hero-copy">
   <div class="eyebrow">OpenPowerBox / A guide for builders</div>
   <h1 id="build-beyond-the-outlet">Build beyond<br>the outlet.</h1>
-  <p class="intro">Put solar power to work wherever your project takes you. Build an affordable battery-backed station for networks, monitoring, and automation—with open guides to understand it, size it, and make it your own.</p>
+  <p class="intro">Put solar power to work wherever your project takes you. Build an affordable battery-backed station for networks, monitoring, and automation—with open guides to understand it, build it, and make it your own.</p>
   <div class="home-actions"><a class="home-action-primary" href="{{ '/docs/system-design/' | relative_url }}">Explore the system <span aria-hidden="true">↗</span></a><a class="home-action-secondary" href="{{ '/docs/build/' | relative_url }}">Go to the build guide <span aria-hidden="true">→</span></a></div>
 </div>
 <figure class="unit-photo-placeholder" aria-label="Space reserved for a photograph of the completed OpenPowerBox unit"><span class="eyebrow">The completed build</span><span class="photo-placeholder-mark" aria-hidden="true">+</span><span>System image pending</span></figure>
@@ -42,13 +42,13 @@ Sustained storms can exhaust the reserve and interrupt output. With automatic lo
 
 Higher-power tasks can run for shorter periods while staying within the daily energy budget. Our pump testing has demonstrated **100 W+ intermittent loads**; the output path and operating schedule determine how that capacity is used. <a href="{{ '/docs/system-design/#continuous-energy-and-short-bursts' | relative_url }}">How short bursts fit the budget →</a>
 
-## Understand it. Size it. Build it.
+<span id="understand-it-size-it-build-it"></span>
+## Understand it. Build it. Use it.
 
 <div class="guide-list">
-<a href="{{ '/docs/system-design/' | relative_url }}"><span class="guide-index">01</span><span><strong>System design & methodology</strong><span>How solar input, storage, and output work together—and what can scale.</span></span><span aria-hidden="true">→</span></a>
-<a href="{{ '/docs/sizing/' | relative_url }}"><span class="guide-index">02</span><span><strong>Size your system</strong><span>Explore load, sunshine, and reserve with a simple energy calculator.</span></span><span aria-hidden="true">→</span></a>
-<a href="{{ '/docs/build/' | relative_url }}"><span class="guide-index">03</span><span><strong>Build your system</strong><span>Meet the components, prepare the mount, and install the reference station.</span></span><span aria-hidden="true">→</span></a>
-<a href="{{ '/docs/operation/' | relative_url }}"><span class="guide-index">04</span><span><strong>Operation & maintenance</strong><span>Start, monitor, shut down, troubleshoot, and care for the station.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/system-design/' | relative_url }}"><span><strong>System design</strong><span>How solar input, storage, and output work together—and what can scale.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/build/' | relative_url }}"><span><strong>Build your system</strong><span>Meet the components, prepare the mount, and install the reference station.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/operation/' | relative_url }}"><span><strong>Operation & maintenance</strong><span>Start, monitor, shut down, troubleshoot, and care for the station.</span></span><span aria-hidden="true">→</span></a>
 </div>
 
 <div class="reading-note reference-note"><p><strong>Start with our build. Adapt it to yours.</strong> The reference design pairs a 200 W panel with a 12.8 V, 50 Ah LiFePO4 battery and a Victron SmartSolar MPPT 75/15 controller. A larger battery can add reserve; a larger array can improve recharge.</p><p>Our <a href="{{ '/docs/system-design/#scaling-the-architecture' | relative_url }}">scaling examples</a> explain what changes with the controller, wiring, enclosure, and mount as you change the system.</p></div>
