@@ -24,4 +24,4 @@ Send a private message to the team, or submit a build story for this page. **Pub
 <p class="community-empty">No build stories have been published yet. Share what you built, what you changed, and what you learned.</p>
 {% endif %}
 
-[Interested in a complete system? →]({{ '/contact/' | relative_url }})
+[Interested in purchasing a complete system? →]({{ '/contact/' | relative_url }})

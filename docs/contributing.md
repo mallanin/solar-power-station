@@ -18,5 +18,3 @@ For a question or missing information, [open an issue](https://github.com/mallan
 ## Before contributing
 
 Keep explanations concise. Distinguish component ratings, calculations, design targets, and measured results. Share only material you have permission to contribute, and keep private information out of public files.
-
-The project’s reuse license is still being agreed by the team and sponsor. Public access to the repository does not place all its contents in the public domain. See [licensing and site notices]({{ '/safety-and-terms/#licensing' | relative_url }}) before redistributing project material.

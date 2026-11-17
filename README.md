@@ -60,4 +60,4 @@ Forms prepare a `mailto:` draft for `milogoehring@gmail.com`; they do not send, 
 
 Private feedback and build inquiries remain private. Publish a public story only after verifying its explicit consent, reviewing its contents, and removing any email addresses or private information. Add the approved display name, title, date, and plain-text story to `_data/community_posts.yml`. Story text is escaped when displayed. Never commit raw submission emails. To change the contact address, update the form include and contact, community, and safety notices consistently.
 
-The closed-unit homepage image is a manually masked cutout of the owner's original photograph. No hardware was generated or reconstructed. The open-enclosure photograph shows an earlier assembly stage before the controller and final wiring were installed; its caption must preserve that distinction.
+The closed-unit homepage image is a manually masked cutout of the owner's original photograph. No hardware was generated or reconstructed. The interior photograph shows the installed charge controller and battery; the USB-C output is not shown. A linked wider photograph shows the panel, frame, and enclosure.

@@ -4,7 +4,7 @@ nav_order: 9
 permalink: /contact/
 form_kind: inquiry
 ---
-# Interested in a complete system?
+# Interested in purchasing a complete system?
 
 Tell us what you want to power, where it will operate, and when you need it. We’ll discuss the build and whether we can help.
 

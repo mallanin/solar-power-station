@@ -1,5 +1,5 @@
 ---
-title: Start here
+title: Home
 nav_order: 1
 description: Open documentation for a customizable 200 W solar power system with 640 Wh battery storage.
 ---
@@ -18,7 +18,9 @@ description: Open documentation for a customizable 200 W solar power system with
 
 ## Why build it?
 
-OpenPowerBox is a customizable system with a **200 W solar panel** and a **12.8 V, 50 Ah battery (640 Wh)**, designed around a **15 W continuous load**. Pump testing has demonstrated **100 W+ intermittent loads**. Build it with readily available components and use the open documentation to adapt it to your application. [Design assumptions and test results →]({{ '/docs/testing/' | relative_url }})
+OpenPowerBox is a customizable system with a **200 W solar panel** and a **12.8 V, 50 Ah battery (640 Wh)**, designed around a **15 W continuous load**. Testing has demonstrated **100 W+ intermittent loads**.
+
+**Build it with readily available components and use open documentation to adapt it to your application. The nominal component cost is under $500—less than half the listed price of the commercial package compared below.**
 
 <div class="application-grid">
 <div><span class="eyebrow">Connect</span><h3 id="connect-a-property">A network across your property</h3><p>Power wireless mesh nodes at multiple locations to connect cameras and sensors across large properties, farms, and remote worksites.</p></div>
@@ -29,14 +31,14 @@ OpenPowerBox is a customizable system with a **200 W solar panel** and a **12.8 
 
 Built for a wide range of devices, the system uses USB-C as its reference output. A suitable regulated DC-DC converter can supply other devices. <a href="{{ '/docs/system-design/#applications-and-output-options' | relative_url }}">Applications and output options →</a>
 
-<div class="budget-callout"><div><span class="eyebrow">Budget for the whole build</span></div><p>The unit can feasibly be made for <strong>under $500 in retail components, including taxes and shipping</strong>, depending on your market, with the pole supplied separately. For context, a Tycon package with a 100 W panel and 600 Wh lithium battery is listed at about <strong>$1,183</strong>. At a sub-$500 build cost, that's <strong>less than half the price</strong> of this commercial package.</p><a href="{{ '/docs/cost/' | relative_url }}">See the current budget and comparison <span aria-hidden="true">→</span></a></div>
+<div class="budget-callout"><div><span class="eyebrow">Budget for the whole build</span></div><p>The unit can feasibly be made for <strong>under $500 in retail components, including taxes and shipping</strong>, depending on your market, with the pole supplied separately. For context, a Tycon package with a 100 W panel and 600 Wh lithium battery is listed at about <strong>$1,183</strong>. At a sub-$500 build cost, that's <strong>less than half the price</strong> of this commercial package.</p><a href="{{ '/docs/cost/' | relative_url }}">See parts budget and comparison <span aria-hidden="true">→</span></a></div>
 
 <span id="built-to-keep-going"></span>
 ## Inside the system
 
 <figure class="assembly-figure">
-<div class="assembly-photo"><img src="{{ '/assets/images/unit-open-assembly.jpg' | relative_url }}" alt="Open enclosure during assembly, showing the battery below the space reserved for the charge controller" width="900" height="1200" loading="lazy"><span class="component-marker battery-marker" aria-hidden="true">1</span><span class="component-marker enclosure-marker" aria-hidden="true">2</span></div>
-<figcaption><strong>1 · Battery</strong> stores energy for use without sunlight.<br><strong>2 · Enclosure</strong> houses the electrical components.<br>Assembly photo; the charge controller and final wiring are not yet installed.</figcaption>
+<div class="assembly-photo"><img src="{{ '/assets/images/unit-interior.jpg' | relative_url }}" alt="OpenPowerBox interior with the charge controller behind its protective cover and the LiFePO4 battery below; USB-C output not shown" width="360" height="480" loading="lazy"><span class="component-marker controller-marker" aria-hidden="true">1</span><span class="component-marker battery-marker" aria-hidden="true">2</span></div>
+<figcaption><strong>1 · Charge controller</strong> regulates solar charging; shown behind its protective cover.<br><strong>2 · Battery</strong> stores energy for use without sunlight.<br>USB-C output not shown.<br><a href="{{ '/assets/images/unit-open-full.jpg' | relative_url }}">View the panel, frame, and enclosure →</a></figcaption>
 </figure>
 
 The system combines a solar panel, charge controller, battery, and regulated output. Readily available components make it straightforward to service or adapt. A larger battery adds reserve; a larger array can improve recharge when the controller, wiring, protection, and mount are sized to match.
@@ -51,10 +53,9 @@ The system combines a solar panel, charge controller, battery, and regulated out
 <a href="{{ '/docs/system-design/' | relative_url }}"><span><strong>Explore the design</strong><span>System architecture, sizing, and design methodology.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/docs/cost/' | relative_url }}"><span><strong>Buy the parts</strong><span>Review the component requirements and build budget.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/docs/build/' | relative_url }}"><span><strong>Build your system</strong><span>Meet the components, prepare the mount, and install the reference station.</span></span><span aria-hidden="true">→</span></a>
-<a href="{{ '/docs/operation/' | relative_url }}"><span><strong>Operation & maintenance</strong><span>Start, monitor, shut down, troubleshoot, and care for the station.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/community/' | relative_url }}"><span><strong>Tell us about your experience</strong><span>Send private feedback or submit a public build story for team review.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/docs/contributing/' | relative_url }}"><span><strong>Contribute an improvement</strong><span>Copy the project on GitHub, make a change, and share it with the team.</span></span><span aria-hidden="true">→</span></a>
-<a class="purchase-guide-link" href="{{ '/contact/' | relative_url }}"><span><strong>Interested in a complete system?</strong><span>Ask about a build or request a quote.</span></span><span aria-hidden="true">→</span></a>
+<a class="purchase-guide-link" href="{{ '/contact/' | relative_url }}"><span><strong>Interested in purchasing a complete system?</strong><span>Ask about a build or request a quote.</span></span><span aria-hidden="true">→</span></a>
 </div>
 
 <div class="reading-note reference-note"><p><strong>Adapt the design.</strong> The reference design pairs a 200 W panel with a 12.8 V, 50 Ah LiFePO4 battery and a Victron SmartSolar MPPT 75/15 controller. A larger battery can add reserve; a larger array can improve recharge.</p><p>Our <a href="{{ '/docs/system-design/#scaling-the-architecture' | relative_url }}">scaling examples</a> explain what changes with the controller, wiring, enclosure, and mount as you change the system.</p></div>
