@@ -9,7 +9,6 @@ description: Open documentation for a customizable 200 W solar power system with
   <span id="build-beyond-the-outlet"></span>
   <h1 id="reliable-power-for-any-need">Reliable power<br>for any need.</h1>
   <p class="intro">Why purchase a comparable solar power system for over $1,000 when you can build OpenPowerBox for <strong><a href="{{ '/docs/cost/' | relative_url }}">under $500</a></strong>?</p>
-  <p class="hero-budget-basis">Component cost includes shipping, before tax. Pole supplied separately.</p>
   <div class="home-actions"><a class="home-action-primary" href="{{ '/docs/system-design/' | relative_url }}">Explore the system <span aria-hidden="true">↗</span></a><a class="home-action-secondary" href="{{ '/docs/build/' | relative_url }}">Go to the build guide <span aria-hidden="true">→</span></a></div>
 </div>
 <figure class="unit-photo"><img src="{{ '/assets/images/unit-closed-cutout.png' | relative_url }}" alt="The actual OpenPowerBox reference unit: solar panel and closed enclosure on a metal pole" width="1068" height="1400" fetchpriority="high"><figcaption>The completed build</figcaption></figure>
