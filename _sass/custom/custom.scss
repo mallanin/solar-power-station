@@ -31,7 +31,7 @@
 .hero-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.5rem 0 .6rem; }
 .practical-hero h1 { font-size: clamp(2.4rem, 6vw, 3.5rem) !important; }
 .practical-hero .intro { font-size: 1.1rem; line-height: 1.7; }
-.spec-strip { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); border-top: 1px solid #ccd9cd; border-bottom: 1px solid #ccd9cd; margin: 1.25rem 0 2rem; }
+.spec-strip { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid #ccd9cd; border-bottom: 1px solid #ccd9cd; margin: 1.25rem 0 2rem; }
 .spec-strip div { padding: 1.15rem .9rem 1.2rem 0; }
 .spec-strip strong { display: block; font-size: 1.8rem; letter-spacing: -.04em; color: #214d3a; }
 .spec-strip span { display: block; font-size: .74rem; color: #526159; }
@@ -98,7 +98,6 @@
   .visual-intro, .energy-calculator, .quick-order { grid-template-columns: 1fr; }
   .visual-intro figure { max-width: 300px; margin: 0 auto; }
   .edition-switch span { width: 100%; margin-bottom: .3rem; }
-  .spec-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spec-strip strong { font-size: 1.55rem; }
   .spec-strip span { font-size: .66rem; }
   .energy-story { gap: .7rem; }
@@ -113,7 +112,6 @@
 .home-hero { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: center; gap: 1.7rem; padding-top: 1.2rem; }
 .home-hero h1 { font-size: clamp(2.5rem, 4.5vw, 3.35rem) !important; line-height: 1.07; margin-top: .8rem; }
 .home-hero .intro { font-size: 1rem; line-height: 1.65; }
-.home-hero .hero-budget-basis { margin-top: -.35rem; font-size: .8rem; line-height: 1.55; color: #526159; }
 .unit-photo-placeholder { margin: 0; min-width: 0; min-height: 320px; align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 1rem; border: 1px dashed #a9b8a5; border-radius: 12px; background: #f5f6f0; color: #63715e; font-size: .78rem; padding: 1.1rem; }
 .unit-photo-placeholder .eyebrow { font-size: .6rem; }
 .photo-placeholder-mark { color: #a2b18d; font-size: 2.6rem; font-weight: 300; line-height: 1; }
