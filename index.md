@@ -1,24 +1,24 @@
 ---
 title: Start here
 nav_order: 1
-description: Build reliable off-grid power for networks, monitoring, automation, and field technology.
+description: Open documentation for a customizable 200 W solar power system with 640 Wh battery storage.
 ---
 <div class="hero practical-hero home-hero">
 <div class="home-hero-copy">
   <div class="eyebrow" style="text-transform: none;">OpenPowerBox</div>
   <span id="build-beyond-the-outlet"></span>
   <h1 id="reliable-power-for-any-need">Reliable power<br>for any need.</h1>
-  <p class="intro">Create a solar power station for any use case, anywhere. This open documentation covers the system design and build of an affordable, battery-backed station for networks, monitoring, and automation.</p>
+  <p class="intro">Build a solar power station for networks, monitoring, and automation. Explore the reference design, choose your components, and adapt the system to your needs.</p>
   <div class="home-actions"><a class="home-action-primary" href="{{ '/docs/system-design/' | relative_url }}">Explore the system <span aria-hidden="true">↗</span></a><a class="home-action-secondary" href="{{ '/docs/build/' | relative_url }}">Go to the build guide <span aria-hidden="true">→</span></a></div>
 </div>
-<figure class="unit-photo-placeholder" aria-label="Space reserved for a photograph of the completed OpenPowerBox unit"><span class="eyebrow">The completed build</span><span class="photo-placeholder-mark" aria-hidden="true">+</span><span>System image pending</span></figure>
+<figure class="unit-photo"><img src="{{ '/assets/images/unit-closed-cutout.png' | relative_url }}" alt="The actual OpenPowerBox reference unit: solar panel and closed enclosure on a metal pole" width="1068" height="1400" fetchpriority="high"><figcaption>The completed build</figcaption></figure>
 </div>
 
-<div class="spec-strip" aria-label="Reference build specifications"><div><strong>15 W+</strong><span>continuous power design target</span></div><div><strong>200 W</strong><span>solar generation capacity</span></div><div><strong>640 Wh</strong><span>nominal battery storage</span></div></div>
+<div class="spec-strip" aria-label="Reference build specifications"><div><strong>15 W</strong><span>continuous power design target</span></div><div><strong>200 W</strong><span>solar panel rating</span></div><div><strong>640 Wh</strong><span>nominal battery storage · 50 Ah</span></div></div>
 
 ## Why build it?
 
-OpenPowerBox brings reliable, moderate-scale power to networks, monitoring, automation, and field technology. Solar generation and battery storage support equipment that stays on around the clock alongside higher-power tasks that run when needed—all using standard components you can build into a system of your own.
+OpenPowerBox is a customizable system with a **200 W solar panel** and a **12.8 V, 50 Ah battery (640 Wh)**, designed around a **15 W continuous load**. Pump testing has demonstrated **100 W+ intermittent loads**. Build it with readily available components and use the open documentation to adapt it to your application. [Design assumptions and test results →]({{ '/docs/testing/' | relative_url }})
 
 <div class="application-grid">
 <div><span class="eyebrow">Connect</span><h3 id="connect-a-property">A network across your property</h3><p>Power wireless mesh nodes at multiple locations to connect cameras and sensors across large properties, farms, and remote worksites.</p></div>
@@ -27,32 +27,37 @@ OpenPowerBox brings reliable, moderate-scale power to networks, monitoring, auto
 <div id="light-a-remote-spot"><span class="eyebrow">Technology</span><h3 id="technology-in-the-field">Off-grid technology</h3><p>Set up a drone charging station, bring satellite internet to a remote site, or run a local AI model for on-site processing.</p></div>
 </div>
 
-Built for a wide range of devices, the system has a **15 W+ continuous power design target** and **100 W+ intermittent output demonstrated in our pump tests**. USB-C is our reference output; regulated DC or PoE can be designed in for other devices. <a href="{{ '/docs/system-design/#applications-and-output-options' | relative_url }}">Applications and output options →</a>
+Built for a wide range of devices, the system uses USB-C as its reference output. A suitable regulated DC-DC converter can supply other devices. <a href="{{ '/docs/system-design/#applications-and-output-options' | relative_url }}">Applications and output options →</a>
 
-<div class="budget-callout"><div><span class="eyebrow">Budget for the whole build</span><strong>A DIY route to affordable field power.</strong></div><p>Our estimate is that the unit can feasibly be made for <strong>under $500 in retail components, including tax and shipping</strong>, depending on your market, with the pole supplied separately. For context, a Tycon package with a 100 W panel and 600 Wh lithium battery is listed at about <strong>$1,183</strong>. At a sub-$500 build cost, that's <strong>less than half the price</strong> of this commercial package.</p><a href="{{ '/docs/cost/' | relative_url }}">See the current budget and comparison <span aria-hidden="true">→</span></a></div>
+<div class="budget-callout"><div><span class="eyebrow">Budget for the whole build</span></div><p>The unit can feasibly be made for <strong>under $500 in retail components, including taxes and shipping</strong>, depending on your market, with the pole supplied separately. For context, a Tycon package with a 100 W panel and 600 Wh lithium battery is listed at about <strong>$1,183</strong>. At a sub-$500 build cost, that's <strong>less than half the price</strong> of this commercial package.</p><a href="{{ '/docs/cost/' | relative_url }}">See the current budget and comparison <span aria-hidden="true">→</span></a></div>
 
-## Built to keep going
+<span id="built-to-keep-going"></span>
+## Inside the system
 
-The reference system is designed for **15 W+ of continuous power**, with solar generation to cover daily use and battery reserve to keep equipment running through the night and changing weather.
+<figure class="assembly-figure">
+<div class="assembly-photo"><img src="{{ '/assets/images/unit-open-assembly.jpg' | relative_url }}" alt="Open enclosure during assembly, showing the battery below the space reserved for the charge controller" width="900" height="1200" loading="lazy"><span class="component-marker battery-marker" aria-hidden="true">1</span><span class="component-marker enclosure-marker" aria-hidden="true">2</span></div>
+<figcaption><strong>1 · Battery</strong> stores energy for use without sunlight.<br><strong>2 · Enclosure</strong> houses the electrical components.<br>Assembly photo; the charge controller and final wiring are not yet installed.</figcaption>
+</figure>
 
-<div class="runtime-highlight"><strong>≈40 hours</strong><div>We found roughly 40 hours of runtime with <strong>no solar input</strong>, under a <strong>16 W continuous test load</strong>.<a href="{{ '/docs/testing/#storage-and-runtime' | relative_url }}">Our runtime test →</a></div></div>
+The system combines a solar panel, charge controller, battery, and regulated output. Readily available components make it straightforward to service or adapt. A larger battery adds reserve; a larger array can improve recharge when the controller, wiring, protection, and mount are sized to match.
 
-Even under cloudy winter skies, the 200 W solar panel can provide meaningful power. Combining that year-round input with roughly 40 hours of battery-only reserve allows the system to sustain a **15 W continuous draw in San Luis Obispo**.
-
-Sustained storms can exhaust the reserve and interrupt output. With automatic load reconnection configured, the controller restores power once solar charging brings the battery back above its reconnect threshold.
-
-Higher-power tasks can run for shorter periods while staying within the daily energy budget. Our pump testing has demonstrated **100 W+ intermittent loads**; the output path and operating schedule determine how that capacity is used. <a href="{{ '/docs/system-design/#continuous-energy-and-short-bursts' | relative_url }}">How short bursts fit the budget →</a>
+[See how the components work together →]({{ '/docs/system-design/' | relative_url }})
 
 <span id="understand-it-size-it-build-it"></span>
+<p class="section-kicker">Want to build one yourself?</p>
 ## Understand it. Build it. Use it.
 
 <div class="guide-list">
-<a href="{{ '/docs/system-design/' | relative_url }}"><span><strong>System design</strong><span>How solar input, storage, and output work together—and what can scale.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/system-design/' | relative_url }}"><span><strong>Explore the design</strong><span>System architecture, sizing, and design methodology.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/cost/' | relative_url }}"><span><strong>Buy the parts</strong><span>Review the component requirements and build budget.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/docs/build/' | relative_url }}"><span><strong>Build your system</strong><span>Meet the components, prepare the mount, and install the reference station.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/docs/operation/' | relative_url }}"><span><strong>Operation & maintenance</strong><span>Start, monitor, shut down, troubleshoot, and care for the station.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/community/' | relative_url }}"><span><strong>Tell us about your experience</strong><span>Send private feedback or submit a public build story for team review.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/docs/contributing/' | relative_url }}"><span><strong>Contribute an improvement</strong><span>Copy the project on GitHub, make a change, and share it with the team.</span></span><span aria-hidden="true">→</span></a>
+<a class="purchase-guide-link" href="{{ '/contact/' | relative_url }}"><span><strong>Interested in a complete system?</strong><span>Ask about a build or request a quote.</span></span><span aria-hidden="true">→</span></a>
 </div>
 
-<div class="reading-note reference-note"><p><strong>Start with our build. Adapt it to yours.</strong> The reference design pairs a 200 W panel with a 12.8 V, 50 Ah LiFePO4 battery and a Victron SmartSolar MPPT 75/15 controller. A larger battery can add reserve; a larger array can improve recharge.</p><p>Our <a href="{{ '/docs/system-design/#scaling-the-architecture' | relative_url }}">scaling examples</a> explain what changes with the controller, wiring, enclosure, and mount as you change the system.</p></div>
+<div class="reading-note reference-note"><p><strong>Adapt the design.</strong> The reference design pairs a 200 W panel with a 12.8 V, 50 Ah LiFePO4 battery and a Victron SmartSolar MPPT 75/15 controller. A larger battery can add reserve; a larger array can improve recharge.</p><p>Our <a href="{{ '/docs/system-design/#scaling-the-architecture' | relative_url }}">scaling examples</a> explain what changes with the controller, wiring, enclosure, and mount as you change the system.</p></div>
 
 ## About the project
 

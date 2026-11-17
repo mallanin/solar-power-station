@@ -1,0 +1,4 @@
+# Publish only after review and explicit public-story consent.
+# Do not include email addresses or private correspondence.
+# Fields: title, author (approved display name), date (YYYY-MM-DD), body (plain text).
+[]
