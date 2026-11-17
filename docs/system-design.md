@@ -110,7 +110,7 @@ At a 30 W average, eight hours uses **240 Wh**; continuous use needs **720 Wh/da
 
 ## Featured use case: networking across a property
 
-In our demonstration, we used **Wi-Fi HaLow networking units to remotely actuate a pump**, alongside a camera. This combines ongoing communication and monitoring with an intermittent high-power task.
+In our demonstration, we used **Wi-Fi HaLow networking units to remotely actuate a pump**. This combines ongoing communication and monitoring with an intermittent high-power task.
 
 The expo diagram shows the connections: commands travel to the Raspberry Pi and relay, while readings return to the input computer. Each station supplies its own electrical power.
 
