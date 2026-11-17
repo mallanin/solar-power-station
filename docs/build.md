@@ -113,9 +113,11 @@ Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers,
 ### 1. Attach the pole-mount brackets
 
 1. Center two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** horizontally on the back of the empty enclosure, one above the other. Space them evenly between the top and bottom. Exact positions are flexible; leave clearance for the internal components.
-2. Mark the holes through the brackets’ end slots. Remove the brackets, drill to suit the bolts, and deburr. Bracket bolt size: **pending**.
-3. Feed the bolts through the brackets and enclosure, add washers and nuts inside, and tighten securely without distorting the enclosure. Seal the new holes.
+2. Mark the holes through the brackets’ end slots. Remove the brackets, drill to suit the included bolts, and deburr.
+3. Feed the included bolts through the brackets and enclosure, add washers and nuts inside, and tighten securely without distorting the enclosure.
 4. Feed a hose-clamp band through each bracket’s center guides, ready to wrap around the pole.
+
+Leave the enclosure off the pole for now; finish the internal assembly first.
 
 <div class="build-photo-pair">
   <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
@@ -257,7 +259,10 @@ The **[output module]({{ '/docs/cost/' | relative_url }}#part-usb-c-output)** mo
 
 Start with the battery and panel disconnected. Make the connections in the order below.
 
-<div class="placeholder-note"><strong>Full system photo:</strong> pending</div>
+<figure style="--photo-max-width: 450px" class="build-figure build-portrait">
+  <img src="{{ '/assets/images/enclosure-complete.jpg' | relative_url }}" alt="Open enclosure with the MPPT and output module on the mounting board, battery at the lower right, and red and black solar leads entering through the top." width="1200" height="1600" loading="lazy">
+  <figcaption>The assembled enclosure, with the controller, output module, and battery in place.</figcaption>
+</figure>
 
 <figure class="build-figure">
   <img src="{{ '/assets/images/system-wiring.svg?v=2' | relative_url }}" alt="SmartSolar 75/15 terminal map: battery positive and negative connect to BATT, solar positive and negative to PV, and output-module positive and negative inputs to LOAD." width="1200" height="720" loading="lazy">
@@ -267,10 +272,21 @@ Start with the battery and panel disconnected. Make the connections in the order
 1. **Position the components.** Mount the **[MPPT]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and **[output module]({{ '/docs/cost/' | relative_url }}#part-usb-c-output)**, then place the **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** in its restraint.
 2. **Battery first.** Connect the prepared red lead to **BATT +** and black to **BATT −**, then attach their ring terminals using the [battery connection steps]({{ '/docs/operation/' | relative_url }}#connect-the-battery-first). Wait **10 seconds**. In VictronConnect, confirm a **12 V system** and charging settings that match the battery’s LiFePO4 specifications.
 3. **Output module next.** With the controller’s load output off, connect the module’s positive input to **LOAD +** and negative input to **LOAD −**. Leave USB devices unplugged. [Load-output settings](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/configuration-and-settings.html)
-4. **Solar last.** Keep the panel covered and its plugs disconnected while connecting the red solar lead to **PV +** and black to **PV −**. Check polarity, join the matching panel connectors, then uncover the panel.
+4. **Solar last.** Keep the panel covered and its plugs disconnected while connecting the red solar lead to **PV +** and black to **PV −**. Check polarity, then join the matching PV plug connectors **outside the enclosure**, between the panel leads and the leads passing through the cable glands. Uncover the panel after connecting.
 5. **Check operation.** Confirm battery and solar readings in VictronConnect, enable the configured load-protection mode, and test a compatible USB device. Secure the wiring clear of the door and sharp edges, then close the enclosure.
 
 <span id="pole-mounted-reference-build"></span>
 ## Pole mounting
 
-Pending. Coming soon: exact mount builds for aluminum and wood.
+Mount the enclosure first, then the panel above it. Use a helper to support each assembly until its clamps are secure. Tighten the clamp bands with a drill on a low clutch setting, or firmly by hand.
+
+1. **Mount the enclosure.** With the system [shut down]({{ '/docs/operation/' | relative_url }}#full-shutdown-for-servicing-or-removal), hold the enclosure at the chosen height. Wrap both clamp bands around the pole and tighten evenly until snug.
+2. **Mount the panel.** Support the assembled panel frame above the enclosure, wrap its clamp bands around the pole, and tighten until snug. Leave room for the enclosure door to open and for the solar leads to reach without tension.
+3. **Check and connect.** Check that neither assembly slides or rotates on the pole. Secure the loose cabling, then follow the [startup steps]({{ '/docs/operation/' | relative_url }}#initial-startup), joining the PV plug connectors outside the enclosure.
+
+The **[pole-mounting kit]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** has a [listed bearing capacity of 66 lb (30 kg)](https://www.amazon.com/dp/B0CFL4V8XK). This is the hardware rating, not a wind-load rating for the complete installation.
+
+<figure style="--photo-max-width: 450px" class="build-figure build-portrait">
+  <img src="{{ '/assets/images/system-pole-mount-rear.jpg' | relative_url }}" alt="Rear view of the solar panel frame and enclosure secured to the same pole with separate clamp bands; the PV plug connections sit outside the enclosure below the panel." width="1200" height="1600" loading="lazy">
+  <figcaption>Rear view: panel above, enclosure below, and PV plug connections outside the box.</figcaption>
+</figure>
