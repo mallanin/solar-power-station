@@ -1,4 +1,20 @@
 {% if page.redirect_to %}<meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">{% endif %}
+{% if page.permalink == '/docs/build/' %}
+<style>
+.main-content .build-figure { margin: 1.4rem 0 1.8rem; }
+.build-figure img { display: block; width: 100%; height: auto; max-height: 600px; object-fit: contain; border-radius: 7px; }
+.main-content .build-figure figcaption { margin-top: .65rem; font-size: .8rem; line-height: 1.6; color: #526159; }
+.build-annotated-photo { position: relative; }
+.build-annotated-photo>svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.build-arrow { filter: drop-shadow(0 1px 3px #203a31); }
+.build-joint-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; align-items: start; }
+.main-content .build-joint-layout .build-figure { margin-top: .6rem; }
+@media (max-width: 600px) {
+  .build-joint-layout { grid-template-columns: 1fr; gap: 0; }
+  .build-joint-layout .build-figure:nth-child(2) img { max-height: 450px; object-fit: contain; background: #f3f5f0; }
+}
+</style>
+{% endif %}
 {% if page.permalink == '/docs/system-design/' %}
 <style>
 /* Keep this page’s diagrams and comparison layout in sync with its content. */
