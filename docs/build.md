@@ -17,7 +17,7 @@ Build the frame on a workbench before attaching it to the pole. The cut lengths 
 ### Tools and hardware
 
 - **Tools:** saw and blade suitable for aluminum, drill and metal bits, rivet gun for 3/16″ rivets, clamps, tape measure, square, marker, center punch, file or deburring tool, and wrenches or sockets for the selected bolts.
-- **Hardware:** two 8 ft lengths of 1″ × 1″ × 1/16″ aluminum angle; 18 medium 3/16″ aluminum rivets; four 1/4″-20 × 1/2″ panel screws, four matching locknuts, and eight nylon washers; two pole-mount brackets with clamp bands. Bracket-to-frame bolts: **pending**.
+- **Hardware:** two 8 ft lengths of **[1″ × 1″ × 1/16″ aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)**; 18 medium **[3/16″ aluminum rivets]({{ '/docs/cost/' | relative_url }}#part-aluminum-rivets)**; four **[1/4″-20 × 1/2″ panel screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**; two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** with clamp bands. Bracket-to-frame bolts: **pending**.
 - **Work setup:** eye and hearing protection, a stable bench, and padding for the panel. Clamp stock before cutting or drilling. Keep the panel disconnected throughout mechanical assembly.
 
 ### 1. Match the frame to your panel
@@ -98,7 +98,76 @@ Check that the frame sits without twisting, all joints are secure, and the leads
 
 ## Electrical housing assembly
 
-Pending. Coming soon: a step-by-step box build.
+Prepare the cable entries, solar leads, and battery leads with the **battery and solar panel disconnected**. The lengths below fit our enclosure layout; check your routing before cutting.
+
+### Tools
+
+Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers, terminal crimper, heat gun, tape measure, deburring tool, small insulated screwdriver, torque screwdriver, battery-terminal wrench, multimeter, and safety glasses.
+
+### 1. Add the solar cable entries
+
+Drill two holes in the top of the **[enclosure]({{ '/docs/cost/' | relative_url }}#part-enclosure)** for the solar input. Choose positions that clear the door seal, mounting plate, and components, with room to tighten the fittings inside.
+
+Fit one **[cable gland]({{ '/docs/cost/' | relative_url }}#part-cable-glands)** per hole, using its seal and locknut. Match the hole to the gland's specified mounting diameter and the gland's clamping range to the cable jacket. Hole diameter: **pending**. Deburr the holes and remove all chips before installing electronics.
+
+<figure class="build-figure electrical-entry-photo">
+  <img src="{{ '/assets/images/enclosure-solar-entries.jpg' | relative_url }}" alt="Two cable-gland positions on the enclosure top, with one gland beside the open mounting hole." width="1200" height="1600" loading="lazy">
+  <figcaption>Two sealed cable entries: one for the positive solar lead and one for the negative lead.</figcaption>
+</figure>
+
+### 2. Cut the PV leads to 2 ft
+
+Cut one red and one black **[10 AWG solar cable]({{ '/docs/cost/' | relative_url }}#part-solar-cabling)** to **24″ (2 ft)**, keeping the original PV connector on one end of each. Save the excess wire for the battery leads.
+
+Strip the bare end of each lead to suit the controller terminal depth, without nicking or removing strands. Feed these ends through the cable glands into the enclosure; the PV connectors stay outside. Tighten each gland around the insulated jacket for sealing and strain relief.
+
+<figure class="build-figure">
+  <img src="{{ '/assets/images/pv-leads-cut.jpg' | relative_url }}" alt="Red and black solar leads, each with a PV connector retained on one end and a cut bare end on the other." width="1600" height="1200" loading="lazy">
+  <figcaption>The two solar-input leads, cut to length with their original connectors retained.</figcaption>
+</figure>
+
+### 3. Cut and strip the battery leads
+
+From the leftover cable, cut **12″ of black wire** and **8″ of red wire**. These will run between the battery and charge controller. Strip both ends of each wire: one end for the controller's screw terminal, the other for a ring terminal. Match each strip length to the receiving terminal.
+
+<figure class="build-figure">
+  <img src="{{ '/assets/images/battery-leads-stripped.jpg' | relative_url }}" alt="Close view of stripped red and black wire ends with the conductor strands exposed." width="1600" height="1200" loading="lazy">
+  <figcaption>Keep the strands intact. The terminal should clamp bare conductor, with no loose strands or exposed copper outside the connection.</figcaption>
+</figure>
+
+**Different layout?** Leave enough length for gentle bends and the final battery-protection hardware; avoid tension on the terminals.
+
+### 4. Crimp the ring terminals and add heat-shrink
+
+The battery connectors are **[crimp ring terminals]({{ '/docs/cost/' | relative_url }}#part-battery-ring-terminals)**. Use terminals rated for 10 AWG wire, with a ring hole that matches the battery's terminal bolt.
+
+1. Slide a piece of **[heat-shrink tubing]({{ '/docs/cost/' | relative_url }}#part-heat-shrink)** onto each wire before fitting the terminal.
+2. Insert the stripped end fully into the terminal barrel, then crimp with the matching tool and die. Gently pull the terminal to check that it holds.
+3. Slide the tubing over the crimp barrel and onto the wire insulation. Shrink it with a heat gun, leaving the flat ring contact exposed. Repeat for the other lead.
+
+<div class="build-photo-pair">
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/ring-terminal-preparation.jpg' | relative_url }}" alt="Stripped black wire beside a yellow-insulated ring terminal and a short piece of heat-shrink tubing before assembly." width="1600" height="1200" loading="lazy">
+    <figcaption>Before: stripped wire, ring terminal, and heat-shrink tubing.</figcaption>
+  </figure>
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/ring-terminal-finished.jpg' | relative_url }}" alt="Finished ring terminal on the black wire, with heat-shrink covering the crimp and the ring contact left exposed." width="1600" height="1200" loading="lazy">
+    <figcaption>After: the crimp is insulated and the ring is ready for the battery bolt.</figcaption>
+  </figure>
+</div>
+
+### 5. Identify the controller and battery ends
+
+<figure class="build-figure">
+  <img src="{{ '/assets/images/battery-leads-complete.jpg' | relative_url }}" alt="Completed battery leads: a longer black wire and shorter red wire, with stripped controller ends on the left and ring terminals on the right." width="1600" height="1200" loading="lazy">
+  <figcaption>Finished battery leads: 12″ black and 8″ red. Stripped ends go to the controller; ring terminals go to the battery connection.</figcaption>
+</figure>
+
+The stripped ends belong in the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** terminals marked **BATT**: red to **+**, black to **−**. The ring ends connect to the corresponding **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** terminals, with the required protection in the positive path. The solar leads belong in **PV + / −**, not BATT. Verify polarity with the terminal markings and a multimeter before connecting power.
+
+**Before powering up:** fit the **[battery fuse and holder]({{ '/docs/cost/' | relative_url }}#part-battery-fuse)** near the positive battery terminal. Victron specifies a 20–25 A battery fuse for the 75/15; the selected fuse and holder are **pending**. Its controller terminals require 0.75 N·m. Once assembly and protection are complete, connect the battery first, wait 10 seconds, confirm the system voltage and battery settings, then connect the load and PV. [Victron installation instructions](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/installation.html).
+
+Controller, battery, and output-module mounting: **pending**.
 
 <span id="pole-mounted-reference-build"></span>
 ## Pole mounting

@@ -9,8 +9,12 @@
 .build-arrow { filter: drop-shadow(0 1px 3px #203a31); }
 .build-joint-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; align-items: start; }
 .main-content .build-joint-layout .build-figure { margin-top: .6rem; }
+.build-photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.main-content .build-photo-pair .build-figure { margin-top: .5rem; }
+.electrical-entry-photo img { max-height: 480px; }
 @media (max-width: 600px) {
   .build-joint-layout { grid-template-columns: 1fr; gap: 0; }
+  .build-photo-pair { grid-template-columns: 1fr; gap: 0; }
   .build-joint-layout .build-figure:nth-child(2) img { max-height: 450px; object-fit: contain; background: #f3f5f0; }
 }
 </style>
@@ -74,6 +78,8 @@
 .parts-table .part-notes { width: 36%; }
 .main-content .parts-table th, .main-content .parts-table td { padding: .75rem .55rem; vertical-align: top; overflow-wrap: break-word; }
 .parts-table th[scope="row"] { font-weight: 600; text-align: left; }
+.parts-table tr[id] { scroll-margin-top: 1.5rem; }
+.main-content .parts-table tr:target>* { background: #e1eed7; }
 .parts-table tfoot td:first-of-type { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .parts-table td:nth-child(4) { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .parts-table .price-detail { display: block; margin-top: .25rem; color: #526159; font-size: .68rem; white-space: normal; }
