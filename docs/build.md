@@ -10,6 +10,16 @@ The reference station has two main assemblies: a solar panel on an aluminum fram
 
 Use [system design]({{ '/docs/system-design/' | relative_url }}) for the specifications and the [parts budget]({{ '/docs/cost/' | relative_url }}) for quantities and suppliers.
 
+<nav class="build-section-nav" aria-labelledby="build-section-nav-title">
+  <strong id="build-section-nav-title">Jump to section</strong>
+  <ul>
+    <li><a href="#solar-panel-assembly">Solar panel assembly <span aria-hidden="true">↓</span></a></li>
+    <li><a href="#electrical-housing-assembly">Electrical housing assembly <span aria-hidden="true">↓</span></a></li>
+    <li><a href="#8-wire-the-system">Wiring <span aria-hidden="true">↓</span></a></li>
+    <li><a href="#pole-mounting">Pole mounting <span aria-hidden="true">↓</span></a></li>
+  </ul>
+</nav>
+
 ## Solar panel assembly
 
 Build the frame on a workbench before attaching it to the pole. The cut lengths below come from our aluminum prototype's bill of materials; the photos show its assembly.

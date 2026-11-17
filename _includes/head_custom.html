@@ -8,6 +8,13 @@
 </style>
 {% if page.permalink == '/docs/build/' %}
 <style>
+.main-content .build-section-nav { margin: 1.5rem 0 2rem; padding: .9rem 1.1rem; border: 1px solid #d5e2da; border-radius: 7px; background: #f3f7f4; }
+.main-content .build-section-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .15rem 1.25rem; margin: .35rem 0 0; padding: 0; list-style: none; }
+.main-content .build-section-nav li { margin: 0; padding: 0; }
+.main-content .build-section-nav li::before { content: none; }
+.build-section-nav a { display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: .5rem 0; }
+.build-section-nav a:focus-visible { outline: 2px solid #234d3c; outline-offset: 3px; border-radius: 2px; }
+@media (max-width: 600px) { .main-content .build-section-nav ul { grid-template-columns: 1fr; } }
 .main-content .build-figure { margin: 1.4rem 0 1.8rem; }
 .build-figure img { display: block; width: 100%; height: auto; border-radius: 7px; }
 .main-content .build-portrait { width: 100%; max-width: var(--photo-max-width, 450px); margin-inline: auto; }
