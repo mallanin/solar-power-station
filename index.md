@@ -53,8 +53,7 @@ The system combines a solar panel, charge controller, battery, and regulated out
 <a href="{{ '/docs/system-design/' | relative_url }}"><span><strong>Explore the design</strong><span>System architecture, sizing, and design methodology.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/docs/cost/' | relative_url }}"><span><strong>Buy the parts</strong><span>Review the component requirements and build budget.</span></span><span aria-hidden="true">→</span></a>
 <a href="{{ '/docs/build/' | relative_url }}"><span><strong>Build your system</strong><span>Meet the components, prepare the mount, and install the reference station.</span></span><span aria-hidden="true">→</span></a>
-<a href="{{ '/community/' | relative_url }}"><span><strong>Tell us about your experience</strong><span>Send private feedback or submit a public build story for team review.</span></span><span aria-hidden="true">→</span></a>
-<a href="{{ '/docs/contributing/' | relative_url }}"><span><strong>Contribute an improvement</strong><span>Copy the project on GitHub, make a change, and share it with the team.</span></span><span aria-hidden="true">→</span></a>
+<a href="{{ '/community/' | relative_url }}"><span><strong>Share feedback or contribute</strong><span>Tell us about your build, send a note, or propose an improvement on GitHub.</span></span><span aria-hidden="true">→</span></a>
 <a class="purchase-guide-link" href="{{ '/contact/' | relative_url }}"><span><strong>Interested in purchasing a complete system?</strong><span>Ask about a build or request a quote.</span></span><span aria-hidden="true">→</span></a>
 </div>
 

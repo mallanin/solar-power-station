@@ -208,6 +208,13 @@
 .community-story { padding: .5rem 0 1.2rem; border-bottom: 1px solid #dce4da; }
 .community-story p { overflow-wrap: anywhere; }
 .story-byline { color: #647263; font-size: .8rem; }
+.participation-tabs { display: flex; gap: .35rem; border-bottom: 1px solid #c6d5bf; margin: 1.6rem 0; }
+.participation-tabs[hidden], .participation-panel[hidden] { display: none !important; }
+.participation-tabs button { flex: 1; padding: .85rem .65rem; background: transparent; color: #526159; border: 0; border-bottom: 3px solid transparent; font: inherit; font-weight: 600; font-size: .9rem; cursor: pointer; }
+.participation-tabs button[aria-selected=true] { background: #edf3e5; border-bottom-color: #2e6249; color: #214d3a; }
+.participation-tabs button:hover { background: #f3f6ee; }
+.participation-tabs button:focus-visible { outline: 3px solid #b57c20; outline-offset: -3px; }
+.main-content .participation-panel>h2:first-child { margin-top: 1.4rem; }
 @media (max-width: 600px) {
   .unit-photo img { max-height: 350px; }
   .assembly-figure { grid-template-columns: 1fr; gap: .7rem; }

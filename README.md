@@ -18,7 +18,8 @@ Edit a Markdown file in GitHub, preview it, and commit the change or open a pull
 | Architecture, sizing, build, testing, operation, versions | `docs/` |
 | Project updates | `updates/` |
 | Images and files | `assets/` |
-| Feedback and build inquiries | `community.md`, `contact.md`, `_includes/contact_form.html` |
+| Community tabs, feedback, and GitHub contributions | `community.md`, `assets/js/community-tabs.js` |
+| Build inquiries and shared contact form | `contact.md`, `_includes/contact_form.html` |
 | Reviewed public build stories | `_data/community_posts.yml` |
 | Safety, warranty, licensing, and privacy notices | `safety-and-terms.md` |
 | Site title, repo links, address | `_config.yml` |
@@ -55,6 +56,8 @@ If transferring or renaming, update `url`, `baseurl`, `repository`, and `aux_lin
 Built with Jekyll and [Just the Docs](https://just-the-docs.com/). Those dependencies retain their own licenses. Project content licensing remains a team/sponsor decision; see [LICENSE-NOTE.md](LICENSE-NOTE.md).
 
 ## Feedback and moderation
+
+The community page combines two accessible tabs: contact the team and improve on GitHub. Both sections remain readable without JavaScript. `/community/#github` opens the contribution instructions; the former `/docs/contributing/` URL redirects there. The sidebar and homepage have one combined community entry.
 
 Forms prepare a `mailto:` draft for `milogoehring@gmail.com`; they do not send, store, or publish a submission. The visitor reviews and sends the email in their own email application. A copy-message fallback is available. No form-service account or mail credential is embedded in this repository.
 
