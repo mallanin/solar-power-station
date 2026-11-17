@@ -9,8 +9,7 @@ permalink: /docs/system-design/
 The system combines solar generation, battery storage, charge control, and an output matched to the equipment. Solar input supplies the load and recharges the battery; stored energy carries the load when sunlight falls short.
 
 <figure class="design-diagram">
-<a href="{{ '/assets/images/system-wiring.svg' | relative_url }}" aria-label="Open the system wiring schematic at full size"><img src="{{ '/assets/images/system-wiring.svg' | relative_url }}" alt="Six separate leads connect the controller: BATT positive through a fuse to battery positive, BATT negative to battery negative, PV negative and positive to the corresponding solar connectors, and LOAD negative and fused positive to the USB-C converter inputs." width="1400" height="850"></a>
-<figcaption>Reference connections. <a href="{{ '/assets/images/system-wiring.svg' | relative_url }}">Open full-size schematic →</a></figcaption>
+<img src="{{ '/assets/images/system-wiring.svg?v=2' | relative_url }}" alt="Controller connections: BATT positive and negative lead to the battery; PV negative and positive lead to the solar panel connectors; LOAD negative and positive lead to the USB-C converter inputs." width="1200" height="720">
 </figure>
 
 ## The reference configuration
@@ -112,26 +111,27 @@ At a 30 W average, eight hours uses **240 Wh**; continuous use needs **720 Wh/da
 
 In our demonstration, we used **Wi-Fi HaLow networking units to remotely actuate a pump**. This combines ongoing communication and monitoring with an intermittent high-power task.
 
-The expo diagram shows the connections: commands travel to the Raspberry Pi and relay, while readings return to the input computer. Each station supplies its own electrical power.
+The system diagram shows the connections: commands travel to the Raspberry Pi and relay, while readings from the [Victron MPPT](#why-victron-mppt) return to the input computer. Each station supplies its own electrical power.
 
-<figure class="design-diagram expo-figure">
+<figure class="design-diagram network-figure">
 <div class="diagram-legend"><span class="power-legend">Electrical power</span><span class="signal-legend">Commands and readings</span></div>
-{% include expo-network.svg %}
-<figcaption>Our two-station expo layout. Arrows illustrate the paths; this is not a live control panel. <a href="{{ '/assets/images/expo-network.svg' | relative_url }}">Open full-size diagram →</a></figcaption>
+{% include system-network.svg %}
+<figcaption>Power and data paths in the two-station system. <a href="{{ '/assets/images/system-network.svg' | relative_url }}">Open full-size diagram →</a></figcaption>
 </figure>
 
 ### Extending the network
 
-Several boxes can power radios, cameras, and sensors across a farm or large property. Heltec advertises **up to about 1 km for the HT-HD01 link**, with longer links possible in clear line of sight. That is a manufacturer range claim, not a range we measured; trees, terrain, antenna height, and data rate affect it. [Heltec specifications](https://heltec.org/project/ht-hd01/)
+Several boxes can power radios, cameras, and sensors across a farm or large property. Heltec advertises **up to about 1 km for the HT-HD01 link**, with longer links possible in clear line of sight. [Heltec specifications](https://heltec.org/project/ht-hd01/)
 
-The four-station example below uses a central HaLow access point and three remote stations. A true multi-hop mesh requires radios and firmware that support it. Internet access needs an uplink at the hub; ordinary phones use a local 2.4 GHz Wi-Fi access point, not HaLow directly.
+The four-station example below uses a HaLow hub and three remote stations in mesh mode. The orchard and gate stations link directly to the hub; the pump station reaches it through the orchard relay. [Mesh setup guide](https://wiki.heltec.org/docs/devices/wifi-halow/ht-hd01/meshgate)
+
+Each box powers its own equipment, while linked radios carry readings and commands across the property. Relaying through multiple stations can extend the network over miles. An internet or satellite uplink at the hub lets you monitor and actuate that equipment from across the country.
 
 <figure class="design-diagram property-network-figure">
-<a href="{{ '/assets/images/property-network.svg' | relative_url }}" aria-label="Open the four-station property network diagram at full size"><img src="{{ '/assets/images/property-network.svg' | relative_url }}" alt="Bird's-eye example of four solar-powered radio stations at a farm hub, orchard, pump, and gate. Dashed links connect the three remote stations to the hub. Overlapping circles illustrate radio reach, not measured coverage." width="1300" height="900" loading="lazy"></a>
-<figcaption>Four independently powered stations. Circles are illustrative reach zones, not surveyed coverage or a distance scale. <a href="{{ '/assets/images/property-network.svg' | relative_url }}">Open full-size diagram →</a></figcaption>
+<a href="{{ '/assets/images/property-network.svg?v=2' | relative_url }}" aria-label="Open the four-station property network diagram at full size"><img src="{{ '/assets/images/property-network.svg?v=2' | relative_url }}" alt="Square property with the hub in one corner. Orchard and gate stations connect directly to the hub. A pump station connects through the orchard relay. Circles illustrate radio reach." width="1000" height="1100" loading="lazy"></a>
+<figcaption>The pump station reaches the hub through the orchard relay. Each station supplies its own power. <a href="{{ '/assets/images/property-network.svg?v=2' | relative_url }}">Open full-size diagram →</a></figcaption>
 </figure>
 
-For small sensor messages, networks such as **LoRaWAN** can reach multiple kilometres at much lower data rates. They serve a different job from a link carrying camera video or general internet traffic. [LoRaWAN capabilities and limits](https://www.thethingsnetwork.org/docs/lorawan/limitations/)
 
 <span id="why-mppt"></span>
 ## Why Victron MPPT?
@@ -144,7 +144,7 @@ Built-in Bluetooth lets a nearby phone read solar input, battery voltage, charge
 
 ## Solar panel frame
 
-The panel can sit on a ground mount or a pole. Choose its direction and tilt for your location and winter needs; check a local solar-resource guide rather than using one angle everywhere. A pole keeps the panel out of working space and can lift it above nearby vegetation, splash, and accidental contact. [Panel orientation and tilt](https://www.energy.gov/cmei/systems/solar-photovoltaic-system-design-basics)
+The panel can sit on a ground mount or a pole. Choose its direction and tilt for your location and winter needs; check a local solar-resource guide rather than using one angle everywhere. A pole keeps the panel out of working space and can lift it above nearby vegetation, splash, and accidental contact.
 
 For pole mounting, the solar panel needs a support frame. We built both wood and aluminum versions.
 
