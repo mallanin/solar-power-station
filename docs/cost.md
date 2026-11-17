@@ -48,14 +48,16 @@ These are recorded project BOM prices and allowances. Hardware costs cover whole
 
 ## How commercial systems compare
 
+Listed prices in USD, checked November 17, 2026.
+
 <table class="configuration-table"><thead><tr><th scope="col">Option</th><th scope="col">Price</th><th scope="col">What the listing describes</th></tr></thead><tbody>
 <tr class="reference-configuration"><th scope="row">OpenPowerBox</th><td>$485.48 including shipping, before tax</td><td>Project estimate; 200 W panel, 640 Wh nominal storage, 15 W+ continuous design target; pole excluded</td></tr>
 <tr><th scope="row"><a href="https://www.icomtechinc.com/tycon-systems/power-supplies-n-accessories/solar-power-systems/off-grid-power-systems/rps12-50l-100-by-tycon-systems.php">Tycon RPS12-50L-100</a></th><td>$1,182.95 at iComTech; call for availability</td><td>Retailer lists 100 W solar, 12 V / 50 Ah / 600 Wh LiFePO4 battery, 18.5 W continuous rating, PWM controller, ventilated aluminum enclosure and pole/wall mounting</td></tr>
-<tr><td>Pending</td><td>Pending</td><td>Pending</td></tr>
-<tr><td>Pending</td><td>Pending</td><td>Pending</td></tr>
-<tr><td>Pending</td><td>Pending</td><td>Pending</td></tr>
+<tr><th scope="row"><a href="https://invidtech.com/products/invid-s100b55-solar-powered-system">InVid INVID-S100B55</a></th><td>$1,118.00 at <a href="https://www.surveillance-video.com/power-supply-invid-s100b55.html">Surveillance-Video</a>; free shipping listed</td><td>100 W solar, 555 Wh NMC battery, 9–12.6 V DC output through an M12 connector, IP66 steel housing and pole/wall mounting. Designed for compatible surveillance equipment</td></tr>
+<tr><th scope="row"><a href="https://www.tyconsystems.com/products/rps12-24m-100-200/6026428000003677969">Tycon RPS12/24M-100-200</a></th><td>$1,973.95 direct from Tycon</td><td>200 W solar, 1,200 Wh AGM storage, 25 W continuous rating at 6 peak-sun hours, 30 A MPPT controller, ventilated aluminum enclosure and pole/wall mounting; pole excluded</td></tr>
+<tr><th scope="row"><a href="https://www.expertpower.us/products/12v-640wh-kit-2">ExpertPower 200 W / 50 Ah kit</a></th><td>$599.99 sale price from ExpertPower</td><td>200 W solar, 640 Wh LiFePO4 battery, 20 A MPPT controller, Bluetooth module, cables and panel brackets. Component kit; outdoor enclosure, pole mount and regulated output module are not included</td></tr>
 </tbody></table>
 
-Commercial prices are listed before any unquoted taxes or delivery. The comparison supports the project's motivation: standard components and builder assembly can cost less than some packaged field-power systems. Packaged products also include engineering, assembly, different temperature/output ratings, warranty, and support. A lower DIY component cost does not establish identical autonomy or reliability, and not every commercial option costs over $1,000.
+Commercial prices are listed before any unquoted taxes or delivery. The comparison supports the project's motivation: standard components and builder assembly can cost less than some packaged field-power systems.
 
 [Return to the build guide →]({{ '/docs/build/' | relative_url }})
