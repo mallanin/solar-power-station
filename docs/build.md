@@ -102,7 +102,7 @@ Prepare the cable entries, solar leads, and battery leads with the **battery and
 
 ### Tools
 
-Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers, terminal crimper, heat gun, tape measure, deburring tool, small insulated screwdriver, torque screwdriver, and safety glasses.
+Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers, terminal crimper, heat gun, tape measure, deburring tool, small insulated screwdriver, torque screwdriver, wrench or socket for the bracket nuts, and safety glasses.
 
 <aside class="enclosure-fit-note" aria-labelledby="enclosure-fit-title">
   <strong id="enclosure-fit-title">Choosing an enclosure</strong>
@@ -110,7 +110,26 @@ Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers,
   <p>Capacity does not determine size: 50 Ah batteries—and larger models—can have different dimensions. If changing the box or battery, size the enclosure around the battery and remaining components. Adjust mounts and cable lengths to your layout; the basic assembly approach stays the same.</p>
 </aside>
 
-### 1. Add the solar cable entries
+### 1. Attach the pole-mount brackets
+
+1. Center two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** horizontally on the back of the empty enclosure, one above the other. Space them evenly between the top and bottom. Exact positions are flexible; leave clearance for the internal components.
+2. Mark the holes through the brackets’ end slots. Remove the brackets, drill to suit the bolts, and deburr. Bracket bolt size: **pending**.
+3. Feed the bolts through the brackets and enclosure, add washers and nuts inside, and tighten securely without distorting the enclosure. Seal the new holes.
+4. Feed a hose-clamp band through each bracket’s center guides, ready to wrap around the pole.
+
+<div class="build-photo-pair">
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/enclosure-brackets-off-pole.jpg' | relative_url }}" alt="Back of the enclosure off the pole, showing two horizontal mounting brackets with bolts in their end slots and hose clamps through the center guides." width="1200" height="1600" loading="lazy">
+    <figcaption>Off the pole: two brackets bolted to the back of the enclosure.</figcaption>
+  </figure>
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/enclosure-brackets-on-pole.jpg' | relative_url }}" alt="The same two enclosure brackets installed on a pole, with a hose-clamp band wrapped around the pole at each bracket." width="1200" height="1600" loading="lazy">
+    <figcaption>Installed: the clamp bands wrap around the pole and hold both brackets against it.</figcaption>
+  </figure>
+</div>
+
+<span id="1-add-the-solar-cable-entries"></span>
+### 2. Add the solar cable entries
 
 Drill two holes in the top of the **[enclosure]({{ '/docs/cost/' | relative_url }}#part-enclosure)** for the solar input. Choose positions that clear the door seal, mounting plate, and components, with room to tighten the fittings inside.
 
@@ -121,7 +140,8 @@ Fit one **[cable gland]({{ '/docs/cost/' | relative_url }}#part-cable-glands)** 
   <figcaption>Two sealed cable entries: one for the positive solar lead and one for the negative lead.</figcaption>
 </figure>
 
-### 2. Cut the PV leads to 2 ft
+<span id="2-cut-the-pv-leads-to-2-ft"></span>
+### 3. Cut the PV leads to 2 ft
 
 Cut one red and one black **[10 AWG solar cable]({{ '/docs/cost/' | relative_url }}#part-solar-cabling)** to **24″ (2 ft)**, keeping the original PV connector on one end of each. Save the excess wire for the battery leads.
 
@@ -132,7 +152,8 @@ Strip approximately ¼″ of insulation from the cut end of each lead. Feed thes
   <figcaption>The two solar-input leads, cut to length with their original connectors retained.</figcaption>
 </figure>
 
-### 3. Cut and strip the battery leads
+<span id="3-cut-and-strip-the-battery-leads"></span>
+### 4. Cut and strip the battery leads
 
 From the leftover cable, cut **12″ of black wire** and **8″ of red wire**. These will run between the battery and charge controller. Strip both ends of each wire: one end for the controller's screw terminal, the other for a ring terminal. Match each strip length to the receiving terminal.
 
@@ -143,7 +164,8 @@ From the leftover cable, cut **12″ of black wire** and **8″ of red wire**. T
 
 These lengths fit well in this system design. For a different layout, leave plenty of length in all cabling.
 
-### 4. Crimp the ring terminals and add heat-shrink
+<span id="4-crimp-the-ring-terminals-and-add-heat-shrink"></span>
+### 5. Crimp the ring terminals and add heat-shrink
 
 The battery connectors are **[crimp ring terminals]({{ '/docs/cost/' | relative_url }}#part-battery-ring-terminals)**. Use terminals rated for 10 AWG wire, with a ring hole that matches the battery's terminal bolt.
 
@@ -162,7 +184,8 @@ The battery connectors are **[crimp ring terminals]({{ '/docs/cost/' | relative_
   </figure>
 </div>
 
-### 5. Identify the controller and battery ends
+<span id="5-identify-the-controller-and-battery-ends"></span>
+### 6. Identify the controller and battery ends
 
 <figure class="build-figure">
   <img src="{{ '/assets/images/battery-leads-complete.jpg' | relative_url }}" alt="Completed battery leads: a longer black wire and shorter red wire, with stripped controller ends on the left and ring terminals on the right." width="1600" height="1200" loading="lazy">
@@ -171,7 +194,8 @@ The battery connectors are **[crimp ring terminals]({{ '/docs/cost/' | relative_
 
 The stripped ends belong in the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** terminals marked **BATT**: red to **+**, black to **−**. The ring ends connect to the corresponding **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** terminals, with the required protection in the positive path. The solar leads belong in **PV + / −**, not BATT. Verify polarity with the terminal markings and a multimeter before connecting power.
 
-### 6. Add the optional internal mounts
+<span id="6-add-the-optional-internal-mounts"></span>
+### 7. Add the optional internal mounts
 
 Internal mounts are optional, but make components easier to fit and remove.
 
@@ -179,7 +203,7 @@ Internal mounts are optional, but make components easier to fit and remove.
 
 Print the **[universal mounting board (substrate)]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** and glue it near the center-left of the enclosure’s mounting plate. Use an adhesive compatible with the printed part and mounting surface.
 
-Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount)**. This holder supports the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and lets it attach to the gray substrate, as shown below.
+Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount)**. This holder supports the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and lets it attach to the gray substrate, as shown below. All 3D-printed component mounts attach to the board with the same bolt-and-nut size: **pending**.
 
 <div class="build-photo-pair">
   <figure class="build-figure">
@@ -225,7 +249,9 @@ Place the **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** in the 
   </figure>
 </div>
 
-Output-module mounting: **pending**.
+#### Output-module mount
+
+The **[output module]({{ '/docs/cost/' | relative_url }}#part-usb-c-output)** mounts to the **[universal mounting board]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** in the same way as the MPPT mount, using the shared bolts and nuts.
 
 <span id="pole-mounted-reference-build"></span>
 ## Pole mounting

@@ -58,7 +58,7 @@ Optional internal mounting parts. These are SolidWorks source files (.SLDPRT); e
 
 <p id="cad-mppt-mount" class="cad-download"><strong><a href="{{ '/assets/downloads/mppt-mount.SLDPRT' | relative_url }}" download>Download MPPT mount CAD</a></strong><br>The white holder that mounts the charge controller to the substrate.</p>
 
-[See the internal mounting steps →]({{ '/docs/build/' | relative_url }}#6-add-the-optional-internal-mounts)
+[See the internal mounting steps →]({{ '/docs/build/' | relative_url }}#7-add-the-optional-internal-mounts)
 
 ## How commercial systems compare
 
