@@ -104,6 +104,12 @@ Prepare the cable entries, solar leads, and battery leads with the **battery and
 
 Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers, terminal crimper, heat gun, tape measure, deburring tool, small insulated screwdriver, torque screwdriver, and safety glasses.
 
+<aside class="enclosure-fit-note" aria-labelledby="enclosure-fit-title">
+  <strong id="enclosure-fit-title">Choosing an enclosure</strong>
+  <p>Many enclosures can work. Check usable internal depth first: the battery is the largest component. Our <strong><a href="{{ '/docs/cost/' | relative_url }}#part-battery">NERMAK 50 Ah battery</a></strong> is <a href="https://www.amazon.com/dp/B0FBK6J924">listed at 7.59″ × 5.11″ × 6.14″ (L × W × H)</a>. In the orientation shown, allow <strong>more than 5.11″ of internal depth</strong>, with clearance for wiring and mounts.</p>
+  <p>Capacity does not determine size: 50 Ah batteries—and larger models—can have different dimensions. If changing the box or battery, size the enclosure around the battery and remaining components. Adjust mounts and cable lengths to your layout; the basic assembly approach stays the same.</p>
+</aside>
+
 ### 1. Add the solar cable entries
 
 Drill two holes in the top of the **[enclosure]({{ '/docs/cost/' | relative_url }}#part-enclosure)** for the solar input. Choose positions that clear the door seal, mounting plate, and components, with room to tighten the fittings inside.
