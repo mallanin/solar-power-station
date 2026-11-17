@@ -30,14 +30,15 @@
 {% endif %}
 {% if page.permalink == '/docs/cost/' %}
 <style>
-.main-content .parts-table { min-width: 640px; table-layout: fixed; font-size: .8rem; line-height: 1.5; }
+.main-content .parts-table { min-width: 600px; table-layout: fixed; font-size: .8rem; line-height: 1.5; }
 .parts-table .part-item { width: 17%; }
-.parts-table .part-quantity { width: 10%; }
-.parts-table .part-source { width: 24%; }
-.parts-table .part-price { width: 12%; }
-.parts-table .part-notes { width: 37%; }
+.parts-table .part-quantity { width: 11%; }
+.parts-table .part-source { width: 23%; }
+.parts-table .part-price { width: 13%; }
+.parts-table .part-notes { width: 36%; }
 .main-content .parts-table th, .main-content .parts-table td { padding: .75rem .55rem; vertical-align: top; overflow-wrap: break-word; }
-.parts-table th[scope="row"] { font-weight: 600; }
+.parts-table th[scope="row"] { font-weight: 600; text-align: left; }
+.parts-table tfoot td:first-of-type { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .parts-table td:nth-child(4) { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .parts-table .price-detail { display: block; margin-top: .25rem; color: #526159; font-size: .68rem; white-space: normal; }
 .main-content .parts-table tfoot>* >* { background: #edf3e5; color: #244c35; font-weight: 600; }
