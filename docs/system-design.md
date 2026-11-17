@@ -54,16 +54,19 @@ Nominal stored energy is **12.8 V × 50 Ah = 640 Wh**. Dividing by 15 W gives **
 
 Clouds and rain reduce generation, but useful solar input can still extend runtime. Sustained dark weather can eventually exhaust the reserve.
 
-As a regional rainy-day reference, our analysis of NASA POWER data near San Luis Obispo for 2016–2025 found about <strong class="solar-reference">1.5 peak-sun hours per day</strong> across 76 December–February days with at least 10 mm of rain. This is sunlight on a horizontal surface; individual storms and a tilted panel will differ.
+As a regional rainy-day reference, our analysis of NASA POWER data near San Luis Obispo for 2016–2025 found about **1.5 peak-sun hours per day** across 76 December–February days with at least 10 mm of rain. This is sunlight on a horizontal surface; individual storms and a tilted panel will differ.
 
 Using a full **640 Wh nominal battery** and a **15 W continuous load**, before losses or battery cutoff:
 
-| Sunlight each day | Ideal solar energy | Daily energy balance | Calculated reserve duration |
-|:---|---:|---:|---:|
-| No useful solar | 0 Wh/day | 360 Wh deficit | 1.8 days / 42.7 hours |
-| 1 peak-sun hour | 200 Wh/day | 160 Wh deficit | 4.0 days |
-| 1.5 peak-sun hours | 300 Wh/day | 60 Wh deficit | 10.7 days |
-| 2 peak-sun hours | 400 Wh/day | 40 Wh surplus | No daily depletion in this ideal model |
+<table class="storm-reserve-table">
+  <thead><tr><th scope="col">Sunlight each day</th><th scope="col">Ideal solar energy</th><th scope="col">Daily energy balance</th><th scope="col">Calculated reserve duration</th></tr></thead>
+  <tbody>
+    <tr><td>No useful solar</td><td>0 Wh/day</td><td>360 Wh deficit</td><td>1.8 days / 42.7 hours</td></tr>
+    <tr><td>1 peak-sun hour</td><td>200 Wh/day</td><td>160 Wh deficit</td><td>4.0 days</td></tr>
+    <tr class="storm-reference-row"><td>1.5 peak-sun hours</td><td>300 Wh/day</td><td>60 Wh deficit</td><td>10.7 days</td></tr>
+    <tr><td>2 peak-sun hours</td><td>400 Wh/day</td><td>40 Wh surplus</td><td>No daily depletion in this ideal model</td></tr>
+  </tbody>
+</table>
 
 At the 1.5-hour storm reference, the calculation gives **up to 10.7 days from a full battery before losses**. Actual runtime will be shorter with conversion losses and battery cutoff. Brighter breaks between storms can recharge the battery and restore reserve.
 
