@@ -203,7 +203,7 @@ Internal mounts are optional, but make components easier to fit and remove.
 
 Print the **[universal mounting board (substrate)]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** and glue it near the center-left of the enclosure’s mounting plate. Use an adhesive compatible with the printed part and mounting surface.
 
-Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount)**. This holder supports the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and lets it attach to the gray substrate, as shown below. All 3D-printed component mounts attach to the board with the same bolt-and-nut size: **pending**.
+Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount)**. This holder supports the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and lets it attach to the gray substrate, as shown below. All 3D-printed component mounts attach to the board with **[M5 bolts and matching nuts]({{ '/docs/cost/' | relative_url }}#part-nylon-mounting-hardware)**.
 
 <div class="build-photo-pair">
   <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
@@ -251,7 +251,23 @@ Place the **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** in the 
 
 #### Output-module mount
 
-The **[output module]({{ '/docs/cost/' | relative_url }}#part-usb-c-output)** mounts to the **[universal mounting board]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** in the same way as the MPPT mount, using the shared bolts and nuts.
+The **[output module]({{ '/docs/cost/' | relative_url }}#part-usb-c-output)** mounts to the **[universal mounting board]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** in the same way as the MPPT mount, using M5 bolts and matching nuts.
+
+### 8. Wire the system
+
+1. **Position the components.** Mount the **[MPPT]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and **[output module]({{ '/docs/cost/' | relative_url }}#part-usb-c-output)**, then place the **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** in its restraint. Keep the battery and panel disconnected while preparing the wiring.
+
+<div class="placeholder-note"><strong>Full system photo:</strong> pending</div>
+
+<figure class="build-figure">
+  <img src="{{ '/assets/images/system-wiring.svg?v=2' | relative_url }}" alt="SmartSolar 75/15 terminal map: battery positive and negative connect to BATT, solar positive and negative to PV, and output-module positive and negative inputs to LOAD." width="1200" height="720" loading="lazy">
+  <figcaption>Match the terminal markings, not just wire colors. Use the <a href="https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/installation.html">controller installation instructions</a> for mounting, terminal tightening, and the required battery-circuit protection, which is not shown in this connection map.</figcaption>
+</figure>
+
+2. **Battery first.** Connect the prepared red lead to **BATT +** and black to **BATT −**, then attach their ring terminals using the [battery connection steps]({{ '/docs/operation/' | relative_url }}#connect-the-battery-first). Wait **10 seconds**. In VictronConnect, confirm a **12 V system** and charging settings that match the battery’s LiFePO4 specifications.
+3. **Output module next.** With the controller’s load output off, connect the module’s positive input to **LOAD +** and negative input to **LOAD −**. Leave USB devices unplugged. [Load-output settings](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/configuration-and-settings.html)
+4. **Solar last.** Keep the panel covered and its plugs disconnected while connecting the red solar lead to **PV +** and black to **PV −**. Check polarity, join the matching panel connectors, then uncover the panel.
+5. **Check operation.** Confirm battery and solar readings in VictronConnect, enable the configured load-protection mode, and test a compatible USB device. Secure the wiring clear of the door and sharp edges, then close the enclosure.
 
 <span id="pole-mounted-reference-build"></span>
 ## Pole mounting
