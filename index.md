@@ -31,7 +31,7 @@ OpenPowerBox is a customizable system with a **200 W solar panel** and a **12.8 
 
 Built for a wide range of devices, the system uses USB-C as its reference output. A suitable regulated DC-DC converter can supply other devices. <a href="{{ '/docs/system-design/#applications-and-output-options' | relative_url }}">Applications and output options →</a>
 
-<div class="budget-callout"><div><span class="eyebrow">Budget for the whole build</span></div><p>The unit can feasibly be made for <strong>under $500 in retail components, including taxes and shipping</strong>, depending on your market, with the pole supplied separately. For context, a Tycon package with a 100 W panel and 600 Wh lithium battery is listed at about <strong>$1,183</strong>. At a sub-$500 build cost, that's <strong>less than half the price</strong> of this commercial package.</p><a href="{{ '/docs/cost/' | relative_url }}">See parts budget and comparison <span aria-hidden="true">→</span></a></div>
+<div class="budget-callout"><div><span class="eyebrow">Budget for the whole build</span></div><p>The unit can feasibly be made for <strong>under $500 in retail components, including shipping and before tax</strong>, depending on your market, with the pole supplied separately. For context, a Tycon package with a 100 W panel and 600 Wh lithium battery is listed at about <strong>$1,183</strong>. At a sub-$500 build cost, that's <strong>less than half the price</strong> of this commercial package.</p><a href="{{ '/docs/cost/' | relative_url }}">See parts budget and comparison <span aria-hidden="true">→</span></a></div>
 
 <span id="built-to-keep-going"></span>
 ## Inside the system
