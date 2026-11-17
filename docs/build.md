@@ -152,6 +152,8 @@ Fit one **[cable gland]({{ '/docs/cost/' | relative_url }}#part-cable-glands)** 
   <figcaption>Two sealed cable entries: one for the positive solar lead and one for the negative lead.</figcaption>
 </figure>
 
+<aside class="design-note"><p><strong>Powering a device outside the enclosure?</strong> Follow the same procedure to add a cable gland for the output cable. Match the gland to the cable diameter, choose a position clear of internal components, and tighten it around the cable jacket for sealing and strain relief.</p></aside>
+
 <span id="2-cut-the-pv-leads-to-2-ft"></span>
 ### 3. Cut the PV leads to 2 ft
 

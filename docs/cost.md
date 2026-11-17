@@ -6,7 +6,7 @@ permalink: /docs/cost/
 <span id="what-does-it-cost-to-build"></span>
 # Parts & cost
 
-The priced items below total **$485.48 including shipping, before tax**, with the pole supplied separately. Items marked **pending** are additional and are not included in this subtotal.
+The priced items below total **~$493.47 including shipping, before tax**, with the pole supplied separately.
 
 The design accepts major components from different manufacturers as long as they meet the required electrical, interface, and mounting specifications. Consumer marketplaces such as Amazon can be a good resource for affordable parts and fast delivery from quality manufacturers when buying through a reliable vendor. Buying directly from a trusted manufacturer may cost more, but can offer greater confidence in product authenticity, reliability, and support.
 
@@ -26,7 +26,7 @@ Prices are in USD for the quantity shown, including shipping and before tax. Bat
 
 ## Small parts and fabrication
 
-These are recorded project BOM prices and allowances. Hardware costs cover whole packs, even when the build uses only a few pieces. The printed mount allowance covers material only.
+These are recorded project BOM prices and allowances. Hardware costs cover whole packs, even when the build uses only a few pieces. The cable-gland pack uses the listed price checked November 17, 2026. The printed mount allowance covers material only.
 
 <table class="parts-table"><colgroup><col class="part-item"><col class="part-quantity"><col class="part-source"><col class="part-price"><col class="part-notes"></colgroup><thead><tr><th scope="col">Item</th><th scope="col">Qty.</th><th scope="col">Example / source</th><th scope="col">Price</th><th scope="col">Notes</th></tr></thead><tbody>
 <tr id="part-aluminum-frame-stock"><th scope="row">Aluminum frame stock</th><td>2 lengths</td><td><a href="https://www.homedepot.com/p/Everbilt-1-in-x-8-ft-1-16-in-Thick-Aluminum-Angle-6433/332734876">Everbilt 1″ aluminum angle, 8 ft</a></td><td>$49.12<span class="price-detail">$24.56 / length</span></td><td>1″ × 1″ angle, 1/16″ thick; cut and drill for the panel frame.</td></tr>
@@ -39,11 +39,11 @@ These are recorded project BOM prices and allowances. Hardware costs cover whole
 <tr id="part-nylon-mounting-hardware"><th scope="row">Nylon mounting hardware</th><td>1 kit</td><td><a href="https://www.amazon.com/dp/B0744MMJ9V">Hotusi nylon screw, nut, and washer kit</a></td><td>$7.98</td><td>Project allowance. Use M5 bolts and matching nuts for the printed component mounts.</td></tr>
 <tr id="part-battery-ring-terminals"><th scope="row">Battery ring terminals</th><td>2</td><td>Insulated crimp ring terminals for 10 AWG wire</td><td>$3.50</td><td>Project allowance; supplier pending. Match the ring hole to the battery terminal bolt; M6 is the reference size. Crimp with a tool rated for the terminal.</td></tr>
 
-<tr id="part-cable-glands"><th scope="row">Cable glands</th><td>2</td><td>Weatherproof cable glands with seals and locknuts; supplier pending</td><td>pending</td><td>One per solar lead. Match the clamping range to the cable jacket diameter and the mounting thread to the drilled hole.</td></tr>
-<tr id="part-heat-shrink"><th scope="row">Heat-shrink tubing</th><td>2 pieces</td><td>Electrical heat-shrink tubing; supplier pending</td><td>pending</td><td>Size to slide over the ring-terminal barrel and shrink snugly onto the wire insulation. Leave the ring contact bare.</td></tr>
-</tbody><tfoot><tr><th scope="row" colspan="3">Priced small parts and fabrication subtotal</th><td>$103.43</td><td>Shipping included; before tax. Pending items excluded.</td></tr></tfoot></table>
+<tr id="part-cable-glands"><th scope="row">Cable glands</th><td>1 pack</td><td><a href="https://www.amazon.com/dp/B09B1KXYPQ">XHF ¼″ NPT cable glands</a></td><td>$6.99</td><td>Sold as a 10-pack; two used, one per solar lead. Match the clamping range to the cable jacket diameter and the mounting thread to the drilled hole.</td></tr>
+<tr id="part-heat-shrink"><th scope="row">Heat-shrink tubing</th><td>2 pieces</td><td>Electrical heat-shrink tubing</td><td>~$1</td><td>Available at any hardware store.</td></tr>
+</tbody><tfoot><tr><th scope="row" colspan="3">Priced small parts and fabrication subtotal</th><td>~$111.42</td><td>Shipping included; before tax.</td></tr></tfoot></table>
 
-<div class="parts-total"><span>Priced parts subtotal</span><strong>$485.48</strong><p>Shipping included; tax, pending items, and installation-specific consumables excluded.</p></div>
+<div class="parts-total"><span>Priced parts subtotal</span><strong>~$493.47</strong><p>Shipping included; tax and installation-specific consumables excluded.</p></div>
 
 **Excluded:** pole and foundation, tools, labor, the powered device, test equipment, and contingency. Confirm any additional sealing, strain relief, and electrical protection needed for your installation.
 
@@ -65,7 +65,7 @@ Optional internal mounting parts. These are SolidWorks source files (.SLDPRT); e
 Listed prices in USD, checked November 17, 2026.
 
 <table class="configuration-table"><thead><tr><th scope="col">Option</th><th scope="col">Price</th><th scope="col">What the listing describes</th></tr></thead><tbody>
-<tr class="reference-configuration"><th scope="row">OpenPowerBox</th><td>$485.48 including shipping, before tax; pending items extra</td><td>200 W panel, 640 Wh nominal storage, 15 W+ continuous design target; pole excluded</td></tr>
+<tr class="reference-configuration"><th scope="row">OpenPowerBox</th><td>~$493.47 including shipping, before tax</td><td>200 W panel, 640 Wh nominal storage, 15 W+ continuous design target; pole excluded</td></tr>
 <tr><th scope="row"><a href="https://www.icomtechinc.com/tycon-systems/power-supplies-n-accessories/solar-power-systems/off-grid-power-systems/rps12-50l-100-by-tycon-systems.php">Tycon RPS12-50L-100</a></th><td>$1,182.95 at iComTech; call for availability</td><td>Retailer lists 100 W solar, 12 V / 50 Ah / 600 Wh LiFePO4 battery, 18.5 W continuous rating, PWM controller, ventilated aluminum enclosure and pole/wall mounting</td></tr>
 <tr><th scope="row"><a href="https://invidtech.com/products/invid-s100b55-solar-powered-system">InVid INVID-S100B55</a></th><td>$1,118.00 at <a href="https://www.surveillance-video.com/power-supply-invid-s100b55.html">Surveillance-Video</a>; free shipping listed</td><td>100 W solar, 555 Wh NMC battery, 9–12.6 V DC output through an M12 connector, IP66 steel housing and pole/wall mounting. Designed for compatible surveillance equipment</td></tr>
 <tr><th scope="row"><a href="https://www.tyconsystems.com/products/rps12-24m-100-200/6026428000003677969">Tycon RPS12/24M-100-200</a></th><td>$1,973.95 direct from Tycon</td><td>200 W solar, 1,200 Wh AGM storage, 25 W continuous rating at 6 peak-sun hours, 30 A MPPT controller, ventilated aluminum enclosure and pole/wall mounting; pole excluded</td></tr>
