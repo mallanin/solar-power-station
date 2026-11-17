@@ -156,8 +156,8 @@ The panel can sit on a ground mount or a pole. Choose its direction and tilt for
 For pole mounting, the solar panel needs a support frame. We built both wood and aluminum versions.
 
 <div class="frame-comparison">
-<figure class="documentation-photo" aria-label="Photo placeholder: wood solar panel frame"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Wood frame</strong><span>Photo pending</span></div><figcaption>The wood design is affordable and simple to manufacture. It is heavier, less elegant, and likely to have a shorter service life outdoors.</figcaption></figure>
-<figure class="documentation-photo" aria-label="Photo placeholder: aluminum solar panel frame"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Aluminum frame</strong><span>Photo pending</span></div><figcaption>The aluminum design is lighter, more elegant, and likely to last longer outdoors, but takes more assembly.</figcaption></figure>
+<figure class="documentation-photo"><img src="{{ '/assets/images/wood-frame-reference.jpg' | relative_url }}" alt="Rear view of the solar panel with its wooden support frame resting on the ground." width="1200" height="1600" loading="lazy"><figcaption><strong>Wood frame</strong>The wood design is affordable and simple to manufacture. It is heavier, less elegant, and likely to have a shorter service life outdoors.</figcaption></figure>
+<figure class="documentation-photo"><img src="{{ '/assets/images/aluminum-frame-reference.jpg' | relative_url }}" alt="Rear view of the solar panel on its aluminum angle frame, attached to a pole above the enclosure." width="1200" height="1600" loading="lazy"><figcaption><strong>Aluminum frame</strong>The aluminum design is lighter, more elegant, and likely to last longer outdoors, but takes more assembly.</figcaption></figure>
 </div>
 
 ## Scaling the architecture

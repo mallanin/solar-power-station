@@ -20,8 +20,9 @@
 /* Keep this page’s diagrams and comparison layout in sync with its content. */
 .frame-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2rem; }
 .frame-comparison .documentation-photo { margin: 0; }
-.frame-comparison .documentation-photo>div { min-height: 220px; }
+.frame-comparison img { display: block; width: 100%; height: auto; border-radius: 7px; }
 .main-content .frame-comparison figcaption { font-size: .86rem; line-height: 1.65; margin-top: .8rem; color: #526159; }
+.frame-comparison figcaption>strong { display: block; margin-bottom: .25rem; color: #234d3c; }
 @media (max-width: 600px) { .frame-comparison { grid-template-columns: 1fr; gap: 1.5rem; } }
 /* Original app screenshot with explanations aligned to its three readout groups. */
 .victron-monitor { margin: 1.5rem 0 2rem; padding: 1.1rem; border: 1px solid #dce4da; border-radius: 9px; background: #f5f7f2; }
