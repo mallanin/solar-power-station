@@ -36,14 +36,12 @@ Built for a wide range of devices, the system uses USB-C as its reference output
 <span id="built-to-keep-going"></span>
 ## Inside the system
 
-<figure class="assembly-figure">
-<div class="assembly-photo"><img src="{{ '/assets/images/unit-interior.jpg' | relative_url }}" alt="OpenPowerBox interior with the charge controller behind its protective cover and the LiFePO4 battery below; USB-C output not shown" width="360" height="480" loading="lazy"><span class="component-marker controller-marker" aria-hidden="true">1</span><span class="component-marker battery-marker" aria-hidden="true">2</span></div>
-<figcaption><strong>1 · Charge controller</strong> regulates solar charging; shown behind its protective cover.<br><strong>2 · Battery</strong> stores energy for use without sunlight.<br>USB-C output not shown.<br><a href="{{ '/assets/images/unit-open-full.jpg' | relative_url }}">View the panel, frame, and enclosure →</a></figcaption>
+<figure class="assembly-figure full-system-figure">
+<div class="assembly-photo full-system-photo"><img src="{{ '/assets/images/unit-open-cutout.png' | relative_url }}" alt="The complete OpenPowerBox unit on its pole with the enclosure door open: 1 solar panel, 2 aluminum panel frame, 3 enclosure, 4 charge controller, and 5 battery" width="952" height="1400" loading="lazy"><span class="component-marker panel-marker" aria-hidden="true">1</span><span class="component-marker frame-marker" aria-hidden="true">2</span><span class="component-marker enclosure-marker" aria-hidden="true">3</span><span class="component-marker controller-marker" aria-hidden="true">4</span><span class="component-marker battery-marker" aria-hidden="true">5</span></div>
+<figcaption><strong>1 · Solar panel</strong><br><strong>2 · Aluminum panel frame</strong><br><strong>3 · Enclosure</strong><br><strong>4 · Charge controller</strong><br><strong>5 · Battery</strong></figcaption>
 </figure>
 
 The system combines a solar panel, charge controller, battery, and regulated output. Readily available components make it straightforward to service or adapt. A larger battery adds reserve; a larger array can improve recharge when the controller, wiring, protection, and mount are sized to match.
-
-[See how the components work together →]({{ '/docs/system-design/' | relative_url }})
 
 <span id="understand-it-size-it-build-it"></span>
 <p class="section-kicker">Want to build one yourself?</p>

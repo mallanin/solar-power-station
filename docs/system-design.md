@@ -8,7 +8,10 @@ permalink: /docs/system-design/
 
 The system combines solar generation, battery storage, charge control, and an output matched to the equipment. Solar input supplies the load and recharges the battery; stored energy carries the load when sunlight falls short.
 
-<figure class="documentation-photo" aria-label="Photo placeholder: inside the completed enclosure"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Inside the enclosure</strong><span>Photo pending · battery, controller, output module, and wiring</span></div><figcaption>An open-door view of the completed unit will show how the main components fit together.</figcaption></figure>
+<figure class="assembly-figure">
+<div class="assembly-photo"><img src="{{ '/assets/images/unit-interior.jpg' | relative_url }}" alt="OpenPowerBox interior with the charge controller behind its protective cover and the LiFePO4 battery below; USB-C output not shown" width="360" height="480" loading="lazy"><span class="component-marker controller-marker" aria-hidden="true">1</span><span class="component-marker battery-marker" aria-hidden="true">2</span></div>
+<figcaption><strong>1 · Charge controller</strong> regulates solar charging; shown behind its protective cover.<br><strong>2 · Battery</strong> stores energy for use without sunlight.<br>USB-C output not shown.</figcaption>
+</figure>
 
 ## The reference configuration
 
