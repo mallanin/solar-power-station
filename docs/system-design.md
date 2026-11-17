@@ -140,7 +140,14 @@ We chose Victron for its monitoring tools, documentation, efficiency, and establ
 
 Built-in Bluetooth lets a nearby phone read solar input, battery voltage, charge state, load current, and history in **VictronConnect**. A nearby Raspberry Pi can also receive supported Instant Readout data for a local dashboard; HaLow carries that data across the property. [Monitoring features](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/monitoring.html) · [Instant Readout](https://www.victronenergy.com/media/pg/VictronConnect_app/en/stored-trends---instant-readout.html)
 
-<figure class="documentation-photo documentation-photo-compact" aria-label="Screenshot placeholder: VictronConnect monitoring"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>VictronConnect</strong><span>Screenshot to add · solar input, battery, and load readings</span></div></figure>
+<figure class="victron-monitor victron-monitor-layout" aria-label="VictronConnect status screen explained">
+<img src="{{ '/assets/images/victronconnect-status.png' | relative_url }}" alt="VictronConnect screenshot: solar input 209 W at 23.83 V and 8.8 A; battery 13.66 V and 14.90 A in Bulk charging; load output On at 0.0 A and 0 W." width="1320" height="2868" loading="lazy">
+<figcaption>
+<div class="monitor-callout monitor-solar"><strong>Solar input</strong><p>Live power, voltage, and current from the panel. Here, the array is producing <b>209 W</b>.</p></div>
+<div class="monitor-callout monitor-battery"><strong>Battery charging</strong><p>Battery voltage, charging current, and charge stage. <b>Bulk</b> means the controller is delivering as much charging current as available.</p></div>
+<div class="monitor-callout monitor-load"><strong>Load output</strong><p>Whether the load terminals are on, and the current and power drawn through them. Here, the output is <b>on with no measured draw</b>.</p></div>
+</figcaption>
+</figure>
 
 ## Solar panel frame
 

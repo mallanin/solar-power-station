@@ -7,6 +7,25 @@
 .frame-comparison .documentation-photo>div { min-height: 220px; }
 .main-content .frame-comparison figcaption { font-size: .86rem; line-height: 1.65; margin-top: .8rem; color: #526159; }
 @media (max-width: 600px) { .frame-comparison { grid-template-columns: 1fr; gap: 1.5rem; } }
+/* Original app screenshot with explanations aligned to its three readout groups. */
+.victron-monitor { margin: 1.5rem 0 2rem; padding: 1.1rem; border: 1px solid #dce4da; border-radius: 9px; background: #f5f7f2; }
+.victron-monitor-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); column-gap: 3rem; }
+.victron-monitor img { display: block; width: 100%; height: auto; border-radius: 7px; }
+.main-content .victron-monitor figcaption { display: grid; grid-template-rows: 17fr 37fr 22fr 24fr; margin: 0; padding: 0; min-width: 0; font-size: .83rem; line-height: 1.55; color: #526159; }
+.monitor-callout { position: relative; align-self: center; }
+.monitor-solar { grid-row: 2; }
+.monitor-battery { grid-row: 3; }
+.monitor-load { grid-row: 4; }
+.monitor-callout::before { content: ''; position: absolute; top: 50%; right: calc(100% + .65rem); width: 2.35rem; border-top: 1px dashed #718b70; }
+.monitor-callout>strong { display: block; color: #234d3c; font-size: .95rem; font-weight: 650; }
+.main-content .monitor-callout p { margin: .35rem 0 0; }
+@media (max-width: 900px) {
+  .victron-monitor-layout { grid-template-columns: 1fr; gap: 1.4rem; }
+  .victron-monitor img { max-width: 280px; margin: 0 auto; }
+  .main-content .victron-monitor figcaption { display: grid; grid-template-rows: none; gap: 1.2rem; }
+  .monitor-callout { grid-row: auto; padding-left: .9rem; border-left: 1px dashed #718b70; }
+  .monitor-callout::before { display: none; }
+}
 /* System-design diagrams, ideal-energy references and optional applications. */
 .design-diagram { margin: 1.5rem 0 2rem; padding: .8rem; border: 1px solid #dce4da; border-radius: 9px; background: #fff; }
 .design-diagram>a, .design-diagram img, .network-figure>svg { display: block; width: 100%; height: auto; }
