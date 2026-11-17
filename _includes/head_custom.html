@@ -1,8 +1,16 @@
 {% if page.redirect_to %}<meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">{% endif %}
+<style>
+/* Shared visual defaults for documentation pages. */
+.main-content th { text-align: left; }
+.main-content th, .main-content td { vertical-align: top; }
+.main-content figcaption { font-size: .8rem; line-height: 1.6; color: #526159; }
+.main-content :is(h1, h2, h3, h4)[id] { scroll-margin-top: 1.25rem; }
+</style>
 {% if page.permalink == '/docs/build/' %}
 <style>
 .main-content .build-figure { margin: 1.4rem 0 1.8rem; }
-.build-figure img { display: block; width: 100%; height: auto; max-height: 600px; object-fit: contain; border-radius: 7px; }
+.build-figure img { display: block; width: 100%; height: auto; border-radius: 7px; }
+.main-content .build-portrait { width: 100%; max-width: var(--photo-max-width, 450px); margin-inline: auto; }
 .main-content .build-figure figcaption { margin-top: .65rem; font-size: .8rem; line-height: 1.6; color: #526159; }
 .build-annotated-photo { position: relative; }
 .build-annotated-photo>svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
@@ -11,7 +19,6 @@
 .main-content .build-joint-layout .build-figure { margin-top: .6rem; }
 .build-photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
 .main-content .build-photo-pair .build-figure { margin-top: .5rem; }
-.electrical-entry-photo img { max-height: 480px; }
 .enclosure-fit-note { margin: 1.4rem 0 1.8rem; padding: 1.1rem 1.3rem; border: 1px solid #e4ca7a; border-left: 4px solid #c69b29; border-radius: 7px; background: #fff7da; color: #51451f; }
 .enclosure-fit-note>strong { display: block; font-size: 1rem; }
 .main-content .enclosure-fit-note p { margin: .65rem 0 0; font-size: .88rem; line-height: 1.65; }
@@ -22,7 +29,7 @@
 @media (max-width: 600px) {
   .build-joint-layout { grid-template-columns: 1fr; gap: 0; }
   .build-photo-pair { grid-template-columns: 1fr; gap: 0; }
-  .build-joint-layout .build-figure:nth-child(2) img { max-height: 450px; object-fit: contain; background: #f3f5f0; }
+
 }
 </style>
 {% endif %}
@@ -32,7 +39,7 @@
 .frame-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2rem; }
 .frame-comparison .documentation-photo { margin: 0; }
 .frame-comparison img { display: block; width: 100%; height: auto; border-radius: 7px; }
-.main-content .frame-comparison figcaption { font-size: .86rem; line-height: 1.65; margin-top: .8rem; color: #526159; }
+.main-content .frame-comparison figcaption { font-size: .8rem; line-height: 1.6; margin-top: .8rem; color: #526159; }
 .frame-comparison figcaption>strong { display: block; margin-bottom: .25rem; color: #234d3c; }
 @media (max-width: 600px) { .frame-comparison { grid-template-columns: 1fr; gap: 1.5rem; } }
 /* Original app screenshot with explanations aligned to its three readout groups. */

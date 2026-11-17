@@ -66,7 +66,7 @@ Drill the clamped joints to the rivet manufacturer's specified hole size, deburr
     <img src="{{ '/assets/images/panel-rivet-tab.jpg' | relative_url }}" alt="Close view of a short aluminum angle tab joining two frame members, with a rivet in one flange." width="1600" height="901" loading="lazy">
     <figcaption>A short angle tab joins the adjoining flanges. Finish all drilling and deburring before riveting the joint.</figcaption>
   </figure>
-  <figure class="build-figure">
+  <figure style="--photo-max-width: 337.88px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/panel-frame-assembly.jpg' | relative_url }}" alt="Aluminum panel frame standing on the workshop floor during assembly, showing the two rails, back crossmembers, and supports." width="901" height="1600" loading="lazy">
     <figcaption>The assembled frame before the panel is fitted. Blue tape temporarily held the layout; it is not a structural part.</figcaption>
   </figure>
@@ -89,7 +89,7 @@ Thread the hose-clamp bands through the bracket guides. Leave them open for the 
 
 Support the panel face-down on a clean, padded surface. Align the rails with the factory mounting holes, then fit the four panel screws, locknuts, and eight washers. Check that each screw fully engages its locknut and cannot touch the panel backsheet. If your panel frame is thicker, select a suitable screw length.
 
-<figure class="build-figure">
+<figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/panel-bolt-attachment.jpg' | relative_url }}" alt="Close view of an aluminum rail bolted through the solar panel's perimeter frame, with the adjacent support and riveted joint visible." width="1200" height="1600" loading="lazy">
   <figcaption>The rail attaches to the panel's metal perimeter frame. Use the panel's approved mounting holes; keep drilling and fasteners clear of the cells and backsheet.</figcaption>
 </figure>
@@ -118,11 +118,11 @@ Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers,
 4. Feed a hose-clamp band through each bracket’s center guides, ready to wrap around the pole.
 
 <div class="build-photo-pair">
-  <figure class="build-figure">
+  <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/enclosure-brackets-off-pole.jpg' | relative_url }}" alt="Back of the enclosure off the pole, showing two horizontal mounting brackets with bolts in their end slots and hose clamps through the center guides." width="1200" height="1600" loading="lazy">
     <figcaption>Off the pole: two brackets bolted to the back of the enclosure.</figcaption>
   </figure>
-  <figure class="build-figure">
+  <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/enclosure-brackets-on-pole.jpg' | relative_url }}" alt="The same two enclosure brackets installed on a pole, with a hose-clamp band wrapped around the pole at each bracket." width="1200" height="1600" loading="lazy">
     <figcaption>Installed: the clamp bands wrap around the pole and hold both brackets against it.</figcaption>
   </figure>
@@ -135,7 +135,7 @@ Drill two holes in the top of the **[enclosure]({{ '/docs/cost/' | relative_url 
 
 Fit one **[cable gland]({{ '/docs/cost/' | relative_url }}#part-cable-glands)** per hole, using its seal and locknut. Match the hole to the gland's specified mounting diameter and the gland's clamping range to the cable jacket. Hole diameter: **21/32″**. Deburr the holes and remove all chips before installing electronics.
 
-<figure class="build-figure electrical-entry-photo">
+<figure style="--photo-max-width: 360.0px" class="build-figure build-portrait electrical-entry-photo">
   <img src="{{ '/assets/images/enclosure-solar-entries.jpg' | relative_url }}" alt="Two cable-gland positions on the enclosure top, with one gland beside the open mounting hole." width="1200" height="1600" loading="lazy">
   <figcaption>Two sealed cable entries: one for the positive solar lead and one for the negative lead.</figcaption>
 </figure>
@@ -206,11 +206,11 @@ Print the **[universal mounting board (substrate)]({{ '/docs/cost/' | relative_u
 Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount)**. This holder supports the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and lets it attach to the gray substrate, as shown below. All 3D-printed component mounts attach to the board with the same bolt-and-nut size: **pending**.
 
 <div class="build-photo-pair">
-  <figure class="build-figure">
+  <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/internal-board-placement.jpg' | relative_url }}" alt="Wider view of the gray mounting board installed near the center-left of the enclosure, with the MPPT holder attached." width="1200" height="1600" loading="lazy">
     <figcaption>Place the board near the center-left, leaving room for the battery on the right.</figcaption>
   </figure>
-  <figure class="build-figure">
+  <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <div class="build-annotated-photo mount-photo">
       <img src="{{ '/assets/images/internal-mppt-mount.jpg' | relative_url }}" alt="Close-up of the gray keyhole mounting board and white printed MPPT holder, with CAD links labeling each part." width="1200" height="1600" loading="lazy">
       <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg" aria-label="Links to mounting board and MPPT mount CAD files">
@@ -239,11 +239,11 @@ Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount
 Place the **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** in the bottom-right corner and mark its edges. Remove the battery, then cut leftover **[aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)** into stops along the marked edges. Glue them in place as shown and let the adhesive cure before refitting the battery.
 
 <div class="build-photo-pair">
-  <figure class="build-figure">
+  <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/battery-restraint-installed.jpg' | relative_url }}" alt="Battery in the bottom-right corner of the enclosure with aluminum angle along its base to limit sliding." width="1200" height="1600" loading="lazy">
     <figcaption>Position the battery and mark where the stops should sit.</figcaption>
   </figure>
-  <figure class="build-figure">
+  <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/battery-restraint-angle.jpg' | relative_url }}" alt="Battery removed to show two aluminum angle stops glued to the enclosure floor." width="1200" height="1600" loading="lazy">
     <figcaption>With the battery removed: aluminum stops glued along the marked edges.</figcaption>
   </figure>
