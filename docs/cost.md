@@ -41,7 +41,6 @@ These are recorded project BOM prices and allowances. Hardware costs cover whole
 
 <tr id="part-cable-glands"><th scope="row">Cable glands</th><td>2</td><td>Weatherproof cable glands with seals and locknuts; supplier pending</td><td>pending</td><td>One per solar lead. Match the clamping range to the cable jacket diameter and the mounting thread to the drilled hole.</td></tr>
 <tr id="part-heat-shrink"><th scope="row">Heat-shrink tubing</th><td>2 pieces</td><td>Electrical heat-shrink tubing; supplier pending</td><td>pending</td><td>Size to slide over the ring-terminal barrel and shrink snugly onto the wire insulation. Leave the ring contact bare.</td></tr>
-<tr id="part-battery-fuse"><th scope="row">Battery fuse and holder</th><td>1 set</td><td>DC-rated fuse and holder; selection pending</td><td>pending</td><td>Victron specifies 20–25 A for the 75/15. Place near battery positive; match the wire rating and the battery’s available fault current. <a href="https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/installation.html">Controller requirements</a>.</td></tr>
 </tbody><tfoot><tr><th scope="row" colspan="3">Priced small parts and fabrication subtotal</th><td>$103.43</td><td>Shipping included; before tax. Pending items excluded.</td></tr></tfoot></table>
 
 <div class="parts-total"><span>Priced parts subtotal</span><strong>$485.48</strong><p>Shipping included; tax, pending items, and installation-specific consumables excluded.</p></div>

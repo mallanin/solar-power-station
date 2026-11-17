@@ -102,7 +102,7 @@ Prepare the cable entries, solar leads, and battery leads with the **battery and
 
 ### Tools
 
-Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers, terminal crimper, heat gun, tape measure, deburring tool, small insulated screwdriver, torque screwdriver, battery-terminal wrench, multimeter, and safety glasses.
+Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers, terminal crimper, heat gun, tape measure, deburring tool, small insulated screwdriver, torque screwdriver, and safety glasses.
 
 ### 1. Add the solar cable entries
 
@@ -119,7 +119,7 @@ Fit one **[cable gland]({{ '/docs/cost/' | relative_url }}#part-cable-glands)** 
 
 Cut one red and one black **[10 AWG solar cable]({{ '/docs/cost/' | relative_url }}#part-solar-cabling)** to **24″ (2 ft)**, keeping the original PV connector on one end of each. Save the excess wire for the battery leads.
 
-Strip the bare end of each lead to suit the controller terminal depth, without nicking or removing strands. Feed these ends through the cable glands into the enclosure; the PV connectors stay outside. Tighten each gland around the insulated jacket for sealing and strain relief.
+Strip approximately ¼″ of insulation from the cut end of each lead. Feed these ends through the cable glands into the enclosure; the PV connectors stay outside. Tighten each gland around the insulated jacket for sealing and strain relief.
 
 <figure class="build-figure">
   <img src="{{ '/assets/images/pv-leads-cut.jpg' | relative_url }}" alt="Red and black solar leads, each with a PV connector retained on one end and a cut bare end on the other." width="1600" height="1200" loading="lazy">
@@ -135,7 +135,7 @@ From the leftover cable, cut **12″ of black wire** and **8″ of red wire**. T
   <figcaption>Keep the strands intact. The terminal should clamp bare conductor, with no loose strands or exposed copper outside the connection.</figcaption>
 </figure>
 
-**Different layout?** Leave enough length for gentle bends and the final battery-protection hardware; avoid tension on the terminals.
+These lengths fit well in this system design. For a different layout, leave plenty of length in all cabling.
 
 ### 4. Crimp the ring terminals and add heat-shrink
 
@@ -164,8 +164,6 @@ The battery connectors are **[crimp ring terminals]({{ '/docs/cost/' | relative_
 </figure>
 
 The stripped ends belong in the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** terminals marked **BATT**: red to **+**, black to **−**. The ring ends connect to the corresponding **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** terminals, with the required protection in the positive path. The solar leads belong in **PV + / −**, not BATT. Verify polarity with the terminal markings and a multimeter before connecting power.
-
-**Before powering up:** fit the **[battery fuse and holder]({{ '/docs/cost/' | relative_url }}#part-battery-fuse)** near the positive battery terminal. Victron specifies a 20–25 A battery fuse for the 75/15; the selected fuse and holder are **pending**. Its controller terminals require 0.75 N·m. Once assembly and protection are complete, connect the battery first, wait 10 seconds, confirm the system voltage and battery settings, then connect the load and PV. [Victron installation instructions](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/installation.html).
 
 Controller, battery, and output-module mounting: **pending**.
 
