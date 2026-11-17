@@ -114,7 +114,7 @@ Drill with a step bit or suitable hole saw, wire cutters, 10 AWG wire strippers,
 
 Drill two holes in the top of the **[enclosure]({{ '/docs/cost/' | relative_url }}#part-enclosure)** for the solar input. Choose positions that clear the door seal, mounting plate, and components, with room to tighten the fittings inside.
 
-Fit one **[cable gland]({{ '/docs/cost/' | relative_url }}#part-cable-glands)** per hole, using its seal and locknut. Match the hole to the gland's specified mounting diameter and the gland's clamping range to the cable jacket. Hole diameter: **pending**. Deburr the holes and remove all chips before installing electronics.
+Fit one **[cable gland]({{ '/docs/cost/' | relative_url }}#part-cable-glands)** per hole, using its seal and locknut. Match the hole to the gland's specified mounting diameter and the gland's clamping range to the cable jacket. Hole diameter: **21/32″**. Deburr the holes and remove all chips before installing electronics.
 
 <figure class="build-figure electrical-entry-photo">
   <img src="{{ '/assets/images/enclosure-solar-entries.jpg' | relative_url }}" alt="Two cable-gland positions on the enclosure top, with one gland beside the open mounting hole." width="1200" height="1600" loading="lazy">
