@@ -51,6 +51,8 @@ Mark these pieces on the angle stock, allowing for the material removed by each 
 
 Each 8 ft length can supply one rail, one support, one back crossmember, and two tabs. Cut the small tabs from securely held stock; keep hands clear of the blade.
 
+[Download the panel-mount CAD (SolidWorks assembly and parts, ZIP)]({{ '/assets/downloads/solar-panel-solidworks.zip' | relative_url }})
+
 ### 3. Assemble and rivet the frame
 
 Lay out the two rails, two back crossmembers, and two supports as shown. Use the four short tabs to join the members where their flanges meet. Clamp the parts together and check the rail spacing before setting rivets.
