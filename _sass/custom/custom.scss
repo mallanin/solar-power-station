@@ -227,3 +227,23 @@
   .assembly-photo { max-width: 340px; margin: 0 auto; }
   .contact-panel { padding: 1rem; }
 }
+
+/* System-design diagrams, ideal-energy references and optional applications. */
+.design-diagram { margin: 1.5rem 0 2rem; padding: .8rem; border: 1px solid #dce4da; border-radius: 9px; background: #fff; }
+.design-diagram>a, .design-diagram img, .expo-figure>svg { display: block; width: 100%; height: auto; }
+.main-content .design-diagram figcaption { margin: .7rem .2rem .1rem; font-size: .75rem; line-height: 1.6; }
+.equation-label { display: block; margin-bottom: .4rem; color: #526159; font-size: .8rem; font-weight: 600; }
+.solar-reference { padding: .12rem .35rem; border-radius: 4px; background: #e1eed7; color: #234d3c; }
+.resilience-note { background: #edf3e5; border-color: #c8d9bd; color: #294d37; }
+.diagram-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; padding: .2rem .3rem .8rem; color: #526159; font-size: .72rem; }
+.diagram-legend span::before { content: ''; display: inline-block; width: 1.5rem; margin-right: .4rem; vertical-align: middle; border-top: 2px dashed #b9974e; }
+.diagram-legend .signal-legend::before { border-color: #3a7a64; }
+.application-details { margin: 1rem 0; padding: 0 1.1rem; border: 1px solid #d4dfcd; border-radius: 7px; background: #fafbf7; }
+.application-details summary { padding: 1rem 0; cursor: pointer; font-weight: 600; color: #234d3c; line-height: 1.5; }
+.application-details summary:focus-visible { outline: 3px solid #b57c20; outline-offset: 3px; }
+.application-details[open] summary { border-bottom: 1px solid #dce4da; }
+.application-details>p, .application-details>ul { font-size: .9rem; }
+@media (max-width: 600px) {
+  .design-diagram { padding: .4rem; }
+  .application-details { padding: 0 .85rem; }
+}

@@ -8,9 +8,9 @@ permalink: /docs/system-design/
 
 The system combines solar generation, battery storage, charge control, and an output matched to the equipment. Solar input supplies the load and recharges the battery; stored energy carries the load when sunlight falls short.
 
-<figure class="assembly-figure">
-<div class="assembly-photo"><img src="{{ '/assets/images/unit-interior.jpg' | relative_url }}" alt="OpenPowerBox interior with the charge controller behind its protective cover and the LiFePO4 battery below; USB-C output not shown" width="360" height="480" loading="lazy"><span class="component-marker controller-marker" aria-hidden="true">1</span><span class="component-marker battery-marker" aria-hidden="true">2</span></div>
-<figcaption><strong>1 · Charge controller</strong> regulates solar charging; shown behind its protective cover.<br><strong>2 · Battery</strong> stores energy for use without sunlight.<br>USB-C output not shown.</figcaption>
+<figure class="design-diagram">
+<a href="{{ '/assets/images/system-wiring.svg' | relative_url }}" aria-label="Open the system wiring schematic at full size"><img src="{{ '/assets/images/system-wiring.svg' | relative_url }}" alt="Six separate leads connect the controller: BATT positive through a fuse to battery positive, BATT negative to battery negative, PV negative and positive to the corresponding solar connectors, and LOAD negative and fused positive to the USB-C converter inputs." width="1400" height="850"></a>
+<figcaption>Reference connections. <a href="{{ '/assets/images/system-wiring.svg' | relative_url }}">Open full-size schematic →</a></figcaption>
 </figure>
 
 ## The reference configuration
@@ -23,35 +23,26 @@ The system combines solar generation, battery storage, charge control, and an ou
 | Output | Regulated USB-C module | Supply a compatible device; 15 W+ continuous design target. Separate pump testing has demonstrated 100 W+ intermittent loads. |
 | Physical installation | Aluminum panel support and equipment enclosure on an existing 4–6 inch pole | Support, protect, and provide access to the components |
 
-<div class="power-path"><span>Solar panel</span><b aria-hidden="true">→</b><span>MPPT controller<br><small>↕ Battery storage</small></span><b aria-hidden="true">→</b><span>USB-C module</span><b aria-hidden="true">→</b><span>Your device</span></div>
+<span id="the-daily-energy-balance"></span>
+## Balancing cost and performance
 
-The controller manages the solar input. Its load output feeds the USB module, which provides the device's required voltage profile. The battery shares the DC system: it charges when energy is available and supplies energy when solar input falls short. This is a functional diagram, not a wiring schematic.
+A power system should deliver the required output reliably at the lowest practical cost. Here's why we chose a 200 W panel and 640 Wh of battery storage.
 
-## The daily energy balance
+<div class="equation"><span class="equation-label">Required daily energy output</span>15 W × 24 h = <strong>360 Wh per day</strong></div>
 
-**Power is a rate. Energy is what accumulates over time.** A 15 W continuous load consumes:
+For winter planning in climates like the **Central Coast of California**, we use **4.5 peak-sun hours per day** as a regional December reference. Historical NREL data for nearby Santa Maria gives 4.5 in December and 4.6 in January for a south-facing panel tilted about 35°. These are monthly averages that include cloudy days. [NREL solar-resource tables](https://pages.mtu.edu/~jstallen/courses/MEEM4200/lectures/solar/NREL_TP-463-5607_1994.pdf)
 
-<div class="equation">15 W × 24 h = <strong>360 Wh per day</strong></div>
+<div class="equation"><span class="equation-label">Expected daily winter energy supply · ideal reference</span>200 W × 4.5 h = <strong>900 Wh per day</strong><br><small>900 Wh generated − 360 Wh used = 540 Wh of daily energy margin, before losses</small></div>
 
-The panel does not supply 200 W all day. A useful first estimate multiplies panel rating by *equivalent peak-sun hours* and a delivery factor for real-world losses. Peak-sun hours describe the day's total sunlight as equivalent hours at full reference intensity; they are not simply daylight hours.
+We measured **97% electrical input-to-output efficiency through the Victron controller** in live testing. The calculation above is idealized and excludes wiring, battery storage, and output-conversion losses, so treat it as a reference point. The controller lost about 3% in that test; total system losses have not been measured.
 
-For winter planning near **San Luis Obispo**, use **4.5 peak-sun hours per day** as a regional December average. Historical NREL data for nearby Santa Maria gives 4.5 in December and 4.6 in January for a south-facing panel tilted about 35°. These are monthly averages that include cloudy days. [NREL solar-resource tables, Santa Maria](https://pages.mtu.edu/~jstallen/courses/MEEM4200/lectures/solar/NREL_TP-463-5607_1994.pdf)
-
-With a **75% conservative planning allowance** for overall delivery:
-
-<div class="equation">200 W × 4.5 h × 0.75 = <strong>675 Wh per day</strong><br><small>675 Wh harvested − 360 Wh used = 315 Wh of daily energy margin</small></div>
-
-We measured **97% electrical input-to-output efficiency through the Victron controller** in live testing. The 75% allowance covers a wider path: panel output below its nameplate rating, wiring, controller conversion, battery storage, and output conversion. It is deliberately conservative and is not a measured 25% loss in our station. The 97% is already within that overall allowance; do not multiply the two factors together. At 75% delivery, a 15 W continuous load breaks even at **2.4 peak-sun hours per day**.
-
-| Illustrative solar resource | Energy available at 75% delivery | Balance against a 15 W continuous load |
+| Sunlight available | Energy available under ideal conditions | Balance against a 15 W continuous load |
 |:---|---:|---:|
-| 1 peak-sun hour/day | 150 Wh/day | 210 Wh/day deficit |
-| 2 peak-sun hours/day | 300 Wh/day | 60 Wh/day deficit |
-| 3 peak-sun hours/day | 450 Wh/day | 90 Wh/day margin |
-| 4.5 peak-sun hours/day | 675 Wh/day | 315 Wh/day margin |
-| 5 peak-sun hours/day | 750 Wh/day | 390 Wh/day margin |
-
-These are energy scenarios. Understanding your local conditions and expected peak-sun hours gives you an idea of the sustained performance you can get, and how much surplus is available to recharge after low-sun periods.
+| 1 peak-sun hour/day | 200 Wh/day | 160 Wh/day deficit |
+| 2 peak-sun hours/day | 400 Wh/day | 40 Wh/day margin |
+| 3 peak-sun hours/day | 600 Wh/day | 240 Wh/day margin |
+| 4.5 peak-sun hours/day | 900 Wh/day | 540 Wh/day margin |
+| 5 peak-sun hours/day | 1,000 Wh/day | 640 Wh/day margin |
 
 ## What the battery contributes
 
@@ -62,72 +53,98 @@ Nominal stored energy is **12.8 V × 50 Ah = 640 Wh**. Dividing by 15 W gives **
 <span id="san-luis-obispo-winter-and-storm-reserve"></span>
 ## What happens during a storm?
 
-**Solar input and battery reserve make the system resilient through changing weather.** Clouds and rain reduce generation, but useful solar input can still extend runtime. Sustained dark weather can eventually exhaust the reserve.
+Clouds and rain reduce generation, but useful solar input can still extend runtime. Sustained dark weather can eventually exhaust the reserve.
 
-As a regional rainy-day reference, our analysis of **NASA POWER data near San Luis Obispo for 2016–2025** found about **1.5 peak-sun hours per day** across 76 December–February days with at least 10 mm of rain. That is sunlight on a horizontal surface, not a prediction for our tilted panel or every storm. [Download the winter weather data (CSV) →]({{ '/assets/downloads/slo-winter-solar-2016-2025.csv' | relative_url }})
+As a regional rainy-day reference, our analysis of NASA POWER data near San Luis Obispo for 2016–2025 found about <strong class="solar-reference">1.5 peak-sun hours per day</strong> across 76 December–February days with at least 10 mm of rain. This is sunlight on a horizontal surface; individual storms and a tilted panel will differ.
 
-Using the full **640 Wh nominal battery reserve** and a **15 W continuous load**:
+Using a full **640 Wh nominal battery** and a **15 W continuous load**, before losses or battery cutoff:
 
-| Sunlight scenario | Harvest at 75% delivery | Daily shortfall at 15 W | Time to use 640 Wh nominal reserve |
+| Sunlight each day | Ideal solar energy | Daily energy balance | Calculated reserve duration |
 |:---|---:|---:|---:|
-| No useful solar | 0 Wh/day | 360 Wh/day | 1.8 days / 42.7 hours |
-| 1 peak-sun hour each day | 150 Wh/day | 210 Wh/day | 3.0 days |
-| 1.5 peak-sun hours each day | 225 Wh/day | 135 Wh/day | 4.7 days |
-| 2 peak-sun hours each day | 300 Wh/day | 60 Wh/day | 10.7 days |
+| No useful solar | 0 Wh/day | 360 Wh deficit | 1.8 days / 42.7 hours |
+| 1 peak-sun hour | 200 Wh/day | 160 Wh deficit | 4.0 days |
+| 1.5 peak-sun hours | 300 Wh/day | 60 Wh deficit | 10.7 days |
+| 2 peak-sun hours | 400 Wh/day | 40 Wh surplus | No daily depletion in this ideal model |
 
-These are idealized full-capacity calculations with a full battery at the start and the same sunlight each day. Battery cutoff, conversion losses, and changing weather can shorten runtime. The table shows why even reduced solar input makes a large difference to reserve.
+At the 1.5-hour storm reference, the calculation gives **up to 10.7 days from a full battery before losses**. Actual runtime will be shorter with conversion losses and battery cutoff. Brighter breaks between storms can recharge the battery and restore reserve.
+
+<aside class="design-note resilience-note"><p><strong>The aim is continuous operation through typical winter storms, without paying for an oversized system.</strong> Solar recharging and battery reserve work together to cover low-sun periods; local weather and the connected load determine the result.</p></aside>
 
 Use local weather data and the length of low-sun periods to judge whether your chosen panel and battery provide the reliability your site needs.
 
 ## Continuous energy and short bursts
 
-The system has a **15 W+ continuous power design target**, and we have demonstrated **100 W+ intermittent loads in pump testing**. These describe different operating patterns: a load that runs around the clock sets the daily energy requirement, while a brief task can use much higher power. [Pump-test record →]({{ '/docs/testing/#output-power' | relative_url }})
+We have demonstrated **100 W+ intermittent loads in pump testing**. Repeated high-power bursts can fit the energy budget when usage between them is low. This is useful for pumps and other motors with high startup demand, provided the output hardware can supply that starting current. [Pump-test record →]({{ '/docs/testing/#output-power' | relative_url }})
 
 For example, a **100 W task running for 10 minutes uses 16.7 Wh**. Add an 8 W background load running all day and the total is **208.7 Wh/day**. The output path must support **108 W simultaneously**, plus startup demand. This is a scheduling example, separate from the measured pump test.
 
 <aside class="design-note"><p><strong>A 15 W continuous target supports much more than a 15 W device.</strong> Many useful devices draw higher power only while charging, moving, pumping, or processing, then spend the rest of their time at a much lower load. Their operating schedule can make them a good fit for this system.</p></aside>
 
-Match the converter, load path, wiring, protection, and battery to the combined running and starting current. A pump or motor can draw much more current at startup or stall. The 100 W+ result describes the intermittent pump operation demonstrated in testing, not a measured upper limit for every possible output configuration.
+The 100 W+ result is a demonstrated operating point, not a measured maximum output rating.
 
 ## Applications and output options
 
 The MPPT controller provides DC output through screw terminals that can be wired to the output hardware your equipment needs. We wired the reference build to a **USB-C module for its versatility**. In testing, we also used an **inverter to supply 120 V AC**. Regulated DC and PoE are other ways to adapt the same solar-and-storage architecture.
 
-Match the output voltage, power profile, wiring, and protection to the connected equipment. An inverter needs a properly rated and protected supply path, including its starting current and idle consumption; do not assume every inverter can connect directly to the controller's load terminals.
+<details class="application-details" markdown="1">
+<summary>Use cases: cameras, sensors, pumps, lighting, and charging</summary>
 
-<figure class="documentation-photo" aria-label="Photo placeholder: Victron MPPT controller and connections"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>MPPT connections close-up</strong><span>Photo pending · solar, battery, load terminals, and USB-C module</span></div><figcaption>A close-up will show the controller connections and the reference output path.</figcaption></figure>
+- **Monitoring:** cameras, weather stations, soil sensors, and tank-level reporting. Include the radio and any night lighting in the energy budget.
+- **Automation:** irrigation valves, sump pumps, and gate controls. Size the output for startup current as well as normal running power.
+- **Lighting:** a 10 W light used for six hours needs 60 Wh, plus any controller or sensor use.
+- **Drone charging:** plan around energy per charge and the number of charges each day.
 
-| Application | A useful project | What to include in the design |
-|:---|:---|:---|
-| Property-wide networking | Several independently powered mesh nodes or wireless bridges linking a large property, farm, or remote worksite | Each node's radio and attached loads; antenna placement, terrain, coverage, and the correct DC or PoE interface. A mesh still needs an internet uplink if internet access is required. |
-| Camera and wildlife monitoring | Crop observation, a remote entrance, equipment security, or a wildlife/timelapse camera | Night illumination, recording and network equipment, and their combined consumption. The camera's rating alone is not the whole installation's load. |
-| Weather, soil, and water sensing | A weather station, soil-moisture gateway, tank-level reporting, or an early leak/flood alert | Sensor and radio demand, transmission frequency, enclosures, and the response needed if connectivity or power is lost. |
-| Irrigation and access control | Motorized valves, irrigation control, or a gate-controller trigger | Valve voltage and driver, relay isolation, startup current, and an appropriate default state after a fault. Powering a control signal is different from powering the motor. |
-| Sump pumping | Intermittent sump-pump operation or water transfer | Pump voltage, measured running and startup/stall current, duty cycle, and converter/switch ratings. Our reported pump tests reached 100 W+; select the output path for the actual pump. |
-| Drone charging | A field charging station for a drone's flight batteries | Charger input profile, energy per charge, number of charges per day, and other simultaneous loads. A charging station does not imply an autonomous landing or battery-handling system. |
-| Field computing and communications | Satellite internet, on-site image recognition, or a local AI model | The complete equipment load, its operating schedule, and the appropriate DC or USB power profile; see the examples below. |
-| Remote lighting | LED lighting at a shed, campsite, or work area | Night length and duty cycle. An illustrative 10 W light used for six hours consumes 60 Wh; include sensor/controller use too. |
+</details>
 
-In our demonstration, we ran **Wi-Fi HaLow networking units, a camera, and a pump at the same time**. This combines ongoing communication and monitoring with an intermittent higher-power task. [Pump and multi-device demonstration →]({{ '/docs/testing/#output-power' | relative_url }})
+<span id="satellite-internet-and-local-ai"></span>
+<details class="application-details" markdown="1">
+<summary>Satellite internet and local AI</summary>
 
-<figure class="documentation-photo documentation-photo-compact" aria-label="Photo placeholder: networking, camera, and pump demonstration"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>Networking, camera, and pump in use</strong><span>Photo pending · the connected demonstration setup</span></div></figure>
+**Satellite internet:** Starlink Mini lists **25–40 W average consumption**, **12–48 V DC / 60 W input**, and a **100 W USB-PD source at 20 V / 5 A** for its USB-C-to-barrel cable. [Starlink Mini specifications](https://starlink.com/public-files/specification_sheet_mini.pdf)
 
-### Satellite internet and local AI
+At a 30 W average, eight hours uses **240 Wh**; continuous use needs **720 Wh/day**. That fits below the 900 Wh ideal winter reference, but leaves only 180 Wh before losses and other loads. Operating hours and storm reserve still matter.
 
-**Satellite internet:** Starlink Mini is a plausible higher-load application with a suitable supply. Its product sheet lists **25–40 W average**, **12–48 V DC / 60 W input**, and a **100 W USB-PD source supporting 20 V / 5 A** for the Starlink USB-C-to-barrel cable. The supply rating is different from typical consumption. [Starlink Mini specifications](https://starlink.com/public-files/specification_sheet_mini.pdf)
+**Local AI:** a small computer can process camera images or run a local model, then send results over the network. Include the computer, camera, and radio in the energy budget. Short processing bursts can work well when idle demand is low.
 
-At an assumed **30 W average**, an eight-hour session uses **240 Wh**, while continuous operation uses **720 Wh/day**. The latter exceeds the 675 Wh winter example above, so planned operating hours or a larger array become important. Longer sunny days and sunnier climates improve the energy balance. As terminal power demand falls, satellite internet also becomes a more attractive fit for a system of this size.
+</details>
 
-**Local AI:** A small computer can run an AI model intermittently to process camera images, identify events, and send useful results back over the network. Pairing local processing with a camera and radio can reduce how much data needs to leave the site. Choose the computer, model, and operating schedule so the average demand fits the energy budget; a higher-power processing burst can still work when the idle load is low. Include the camera and networking equipment in that total.
+## Featured use case: networking across a property
+
+In our demonstration, we used **Wi-Fi HaLow networking units to remotely actuate a pump**, alongside a camera. This combines ongoing communication and monitoring with an intermittent high-power task.
+
+The expo diagram shows the connections: commands travel to the Raspberry Pi and relay, while readings return to the input computer. Each station supplies its own electrical power.
+
+<figure class="design-diagram expo-figure">
+<div class="diagram-legend"><span class="power-legend">Electrical power</span><span class="signal-legend">Commands and readings</span></div>
+{% include expo-network.svg %}
+<figcaption>Our two-station expo layout. Arrows illustrate the paths; this is not a live control panel. <a href="{{ '/assets/images/expo-network.svg' | relative_url }}">Open full-size diagram →</a></figcaption>
+</figure>
+
+### Extending the network
+
+Several boxes can power radios, cameras, and sensors across a farm or large property. Heltec advertises **up to about 1 km for the HT-HD01 link**, with longer links possible in clear line of sight. That is a manufacturer range claim, not a range we measured; trees, terrain, antenna height, and data rate affect it. [Heltec specifications](https://heltec.org/project/ht-hd01/)
+
+The four-station example below uses a central HaLow access point and three remote stations. A true multi-hop mesh requires radios and firmware that support it. Internet access needs an uplink at the hub; ordinary phones use a local 2.4 GHz Wi-Fi access point, not HaLow directly.
+
+<figure class="design-diagram property-network-figure">
+<a href="{{ '/assets/images/property-network.svg' | relative_url }}" aria-label="Open the four-station property network diagram at full size"><img src="{{ '/assets/images/property-network.svg' | relative_url }}" alt="Bird's-eye example of four solar-powered radio stations at a farm hub, orchard, pump, and gate. Dashed links connect the three remote stations to the hub. Overlapping circles illustrate radio reach, not measured coverage." width="1300" height="900" loading="lazy"></a>
+<figcaption>Four independently powered stations. Circles are illustrative reach zones, not surveyed coverage or a distance scale. <a href="{{ '/assets/images/property-network.svg' | relative_url }}">Open full-size diagram →</a></figcaption>
+</figure>
+
+For small sensor messages, networks such as **LoRaWAN** can reach multiple kilometres at much lower data rates. They serve a different job from a link carrying camera video or general internet traffic. [LoRaWAN capabilities and limits](https://www.thethingsnetwork.org/docs/lorawan/limitations/)
 
 <span id="why-mppt"></span>
 ## Why Victron MPPT?
 
-We measured **97% efficiency from electrical input to output through the Victron controller** in live testing. Maximum power point tracking adjusts the panel's operating point to collect available power as sunlight changes.
+We chose Victron for its monitoring tools, documentation, efficiency, and established track record in off-grid power.
 
-We chose Victron for its monitoring tools, documentation, and our confidence in the brand. Built-in Bluetooth connects the SmartSolar controller to **VictronConnect**, where we can inspect solar input, battery voltage and charging, load current, and operating history. That visibility makes setup and troubleshooting easier. [Victron monitoring features](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/monitoring.html)
+Built-in Bluetooth lets a nearby phone read solar input, battery voltage, charge state, load current, and history in **VictronConnect**. A nearby Raspberry Pi can also receive supported Instant Readout data for a local dashboard; HaLow carries that data across the property. [Monitoring features](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/monitoring.html) · [Instant Readout](https://www.victronenergy.com/media/pg/VictronConnect_app/en/stored-trends---instant-readout.html)
+
+<figure class="documentation-photo documentation-photo-compact" aria-label="Screenshot placeholder: VictronConnect monitoring"><div><span class="photo-placeholder-mark" aria-hidden="true">+</span><strong>VictronConnect</strong><span>Screenshot to add · solar input, battery, and load readings</span></div></figure>
 
 ## Solar panel frame
+
+The panel can sit on a ground mount or a pole. Choose its direction and tilt for your location and winter needs; check a local solar-resource guide rather than using one angle everywhere. A pole keeps the panel out of working space and can lift it above nearby vegetation, splash, and accidental contact. [Panel orientation and tilt](https://www.energy.gov/cmei/systems/solar-photovoltaic-system-design-basics)
 
 For pole mounting, the solar panel needs a support frame. We built both wood and aluminum versions.
 
