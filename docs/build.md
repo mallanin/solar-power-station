@@ -165,7 +165,61 @@ The battery connectors are **[crimp ring terminals]({{ '/docs/cost/' | relative_
 
 The stripped ends belong in the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** terminals marked **BATT**: red to **+**, black to **−**. The ring ends connect to the corresponding **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** terminals, with the required protection in the positive path. The solar leads belong in **PV + / −**, not BATT. Verify polarity with the terminal markings and a multimeter before connecting power.
 
-Controller, battery, and output-module mounting: **pending**.
+### 6. Add the optional internal mounts
+
+Internal mounts are optional, but make components easier to fit and remove.
+
+#### Mounting board and MPPT holder
+
+Print the **[universal mounting board (substrate)]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** and glue it near the center-left of the enclosure’s mounting plate. Use an adhesive compatible with the printed part and mounting surface.
+
+Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount)**. This holder supports the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and lets it attach to the gray substrate, as shown below.
+
+<div class="build-photo-pair">
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/internal-board-placement.jpg' | relative_url }}" alt="Wider view of the gray mounting board installed near the center-left of the enclosure, with the MPPT holder attached." width="1200" height="1600" loading="lazy">
+    <figcaption>Place the board near the center-left, leaving room for the battery on the right.</figcaption>
+  </figure>
+  <figure class="build-figure">
+    <div class="build-annotated-photo mount-photo">
+      <img src="{{ '/assets/images/internal-mppt-mount.jpg' | relative_url }}" alt="Close-up of the gray keyhole mounting board and white printed MPPT holder, with CAD links labeling each part." width="1200" height="1600" loading="lazy">
+      <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg" aria-label="Links to mounting board and MPPT mount CAD files">
+        <g fill="none" stroke="#fff" stroke-width="7" class="build-arrow" aria-hidden="true">
+          <path d="M 590 138 L 700 138 L 700 300"/>
+          <circle cx="700" cy="300" r="13" fill="#234d3c"/>
+          <path d="M 625 1248 L 725 1248 L 725 1040"/>
+          <circle cx="725" cy="1040" r="13" fill="#234d3c"/>
+        </g>
+        <a href="{{ '/docs/cost/' | relative_url }}#cad-mounting-board" aria-label="Mounting board CAD download in Parts and cost">
+          <rect x="70" y="90" width="520" height="96" rx="16" fill="#234d3c"/>
+          <text x="106" y="153" fill="#fff" font-family="system-ui, sans-serif" font-size="48" font-weight="600">Board CAD ↗</text>
+        </a>
+        <a href="{{ '/docs/cost/' | relative_url }}#cad-mppt-mount" aria-label="MPPT mount CAD download in Parts and cost">
+          <rect x="105" y="1200" width="520" height="96" rx="16" fill="#234d3c"/>
+          <text x="141" y="1263" fill="#fff" font-family="system-ui, sans-serif" font-size="48" font-weight="600">MPPT mount CAD ↗</text>
+        </a>
+      </svg>
+    </div>
+    <figcaption>The white holder connects the MPPT to the gray board. Select either label for its CAD file.</figcaption>
+  </figure>
+</div>
+
+#### Battery restraint
+
+Place the **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** in the bottom-right corner and mark its edges. Remove the battery, then cut leftover **[aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)** into stops along the marked edges. Glue them in place as shown and let the adhesive cure before refitting the battery.
+
+<div class="build-photo-pair">
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/battery-restraint-installed.jpg' | relative_url }}" alt="Battery in the bottom-right corner of the enclosure with aluminum angle along its base to limit sliding." width="1200" height="1600" loading="lazy">
+    <figcaption>Position the battery and mark where the stops should sit.</figcaption>
+  </figure>
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/battery-restraint-angle.jpg' | relative_url }}" alt="Battery removed to show two aluminum angle stops glued to the enclosure floor." width="1200" height="1600" loading="lazy">
+    <figcaption>With the battery removed: aluminum stops glued along the marked edges.</figcaption>
+  </figure>
+</div>
+
+Output-module mounting: **pending**.
 
 <span id="pole-mounted-reference-build"></span>
 ## Pole mounting

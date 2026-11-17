@@ -35,7 +35,7 @@ These are recorded project BOM prices and allowances. Hardware costs cover whole
 <tr id="part-locknuts"><th scope="row">Locknuts</th><td>1 pack</td><td><a href="https://www.mcmaster.com/91831A029/">McMaster stainless nylon-insert locknuts</a></td><td>$6.35</td><td>50 per pack; 4 used. 1/4″-20 thread, 18-8 stainless steel.</td></tr>
 <tr id="part-hex-screws"><th scope="row">Hex screws</th><td>1 pack</td><td><a href="https://www.mcmaster.com/92240A537/">McMaster stainless hex screws</a></td><td>$7.52</td><td>50 per pack; 4 used. 1/4″-20 × 1/2″, 18-8 stainless steel.</td></tr>
 <tr id="part-usb-c-output"><th scope="row">USB-C output</th><td>1</td><td><a href="https://www.amazon.com/dp/B0852X2CNB">Meagoes USB-C car charger</a></td><td>$10.00</td><td>Project allowance. Check the device’s required USB-C PD profile at a 12 V input.</td></tr>
-<tr id="part-printed-component-mount"><th scope="row">Printed component mount</th><td>1</td><td>PETG printed mount</td><td>$5.00</td><td>Material allowance for the internal component support.</td></tr>
+<tr id="part-printed-component-mount"><th scope="row">Printed component mounts</th><td>1 set</td><td><a href="#printed-mount-cad">PETG board and MPPT holder — CAD files</a></td><td>$5.00</td><td>Material allowance for the optional internal mounting parts.</td></tr>
 <tr id="part-nylon-mounting-hardware"><th scope="row">Nylon mounting hardware</th><td>1 kit</td><td><a href="https://www.amazon.com/dp/B0744MMJ9V">Hotusi nylon screw, nut, and washer kit</a></td><td>$7.98</td><td>Project allowance. Select screw sizes to suit the internal components.</td></tr>
 <tr id="part-battery-ring-terminals"><th scope="row">Battery ring terminals</th><td>2</td><td>Insulated crimp ring terminals for 10 AWG wire</td><td>$3.50</td><td>Project allowance; supplier pending. Match the ring hole to the battery terminal bolt; M6 is the reference size. Crimp with a tool rated for the terminal.</td></tr>
 
@@ -48,6 +48,17 @@ These are recorded project BOM prices and allowances. Hardware costs cover whole
 **Excluded:** pole and foundation, tools, labor, the powered device, test equipment, and contingency. Confirm any additional sealing, strain relief, and electrical protection needed for your installation.
 
 [Download the budget worksheet (CSV)]({{ '/assets/downloads/build-budget.csv' | relative_url }})
+
+<span id="printed-mount-cad"></span>
+## 3D-printed mount CAD files
+
+Optional internal mounting parts. These are SolidWorks source files (.SLDPRT); export STL or 3MF for your slicer.
+
+<p id="cad-mounting-board" class="cad-download"><strong><a href="{{ '/assets/downloads/internal-mounting-board.SLDPRT' | relative_url }}" download>Download universal mounting board CAD</a></strong><br>The gray substrate that attaches to the enclosure’s mounting plate.</p>
+
+<p id="cad-mppt-mount" class="cad-download"><strong><a href="{{ '/assets/downloads/mppt-mount.SLDPRT' | relative_url }}" download>Download MPPT mount CAD</a></strong><br>The white holder that mounts the charge controller to the substrate.</p>
+
+[See the internal mounting steps →]({{ '/docs/build/' | relative_url }}#6-add-the-optional-internal-mounts)
 
 ## How commercial systems compare
 
