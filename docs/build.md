@@ -26,7 +26,7 @@ Build the frame on a workbench before attaching it to the pole. The cut lengths 
 
 ### Tools and hardware
 
-- **Tools:** saw and blade suitable for aluminum, drill and metal bits, rivet gun for 3/16″ rivets, clamps, tape measure, square, marker, center punch, file or deburring tool, and wrenches or sockets for the selected bolts.
+- **Tools:** saw and blade suitable for aluminum, drill with 3/16″ and 9/32″ metal bits, rivet gun for 3/16″ rivets, clamps, tape measure, square, marker, center punch, file or deburring tool, and wrenches or sockets for the selected bolts.
 - **Hardware:** two 8 ft lengths of **[1″ × 1″ × 1/16″ aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)**; 18 medium **[3/16″ aluminum rivets]({{ '/docs/cost/' | relative_url }}#part-aluminum-rivets)**; four **[1/4″-20 × 1/2″ panel screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**; two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** with clamp bands. Use the bolts provided with the brackets.
 - **Work setup:** eye and hearing protection, a stable bench, and padding for the panel. Clamp stock before cutting or drilling. Keep the panel disconnected throughout mechanical assembly.
 
@@ -70,7 +70,7 @@ Each 8 ft length can supply one rail, one support, one back crossmember, and two
 <span id="3-assemble-and-rivet-the-frame"></span>
 ### 2. Assemble and rivet the frame
 
-Rivet-hole diameter for all frame joints: **pending** inches. Deburr each hole before setting the rivet.
+Drill all frame rivet holes with a **3/16″ bit**, matching the **[Arrow 3/16″ aluminum rivets]({{ '/docs/cost/' | relative_url }}#part-aluminum-rivets)**. Deburr each hole before setting the rivet.
 
 #### Attach the back crossmember
 
