@@ -1,0 +1,10 @@
+{
+  "name": "openpowerbox-contact",
+  "main": "worker.mjs",
+  "account_id": "81ffb2b83a457f2beafe7b6661d781df",
+  "compatibility_date": "2026-11-18",
+  "workers_dev": true,
+  "send_email": [{"name":"EMAIL","destination_address":"milogoehring@gmail.com"}],
+  "ratelimits": [{"name":"CONTACT_LIMIT","namespace_id":"1836202601","simple":{"limit":3,"period":60}}],
+  "observability": {"enabled":false}
+}

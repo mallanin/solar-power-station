@@ -20,7 +20,7 @@ permalink: /docs/testing/
 | Battery runtime under load | Roughly 40 hours at a 16 W continuous load, with no solar input | Battery endurance test |
 | Continuous device power | 15 W+ design target | Reference design |
 | Intermittent output | 100 W+ in pump testing | Live pump test |
-| Combined equipment | Wi-Fi HaLow units, camera, and pump running together | Live system demonstration |
+| Combined equipment | Wi-Fi HaLow units and pump running together | Live system demonstration |
 | AC output | Inverter used to supply 120 V AC | Tested output configuration |
 | Victron controller efficiency | 97% electrical input-to-output efficiency | Live controller test |
 | Heat testing | Pending | Planned thermal test |

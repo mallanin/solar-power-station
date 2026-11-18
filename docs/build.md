@@ -27,7 +27,7 @@ Build the frame on a workbench before attaching it to the pole. The cut lengths 
 ### Tools and hardware
 
 - **Tools:** saw and blade suitable for aluminum, drill with 3/16″ and 9/32″ metal bits, rivet gun for 3/16″ rivets, clamps, tape measure, square, marker, center punch, file or deburring tool, and wrenches or sockets for the selected bolts.
-- **Hardware:** two 8 ft lengths of **[1″ × 1″ × 1/16″ aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)**; 18 medium **[3/16″ aluminum rivets]({{ '/docs/cost/' | relative_url }}#part-aluminum-rivets)**; four **[1/4″-20 × 1/2″ panel screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**; two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** with clamp bands. Use the bolts provided with the brackets.
+- **Hardware:** two 8 ft lengths of **[1″ × 1″ × 1/16″ aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)**; 18 medium **[3/16″ aluminum rivets]({{ '/docs/cost/' | relative_url }}#part-aluminum-rivets)**; four **[1/4″-20 × 1″ panel screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**; two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** with clamp bands. Use the bolts provided with the brackets.
 - **Work setup:** eye and hearing protection, a stable bench, and padding for the panel. Clamp stock before cutting or drilling. Keep the panel disconnected throughout mechanical assembly.
 
 <span id="2-cut-and-deburr-the-aluminum"></span>
@@ -168,7 +168,7 @@ Thread the hose-clamp bands through the bracket guides. Leave them open for the 
 
 1. Support the panel face-down on a clean, padded surface. Align the rails with the factory mounting holes and mark the matching hole centers on the rails.
 2. Lift the frame off the panel and clamp it securely. Drill the marked rail holes with a **[9/32″ drill bit](https://www.dispersetech.com/blog/post/clearance-hole-chart.html)** for clearance around the 1/4″ screws, then deburr. Drill only the aluminum rails; use the panel’s existing mounting holes.
-3. Realign the frame and fit four **[1/4″-20 × 1/2″ hex screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**—one washer under each screw head and one under each nut. Check that each screw fully engages its locknut’s nylon insert and cannot touch the panel backsheet. If your panel frame is thicker, select a suitable screw length.
+3. Realign the frame and fit four **[1/4″-20 × 1″ hex screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**—one washer under each screw head and one under each nut. Check that each screw fully engages its locknut’s nylon insert and cannot touch the panel backsheet. If your panel frame is thicker, select a suitable screw length.
 
 <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/panel-bolt-attachment.jpg' | relative_url }}" alt="Close view of an aluminum rail bolted through the solar panel's perimeter frame, with the adjacent support and riveted joint visible." width="1200" height="1600" loading="lazy">
@@ -291,7 +291,7 @@ Internal mounts are optional, but make components easier to fit and remove.
 
 #### Mounting board and MPPT holder
 
-Print the **[universal mounting board (substrate)]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** and glue it near the center-left of the enclosure’s mounting plate. Use an adhesive compatible with the printed part and mounting surface.
+Print the **[universal mounting board (substrate)]({{ '/docs/cost/' | relative_url }}#cad-mounting-board)** and glue it near the center-left of the enclosure’s mounting plate. Use **[super glue adhesive]({{ '/docs/cost/' | relative_url }}#part-adhesive)** compatible with the printed part and mounting surface.
 
 Print the white **[MPPT mount]({{ '/docs/cost/' | relative_url }}#cad-mppt-mount)**. This holder supports the **[charge controller]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and lets it attach to the gray substrate, as shown below. All 3D-printed component mounts attach to the board with **[M5 bolts and matching nuts]({{ '/docs/cost/' | relative_url }}#part-nylon-mounting-hardware)**.
 
@@ -358,10 +358,10 @@ Start with the battery and panel disconnected. Make the connections in the order
 </figure>
 
 1. **Position the components.** Mount the **[MPPT]({{ '/docs/cost/' | relative_url }}#part-charge-controller)** and **[output module]({{ '/docs/cost/' | relative_url }}#part-usb-c-output)**, then place the **[battery]({{ '/docs/cost/' | relative_url }}#part-battery)** in its restraint.
-2. **Battery first.** Connect the prepared red lead to **BATT +** and black to **BATT −**, then attach their ring terminals using the [battery connection steps]({{ '/docs/operation/' | relative_url }}#connect-the-battery-first). Wait **10 seconds**. In VictronConnect, confirm a **12 V system** and charging settings that match the battery’s LiFePO4 specifications.
-3. **Output module next.** With the controller’s load output off, connect the module’s positive input to **LOAD +** and negative input to **LOAD −**. Leave USB devices unplugged. [Load-output settings](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/configuration-and-settings.html)
+2. **Battery first.** Connect the prepared red lead to **BATT +** and black to **BATT −**, then attach their ring terminals using the [battery connection steps]({{ '/docs/operation/' | relative_url }}#connect-the-battery-first). Wait **10 seconds**. In VictronConnect, confirm a **12 V system** with no reported errors.
+3. **Output module next.** With the controller’s load output off, connect the module’s positive input to **LOAD +** and negative input to **LOAD −**. Leave USB devices unplugged.
 4. **Solar last.** Keep the panel covered and its plugs disconnected while connecting the red solar lead to **PV +** and black to **PV −**. Check polarity, then join the matching PV plug connectors **outside the enclosure**, between the panel leads and the leads passing through the cable glands. Uncover the panel after connecting.
-5. **Check operation.** Confirm battery and solar readings in VictronConnect, enable the configured load-protection mode, and test a compatible USB device. Secure the wiring clear of the door and sharp edges, then close the enclosure.
+5. **Check operation.** Confirm battery and solar readings in VictronConnect, and test a compatible USB device. Secure the wiring clear of the door and sharp edges, then close the enclosure.
 
 <span id="pole-mounted-reference-build"></span>
 ## Pole mounting

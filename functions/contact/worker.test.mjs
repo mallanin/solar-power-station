@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import worker from './worker.mjs';
+const base={name:'Test Builder',email:'builder@example.com',subject:'Test',message:'A build report.',kind:'feedback',audience:'private',consent:false,website:''};
+function request(data=base,origin='https://openpowerbox.com') {return new Request('https://contact.example/submit',{method:'POST',headers:{'Content-Type':'application/json','Origin':origin,'CF-Connecting-IP':'192.0.2.1'},body:JSON.stringify(data)});}
+function env({failure=false,limited=false}={}) {const sent=[];return {sent,EMAIL:{send:async mail=>{if(failure)throw Error('failure');sent.push(mail);}},CONTACT_LIMIT:{limit:async()=>({success:!limited})}};}
+test('private feedback sends only to owner and sets reply-to',async()=>{const e=env();const r=await worker.fetch(request(),e);assert.equal(r.status,200);assert.equal(e.sent.length,1);assert.equal(e.sent[0].to,'milogoehring@gmail.com');assert.equal(e.sent[0].replyTo,base.email);assert.match(e.sent[0].text,/Private message/);});
+test('inquiry uses inquiry alias',async()=>{const e=env();await worker.fetch(request({...base,kind:'inquiry'}),e);assert.equal(e.sent[0].from.email,'inquiry@openpowerbox.com');});
+test('public story requires explicit consent and includes it',async()=>{const e=env();assert.equal((await worker.fetch(request({...base,audience:'public'}),e)).status,400);assert.equal(e.sent.length,0);assert.equal((await worker.fetch(request({...base,audience:'public',consent:true}),e)).status,200);assert.match(e.sent[0].text,/explicitly agreed/);});
+test('blocked origin, header injection, oversized and invalid fields do not send',async()=>{const e=env();assert.equal((await worker.fetch(request(base,'https://evil.example'),e)).status,403);for(const data of [{...base,email:'a@example.com\r\nBcc: other@example.com'},{...base,subject:'Test\nInjected'},{...base,message:'a'.repeat(3001)},{...base,kind:'other'},null])assert.equal((await worker.fetch(request(data),e)).status,400);assert.equal((await worker.fetch(request({...base,message:'a'.repeat(17000)}),e)).status,413);assert.equal(e.sent.length,0);});
+test('honeypot never sends',async()=>{const e=env();assert.equal((await worker.fetch(request({...base,website:'spam'}),e)).status,200);assert.equal(e.sent.length,0);});
+test('rate limits and mail failures cannot return success',async()=>{assert.equal((await worker.fetch(request(),env({limited:true}))).status,429);assert.equal((await worker.fetch(request(),env({failure:true}))).status,503);});

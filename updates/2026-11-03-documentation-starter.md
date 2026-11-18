@@ -19,13 +19,6 @@ The project now has a documentation structure for system design, build records, 
 
 The team and sponsor will have a single place to find current documentation and understand how the project evolves.
 
-## Next steps
+## Current documentation
 
-- Add the project scope, team, and sponsor to the overview.
-- Replace the illustrative system diagram with the reviewed architecture.
-- Add requirements, current design files, and the parts list.
-- Record the next project milestone and its owner.
-
-## Engineering status
-
-This update describes the documentation setup only. It makes no claim about hardware completion or test results.
+This November 3 entry records the original documentation setup. The illustrated build guide, parts budget, testing summary, and manual are now part of [Version 1]({{ '/docs/versions/' | relative_url }}).

@@ -31,8 +31,8 @@ The repository is public, but the team and sponsor have not yet selected the reu
 
 ## Feedback and privacy
 
-The feedback and inquiry forms prepare a message in your email application. Nothing is sent until you send that email. The forms do not upload your entries or save them in this website’s storage. Messages you send are received at **milogoehring@gmail.com** and handled through email.
+The forms send your name, email address, subject, message, and any publication consent to the team through Cloudflare’s email service. Feedback goes to **feedback@openpowerbox.com** and purchase inquiries to **inquiry@openpowerbox.com**; both forward to the project owner’s Gmail inbox. Your email address is used to reply. Form entries are not stored in this website’s database. Cloudflare processes the submission and email delivery; Gmail stores the received message. See [Cloudflare’s privacy policy](https://www.cloudflare.com/privacypolicy/) and [Google’s privacy policy](https://policies.google.com/privacy).
 
-Private feedback and purchase inquiries are not posted on this site. Public-story submissions are reviewed by the team before publication. Only the display name, title, and story you agree to share are considered for publication; email addresses and private correspondence are not included. We may contact you to clarify a submission or request changes. To request a correction or removal, [email the team](mailto:milogoehring@gmail.com).
+Private feedback and purchase inquiries are not posted on this site. Public-story submissions are reviewed by the team before publication. Only the display name, title, and story you agree to share are considered for publication; email addresses and private correspondence are not included. We may contact you to clarify a submission or request changes. To request a correction or removal, [email the team](mailto:feedback@openpowerbox.com).
 
 GitHub hosts this site and operates the linked repository. Its handling of connection data and GitHub activity is described in the [GitHub privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).

@@ -45,7 +45,7 @@ Complete the mounting checks in the [user manual]({{ '/assets/downloads/openpowe
 2. **Identify polarity.** Match the positive lead to the battery's **+** post and the negative lead to **−**. The reference leads are red and black, but confirm the markings rather than relying on color alone.
 3. **Attach positive.** Remove the positive terminal bolt, place the ring terminal flat against its contact surface, and refit the supplied hardware in the battery manufacturer's specified order. Tighten firmly by hand with an insulated hand tool; do not use a drill. Cover the positive connection.
 4. **Attach negative.** Repeat for the negative lead and post. Keep the tool clear of the opposite terminal and metal enclosure. Confirm both lugs are secure and cannot rotate, then restore terminal covers.
-5. **Wait at least 10 seconds.** In [VictronConnect](#read-the-controller-status), confirm the controller recognizes a 12 V system and reports no error. Leave the supplied battery settings unchanged.
+5. **Wait at least 10 seconds.** In [VictronConnect](#read-the-controller-status), confirm the controller recognizes a 12 V system and reports no error.
 
 ### Connect solar and start
 
@@ -67,18 +67,18 @@ The owner setup uses the supplied leads; it does not require opening the control
 
 ### Automatic recovery after low battery
 
-During a prolonged solar shortfall, the controller can disconnect its load output to protect the battery. With automatic load reconnection configured, output resumes when solar charging restores the battery above the configured reconnect threshold. The threshold depends on the selected load-control mode. [Victron load-output settings](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/configuration-and-settings.html)
+During a prolonged solar shortfall, the controller can disconnect its load output to protect the battery. Check the controller status and the connected device before resuming use.
 
 Restoring output power does not guarantee that every connected device restarts itself. Check the device's power-return behavior when commissioning an unattended installation, along with the installed battery's BMS recovery behavior. This recovery description concerns low-battery shutdown; damage or a persistent fault requires inspection.
 
 ## Read the controller status
 
-Enable Bluetooth, open [VictronConnect](https://www.victronenergy.com/victronconnectapp) near the station, and select the SmartSolar 75/15. Follow the pairing instructions supplied with the controller. Use the **Status** and **History** views to monitor charging and errors; do not change charging or load-protection settings during normal use.
+Enable Bluetooth, open [VictronConnect](https://www.victronenergy.com/victronconnectapp) near the station, and select the SmartSolar 75/15. Follow the pairing instructions supplied with the controller. Use the **Status** and **History** views to monitor charging and errors.
 
 | Indication | Meaning and action |
 |:---|:---|
 | Bulk / blue | Main charging stage. A brief blue blink can indicate insufficient solar power to start charging. |
-| Absorption / yellow | Later charging stage; allow the configured cycle to continue. |
+| Absorption / yellow | Later charging stage; allow the charging cycle to continue. |
 | Float / green | Maintenance stage after the charging cycle. It is not a precise remaining-capacity gauge. |
 | Unexpected flashing or error | Read the app's error code and consult the SmartSolar manual. Do not repeatedly reset the station. |
 
@@ -144,12 +144,12 @@ Match the installed label, dimensions, connections, and electrical rating before
 
 | Part | Reference identification |
 |:---|:---|
-| Charge controller | Victron SmartSolar MPPT 75/15; preserve installed battery and load settings |
-| Battery | 12.8 V, 50 Ah LiFePO4; match orientation, dimensions, protection, and charging requirements |
+| Charge controller | Victron SmartSolar MPPT 75/15 |
+| Battery | NERMAK Model 1250, 12.8 V, 50 Ah LiFePO4; match orientation, dimensions, protection, and charging requirements |
 | Panel | Nominal 200 W; match electrical limits, dimensions, holes, and connectors |
 | USB module / cable | Match voltage profile, connector, cable rating, and mounting; advertised module wattage is not the system rating |
 | Pole fixtures | Two enclosure mounts and a separate panel-frame mount, for the supplied 4–6 inch pole application |
-| Frame hardware | Where fitted: 1/4-20 × 1 in stainless hex bolts, 1/4-20 nylon lock nuts, and 1/4 × 1-1/4 in fender washers; confirm each joint |
+| Frame hardware | [1/4″-20 × 1″ stainless hex bolts]({{ '/docs/cost/' | relative_url }}#part-hex-screws), [1/4″-20 nylon-insert locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts), and [nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers); confirm each joint |
 | Seals / glands | Match the enclosure profile and cable diameter |
 
 Keep the battery, panel, and connector instructions with the station. For controller installation and faults, use the [official SmartSolar manual](https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/index-en.html). Obtain the battery instructions for the exact installed model. [Parts and sourcing budget →]({{ '/docs/cost/' | relative_url }})

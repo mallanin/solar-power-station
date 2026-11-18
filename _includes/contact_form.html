@@ -1,5 +1,7 @@
-<div class="contact-panel" data-contact-kind="{{ page.form_kind }}" data-contact-email="milogoehring@gmail.com">
-<noscript><p>Email <a href="mailto:milogoehring@gmail.com">milogoehring@gmail.com</a>. For a public story, say that you give permission to publish your display name and story after review.</p></noscript>
+{% assign contact_email = 'feedback@openpowerbox.com' %}
+{% if page.form_kind == 'inquiry' %}{% assign contact_email = 'inquiry@openpowerbox.com' %}{% endif %}
+<div class="contact-panel" data-contact-kind="{{ page.form_kind }}" data-contact-email="{{ contact_email }}" data-contact-endpoint="https://openpowerbox-contact.solar-power-station.workers.dev/submit">
+<noscript><p>Email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>. For a public story, say that you give permission to publish your display name and story after review.</p></noscript>
 <form class="contact-form" hidden>
 {% if page.form_kind == 'feedback' %}
 <fieldset class="message-audience"><legend>Who is this for?</legend><label><input type="radio" name="audience" value="private" checked> Send to the team privately</label><label><input type="radio" name="audience" value="public"> Submit a public build story</label></fieldset>
@@ -7,6 +9,9 @@
 {% endif %}
 <label for="contact-name">{% if page.form_kind == 'feedback' %}Name / display name{% else %}Name{% endif %}</label>
 <input id="contact-name" name="name" autocomplete="name" maxlength="80" required>
+<label for="contact-email">Email address</label>
+<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+<div hidden aria-hidden="true"><label for="contact-website">Leave this blank</label><input id="contact-website" name="website" tabindex="-1" autocomplete="off"></div>
 <label for="contact-subject">{% if page.form_kind == 'feedback' %}Subject / story title{% else %}Subject{% endif %}</label>
 <input id="contact-subject" name="subject" maxlength="120" required{% if page.form_kind == 'inquiry' %} value="Complete system inquiry"{% endif %}>
 <label for="contact-message">{% if page.form_kind == 'feedback' %}Your experience or feedback{% else %}What would you like to power?{% endif %}</label>
@@ -15,10 +20,11 @@
 {% if page.form_kind == 'feedback' %}
 <div class="public-consent" hidden><label><input type="checkbox" name="consent"> I give permission to publish this display name, title, and story after team review. I have permission to share the material.</label></div>
 {% endif %}
-<p class="form-hint">The next step prepares an email. Review it in your email application and send it to the team.</p>
-<button type="submit" class="form-button">Prepare email <span aria-hidden="true">→</span></button>
+<p class="form-hint">Send directly to the team. Public stories are reviewed before publication.</p>
+<button type="submit" class="form-button">Send message <span aria-hidden="true">→</span></button>
 <p class="form-hint">By sending a message, you acknowledge the <a href="{{ '/safety-and-terms/#feedback-and-privacy' | relative_url }}">feedback and privacy notice</a>.</p>
 </form>
-<section class="email-preview" hidden aria-labelledby="preview-heading"><h2 id="preview-heading" tabindex="-1">Your email is ready to review</h2><p>This message has not been sent. Open it in your email application, review it, then send.</p><label for="prepared-message">Prepared message</label><textarea id="prepared-message" rows="10" readonly></textarea><div class="email-actions"><a class="home-action-primary email-draft-link" href="mailto:milogoehring@gmail.com">Open email draft <span aria-hidden="true">↗</span></a><button type="button" class="copy-message">Copy message</button></div><p class="copy-status" role="status" aria-live="polite"></p><p class="form-hint">If no email application opens, copy the message into a new email to <a href="mailto:milogoehring@gmail.com">milogoehring@gmail.com</a>.</p></section>
+<p class="contact-status" role="status" aria-live="polite" tabindex="-1"></p>
+<p class="form-hint">You can also email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.</p>
 </div>
 <script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>

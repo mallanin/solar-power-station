@@ -5,18 +5,17 @@ permalink: /docs/versions/
 ---
 # Versions & history
 
-This is the working documentation for the OpenPowerBox reference prototype. It brings the owner's installation and operating guide together with the design explanation, a first cost review, and clearly identified performance estimates.
+## Version 1 · November 2026
 
-## Current documentation · November 2026
+The first documented OpenPowerBox reference build is our baseline for future changes.
 
-| Area | What is available | What remains |
+| Area | Included in this version | Changes from previous version |
 |:---|:---|:---|
-| System design | Reference components, energy balance, and scaling concepts | Validated alternative configurations |
-| Build | Three-section assembly outline with instructions pending | Solar panel assembly, step-by-step box build, and exact aluminum and wood mount builds |
-| Operation | Startup, normal use, shutdown, storage, troubleshooting, and maintenance from the reviewed manual | Updates as the hardware changes |
-| Cost | Roughly $500 working estimate, pending component tables, and one commercial comparison | Fill in component prices and allowances; review the retained budget worksheet against the final tables |
-| Testing | Roughly 40-hour battery-only runtime at 16 W, 100 W+ pump operation, multi-device demonstration, 97% controller efficiency, and output configuration | Relevant test results and data with short explanations; heat testing |
+| System design | 200 W solar, NERMAK 640 Wh battery, SmartSolar 75/15, energy calculations, and networking examples | First version |
+| Build | Illustrated solar-frame, enclosure, wiring, and pole-mounting instructions; downloadable mount CAD | First version |
+| Operation | Startup, shutdown, troubleshooting, maintenance, and downloadable manual | First version |
+| Parts & cost | Sourced components, hardware allowances, budget worksheet, and commercial comparisons | First version |
+| Testing | Battery-only runtime, intermittent pump loads, HaLow demonstration, and controller-efficiency results | First version |
+| Community | Private feedback, build stories submitted for review, and contributions through GitHub | First version |
 
-## Version History
-
-<p class="text-grey-dk-000">No history</p>
+Measurements labeled **pending** and tests not yet completed remain identified on their respective pages.

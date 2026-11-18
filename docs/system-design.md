@@ -8,8 +8,8 @@ permalink: /docs/system-design/
 
 The system combines solar generation, battery storage, charge control, and an output matched to the equipment. Solar input supplies the load and recharges the battery; stored energy carries the load when sunlight falls short.
 
-<figure class="design-diagram">
-<img src="{{ '/assets/images/system-wiring.svg?v=2' | relative_url }}" alt="Controller connections: BATT positive and negative lead to the battery; PV negative and positive lead to the solar panel connectors; LOAD negative and positive lead to the USB-C converter inputs." width="1200" height="720">
+<figure class="design-diagram" style="max-width:450px;margin:1.5rem auto">
+<img src="{{ '/assets/images/system-design-enclosure.jpg' | relative_url }}" alt="Actual OpenPowerBox enclosure: mounted Victron charge controller and output module on the left, NERMAK 640 Wh battery on the right, and solar leads entering through the top." width="1200" height="1600" style="display:block;width:100%;height:auto;border-radius:12px">
 </figure>
 
 ## The reference configuration

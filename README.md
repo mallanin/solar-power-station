@@ -59,7 +59,9 @@ Built with Jekyll and [Just the Docs](https://just-the-docs.com/). Those depende
 
 The community page combines two accessible tabs: contact the team and improve on GitHub. Both sections remain readable without JavaScript. `/community/#github` opens the contribution instructions; the former `/docs/contributing/` URL redirects there. The sidebar and homepage have one combined community entry.
 
-Forms prepare a `mailto:` draft for `milogoehring@gmail.com`; they do not send, store, or publish a submission. The visitor reviews and sends the email in their own email application. A copy-message fallback is available. No form-service account or mail credential is embedded in this repository.
+Forms submit to the Cloudflare Worker in `functions/contact/`. The Worker validates fields and consent, limits request size and sending rate, checks the site origin, and uses a honeypot. It sends only to the verified owner address through a restricted Email binding; no mail credential is shipped to the browser. Feedback and inquiry aliases forward to that same inbox. Public stories still require manual review.
+
+Deploy the Worker with `npx wrangler deploy --config functions/contact/wrangler.jsonc`. Keep the form include’s endpoint synchronized with its deployed URL. Run `node --test functions/contact/worker.test.mjs` before deployment. The frontend displays success only after the server confirms sending; failed submissions retain entered text.
 
 Private feedback and build inquiries remain private. Publish a public story only after verifying its explicit consent, reviewing its contents, and removing any email addresses or private information. Add the approved display name, title, date, and plain-text story to `_data/community_posts.yml`. Story text is escaped when displayed. Never commit raw submission emails. To change the contact address, update the form include and contact, community, and safety notices consistently.
 
