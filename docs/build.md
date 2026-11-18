@@ -77,14 +77,18 @@ Rivet-hole diameter for all frame joints: **pending** inches. Deburr each hole b
 1. At the end of each **33″ panel rail**, drill and rivet one tab in the orientation shown below.
 2. Position the attached tabs against one **30″ back crossmember**. Space them to match the panel’s mounting-hole spacing, then mark, drill, and rivet the tabs to the crossmember. Rivet spacing on the back crossmember: **pending** inches.
 
-<div class="build-photo-pair frame-connection-photos">
+<div class="build-photo-pair frame-connection-photos frame-tab-sequence">
   <figure class="build-figure">
     <img src="{{ '/assets/images/frame-tab-on-rail.jpg' | relative_url }}" alt="An angle tab riveted to the end of a panel rail, showing the tab orientation." width="658" height="1168" loading="lazy" style="object-position: 50% 45%">
-    <figcaption>Rivet one tab to the end of each panel rail.</figcaption>
+    <figcaption><strong>1.</strong> Rivet one tab to the end of each panel rail.</figcaption>
   </figure>
   <figure class="build-figure">
     <img src="{{ '/assets/images/frame-tab-at-crossmember.jpg' | relative_url }}" alt="A panel rail with its attached tab held beside the marked back crossmember." width="658" height="1168" loading="lazy" style="object-position: 50% 50%">
-    <figcaption>Position the tabs against the back crossmember at the panel-hole spacing.</figcaption>
+    <figcaption><strong>2.</strong> Position the tabs against the back crossmember at the panel-hole spacing.</figcaption>
+  </figure>
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/panel-rivet-tab.jpg' | relative_url }}" alt="Close view of the riveted rail tab seated against the back crossmember, showing the hole for fastening the joint." width="1600" height="901" loading="lazy">
+    <figcaption><strong>3.</strong> Mark and drill through the tab, then rivet it to the back crossmember.</figcaption>
   </figure>
 </div>
 
