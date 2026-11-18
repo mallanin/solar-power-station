@@ -158,7 +158,12 @@ Support the panel face-down on a clean, padded surface. Align the rails with the
   <figcaption>The rail attaches to the panel's metal perimeter frame. Use the panel's approved mounting holes; keep drilling and fasteners clear of the cells and backsheet.</figcaption>
 </figure>
 
-Check that the frame sits without twisting, all joints are secure, and the leads cannot rub against sharp edges or become trapped under a rail. The panel assembly is then ready for pole mounting.
+Check that the frame sits without twisting, all joints are secure, and the leads cannot rub against sharp edges or become trapped under a rail. The panel assembly is then ready for pole mounting and should look as shown below.
+
+<figure style="--photo-max-width: 450px" class="build-figure build-portrait">
+  <img src="{{ '/assets/images/panel-complete-assembly.jpg' | relative_url }}" alt="Completed solar panel assembly mounted on a pole, showing the aluminum rails, supports, crossmembers, and mounting brackets." width="1200" height="1600" loading="lazy">
+  <figcaption>The extra support cabling shown is not required for this assembly.</figcaption>
+</figure>
 
 ## Electrical housing assembly
 
