@@ -117,6 +117,23 @@ From the panel rail’s connection to the back crossmember, measure **pending** 
   </figure>
 </div>
 
+#### Attach the second back crossmember
+
+Use the same tab-and-rivet connection as the first back crossmember, this time joining the free ends of the two **18.8″ supports** to the second **30″ back crossmember**. Mirror the tab orientation as shown. Mark, drill, deburr, and rivet both connections.
+
+<figure class="build-figure">
+  <div class="build-annotated-photo">
+    <img src="{{ '/assets/images/frame-second-crossmember.jpg' | relative_url }}" alt="Full aluminum frame during assembly, with white circles around the two support connections to the second back crossmember." width="1600" height="901" loading="lazy">
+    <svg viewBox="0 0 2048 1153" aria-hidden="true" focusable="false">
+      <g class="build-arrow" fill="none" stroke="white" stroke-width="5">
+        <circle cx="624" cy="582" r="52"/>
+        <circle cx="1143" cy="466" r="52"/>
+      </g>
+    </svg>
+  </div>
+  <figcaption>Mirror the first crossmember’s tab connections at the two circled support ends.</figcaption>
+</figure>
+
 <span id="4-attach-the-pole-mount-brackets"></span>
 ### 3. Attach the pole-mount brackets
 
