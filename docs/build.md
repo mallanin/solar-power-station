@@ -96,9 +96,19 @@ Rivet-hole diameter for all frame joints: **pending** inches. Deburr each hole b
 
 From the panel rail’s connection to the back crossmember, measure **pending** inches along the rail. Position an **18.8″ support** as shown, mark and drill the rivet hole, then rivet the support to the panel rail. Repeat on the adjoining rail, mirroring the connection.
 
-<div class="build-photo-pair frame-connection-photos">
+<div class="build-photo-pair frame-support-sequence">
   <figure class="build-figure">
-    <img src="{{ '/assets/images/frame-support-position.jpg' | relative_url }}" alt="An aluminum support positioned against a panel rail, showing the overlap at the rivet joint." width="658" height="1168" loading="lazy" style="object-position: 50% 45%">
+    <div class="build-annotated-photo">
+      <img src="{{ '/assets/images/frame-support-position.jpg' | relative_url }}" alt="Full view of the support and panel rail, with a white arrow labeled pending inches showing the distance from the back-crossmember connection to the support connection." width="658" height="1168" loading="lazy">
+      <svg viewBox="0 0 658 1168" aria-hidden="true" focusable="false">
+        <defs><marker id="support-spacing-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 10 5 L 0 0 L 0 10 Z" fill="white"/></marker></defs>
+        <g class="build-arrow" fill="none" stroke="white">
+          <path d="M 265 237 L 426 579" stroke-width="4" marker-start="url(#support-spacing-arrow)" marker-end="url(#support-spacing-arrow)"/>
+          <path d="M 201 267 L 278 231 M 362 609 L 439 573" stroke-width="3"/>
+        </g>
+        <g transform="translate(369 397) rotate(64.8)"><rect x="-103" y="-24" width="206" height="38" rx="6" fill="#203a31" fill-opacity=".9"/><text x="0" y="2" text-anchor="middle" fill="white" font-size="24" font-family="Arial, sans-serif">pending inches</text></g>
+      </svg>
+    </div>
     <figcaption>Position the support against the panel rail.</figcaption>
   </figure>
   <figure class="build-figure">
