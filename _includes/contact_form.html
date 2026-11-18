@@ -20,11 +20,11 @@
 {% if page.form_kind == 'feedback' %}
 <div class="public-consent" hidden><label><input type="checkbox" name="consent"> I give permission to publish this display name, title, and story after team review. I have permission to share the material.</label></div>
 {% endif %}
-<p class="form-hint">Send directly to the team. Public stories are reviewed before publication.</p>
+<p class="form-hint">Send directly to the team.{% if page.form_kind == 'feedback' %} Public stories are reviewed before publication.{% endif %}</p>
 <button type="submit" class="form-button">Send message <span aria-hidden="true">→</span></button>
 <p class="form-hint">By sending a message, you acknowledge the <a href="{{ '/safety-and-terms/#feedback-and-privacy' | relative_url }}">feedback and privacy notice</a>.</p>
 </form>
 <p class="contact-status" role="status" aria-live="polite" tabindex="-1"></p>
 <p class="form-hint">You can also email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.</p>
 </div>
-<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/contact.js?v=2' | relative_url }}" defer></script>
