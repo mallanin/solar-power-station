@@ -27,7 +27,7 @@ Build the frame on a workbench before attaching it to the pole. The cut lengths 
 ### Tools and hardware
 
 - **Tools:** saw and blade suitable for aluminum, drill and metal bits, rivet gun for 3/16″ rivets, clamps, tape measure, square, marker, center punch, file or deburring tool, and wrenches or sockets for the selected bolts.
-- **Hardware:** two 8 ft lengths of **[1″ × 1″ × 1/16″ aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)**; 18 medium **[3/16″ aluminum rivets]({{ '/docs/cost/' | relative_url }}#part-aluminum-rivets)**; four **[1/4″-20 × 1/2″ panel screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**; two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** with clamp bands. Bracket-to-frame bolts: **pending**.
+- **Hardware:** two 8 ft lengths of **[1″ × 1″ × 1/16″ aluminum angle]({{ '/docs/cost/' | relative_url }}#part-aluminum-frame-stock)**; 18 medium **[3/16″ aluminum rivets]({{ '/docs/cost/' | relative_url }}#part-aluminum-rivets)**; four **[1/4″-20 × 1/2″ panel screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**; two **[pole-mount brackets]({{ '/docs/cost/' | relative_url }}#part-pole-mounting-kits)** with clamp bands. Use the bolts provided with the brackets.
 - **Work setup:** eye and hearing protection, a stable bench, and padding for the panel. Clamp stock before cutting or drilling. Keep the panel disconnected throughout mechanical assembly.
 
 <span id="2-cut-and-deburr-the-aluminum"></span>
@@ -137,7 +137,7 @@ Use the same tab-and-rivet connection as the first back crossmember, this time j
 <span id="4-attach-the-pole-mount-brackets"></span>
 ### 3. Attach the pole-mount brackets
 
-Center one bracket on each back crossmember, with the band guides facing the pole. Use the bracket slots to mark the holes, then remove the bracket, drill, and deburr. Bolt each bracket to the frame using **pending** bolts, washers, and nuts. Bracket-hole positions: **pending**.
+Center one bracket on each back crossmember, with the band guides facing the pole. Use the bracket slots to mark the holes, then remove the bracket, drill, and deburr. Bolt each bracket to the frame using its provided bolts.
 
 Thread the hose-clamp bands through the bracket guides. Leave them open for the later pole-mounting step; do not drill through the bands.
 
