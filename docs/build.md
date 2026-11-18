@@ -70,20 +70,36 @@ Each 8 ft length can supply one rail, one support, one back crossmember, and two
 <span id="3-assemble-and-rivet-the-frame"></span>
 ### 2. Assemble and rivet the frame
 
-Lay out the two rails, two back crossmembers, and two supports as shown. Use the four short tabs to join the members where their flanges meet. Clamp the parts together and check the rail spacing before setting rivets.
+Rivet-hole diameter for all frame joints: **pending** inches. Deburr each hole before setting the rivet.
 
-Tab positions from the ends: **pending**. Rivet-hole positions: **pending**. Panel tilt angle: **pending**.
+#### Attach the back crossmember
 
-Drill the clamped joints to the rivet manufacturer's specified hole size, deburr, and set the rivets. Match the rivet grip range to the combined material thickness. The reference bill of materials records 18 rivets across the frame.
+1. At the end of each **33″ panel rail**, drill and rivet one tab in the orientation shown below.
+2. Position the attached tabs against one **30″ back crossmember**. Space them to match the panel’s mounting-hole spacing, then mark, drill, and rivet the tabs to the crossmember. Rivet spacing on the back crossmember: **pending** inches.
 
-<div class="build-joint-layout">
+<div class="build-photo-pair frame-connection-photos">
   <figure class="build-figure">
-    <img src="{{ '/assets/images/panel-rivet-tab.jpg' | relative_url }}" alt="Close view of a short aluminum angle tab joining two frame members, with a rivet in one flange." width="1600" height="901" loading="lazy">
-    <figcaption>A short angle tab joins the adjoining flanges. Finish all drilling and deburring before riveting the joint.</figcaption>
+    <img src="{{ '/assets/images/frame-tab-on-rail.jpg' | relative_url }}" alt="An angle tab riveted to the end of a panel rail, showing the tab orientation." width="658" height="1168" loading="lazy" style="object-position: 50% 45%">
+    <figcaption>Rivet one tab to the end of each panel rail.</figcaption>
   </figure>
-  <figure style="--photo-max-width: 337.88px" class="build-figure build-portrait">
-    <img src="{{ '/assets/images/panel-frame-assembly.jpg' | relative_url }}" alt="Aluminum panel frame standing on the workshop floor during assembly, showing the two rails, back crossmembers, and supports." width="901" height="1600" loading="lazy">
-    <figcaption>The assembled frame before the panel is fitted. Blue tape temporarily held the layout; it is not a structural part.</figcaption>
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/frame-tab-at-crossmember.jpg' | relative_url }}" alt="A panel rail with its attached tab held beside the marked back crossmember." width="658" height="1168" loading="lazy" style="object-position: 50% 50%">
+    <figcaption>Position the tabs against the back crossmember at the panel-hole spacing.</figcaption>
+  </figure>
+</div>
+
+#### Attach the supports
+
+From the panel rail’s connection to the back crossmember, measure **pending** inches along the rail. Position an **18.8″ support** as shown, mark and drill the rivet hole, then rivet the support to the panel rail. Repeat on the adjoining rail, mirroring the connection.
+
+<div class="build-photo-pair frame-connection-photos">
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/frame-support-position.jpg' | relative_url }}" alt="An aluminum support positioned against a panel rail, showing the overlap at the rivet joint." width="658" height="1168" loading="lazy" style="object-position: 50% 45%">
+    <figcaption>Position the support against the panel rail.</figcaption>
+  </figure>
+  <figure class="build-figure">
+    <img src="{{ '/assets/images/frame-support-drilling.jpg' | relative_url }}" alt="Drilling the rivet hole through the overlapping support and panel rail." width="658" height="1169" loading="lazy" style="object-position: 50% 35%">
+    <figcaption>Mark and drill the joint, then deburr and rivet.</figcaption>
   </figure>
 </div>
 
