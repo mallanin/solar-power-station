@@ -64,7 +64,7 @@ Each 8 ft length can supply one rail, one support, one back crossmember, and two
       <g transform="translate(450 302) rotate(-54.3)"><rect x="-176" y="-32" width="352" height="47" rx="7" fill="#203a31" fill-opacity=".94"/><text x="0" y="0" text-anchor="middle" fill="white" font-size="24" font-family="Arial, sans-serif">Match panel-rail length</text></g>
     </svg>
   </div>
-  <figcaption>Measure between the panel’s factory mounting-hole centers in both directions. Size each rail to span its bolts with room beyond each hole. Reference hole spacing: <strong>pending</strong>.</figcaption>
+  <figcaption>Measure between the panel’s factory mounting-hole centers in both directions. Size each rail to span its bolts with room beyond each hole.</figcaption>
 </figure>
 
 <span id="3-assemble-and-rivet-the-frame"></span>
