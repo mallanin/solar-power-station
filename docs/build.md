@@ -151,7 +151,24 @@ Thread the hose-clamp bands through the bracket guides. Leave them open for the 
 <span id="5-bolt-the-frame-to-the-panel"></span>
 ### 4. Bolt the frame to the panel
 
-Support the panel face-down on a clean, padded surface. Align the rails with the factory mounting holes, then fit the four panel screws, locknuts, and eight washers. Check that each screw fully engages its locknut and cannot touch the panel backsheet. If your panel frame is thicker, select a suitable screw length.
+<figure class="build-figure">
+  <div class="build-annotated-photo">
+    <img src="{{ '/assets/images/panel-rail-spacing.jpg' | relative_url }}" alt="Rear of the solar panel with white circles marking the four rail-to-panel mounting locations." width="1600" height="901" loading="lazy">
+    <svg viewBox="0 0 1600 901" aria-hidden="true" focusable="false">
+      <g class="build-arrow" fill="none" stroke="white" stroke-width="4">
+        <circle cx="655" cy="102" r="29"/>
+        <circle cx="1085" cy="149" r="29"/>
+        <circle cx="328" cy="557" r="34"/>
+        <circle cx="1038" cy="775" r="34"/>
+      </g>
+    </svg>
+  </div>
+  <figcaption>Align the two rails with the panel’s four factory mounting holes at the circled locations.</figcaption>
+</figure>
+
+1. Support the panel face-down on a clean, padded surface. Align the rails with the factory mounting holes and mark the matching hole centers on the rails.
+2. Lift the frame off the panel and clamp it securely. Drill the marked rail holes with a **[9/32″ drill bit](https://www.dispersetech.com/blog/post/clearance-hole-chart.html)** for clearance around the 1/4″ screws, then deburr. Drill only the aluminum rails; use the panel’s existing mounting holes.
+3. Realign the frame and fit four **[1/4″-20 × 1/2″ hex screws]({{ '/docs/cost/' | relative_url }}#part-hex-screws)**, four **[matching locknuts]({{ '/docs/cost/' | relative_url }}#part-locknuts)**, and eight **[nylon washers]({{ '/docs/cost/' | relative_url }}#part-nylon-washers)**—one washer under each screw head and one under each nut. Check that each screw fully engages its locknut’s nylon insert and cannot touch the panel backsheet. If your panel frame is thicker, select a suitable screw length.
 
 <figure style="--photo-max-width: 450.0px" class="build-figure build-portrait">
     <img src="{{ '/assets/images/panel-bolt-attachment.jpg' | relative_url }}" alt="Close view of an aluminum rail bolted through the solar panel's perimeter frame, with the adjacent support and riveted joint visible." width="1200" height="1600" loading="lazy">
