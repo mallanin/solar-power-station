@@ -6,7 +6,7 @@ permalink: /docs/operation/
 <span id="keep-the-station-running"></span>
 # Operation & maintenance
 
-Use this guide with the reference station: a prewired SmartSolar 75/15, 12.8 V / 50 Ah LiFePO4 battery, solar panel, and regulated USB-C output. It adapts the team's reviewed manual for the web. Keep the [complete user manual (PDF)]({{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}) with the station.
+Use this guide with the reference station: a prewired SmartSolar 75/15, 12.8 V / 50 Ah LiFePO4 battery, solar panel, and regulated USB-C output. It adapts the team's reviewed manual for the web. Keep the [complete user manual (PDF)]({{ '/assets/downloads/openpowerbox-user-manual.pdf?v=20261118' | relative_url }}) with the station.
 
 <div class="quick-order"><div><span>Start</span><strong>Battery → wait 10 seconds → solar</strong></div><div><span>Full shutdown</span><strong>Load off → solar off → battery off</strong></div></div>
 
@@ -37,7 +37,7 @@ Wear safety glasses and closed-toe footwear. Use work gloves for metalwork, suit
 
 ## Initial startup
 
-Complete the mounting checks in the [user manual]({{ '/assets/downloads/openpowerbox-user-manual.pdf' | relative_url }}) before electrical setup. The controller and USB output module should already be wired. Work on one battery terminal at a time using insulated tools.
+Complete the mounting checks in the [user manual]({{ '/assets/downloads/openpowerbox-user-manual.pdf?v=20261118' | relative_url }}) before electrical setup. The controller and USB output module should already be wired. Work on one battery terminal at a time using insulated tools.
 
 ### Connect the battery first
 
