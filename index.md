@@ -22,6 +22,21 @@ OpenPowerBox is a customizable system with a **200 W solar panel** and a **12.8 
 
 **Build it with readily available components and use open documentation to adapt it to your application. The nominal component cost is under $500—less than half the listed price of the commercial package compared below.**
 
+<section class="home-featured-use-case" aria-labelledby="featured-use-case-networking-across-a-property" markdown="1">
+<p class="section-kicker">Featured use case</p>
+## Networking across a property
+{: #featured-use-case-networking-across-a-property }
+
+{% include featured-demonstration.md %}
+
+<details class="application-details featured-details" id="extending-the-network" markdown="1">
+<summary>Extending the network across a property</summary>
+
+{% include featured-network-extension.md %}
+
+</details>
+</section>
+
 <div class="application-grid">
 <div><span class="eyebrow">Connect</span><h3 id="connect-a-property">A network across your property</h3><p>Power wireless mesh nodes at multiple locations to connect cameras and sensors across large properties, farms, and remote worksites.</p></div>
 <div><span class="eyebrow">Monitor</span><h3 id="monitor-what-matters">Video monitoring</h3><p>Watch crops, wildlife, equipment, or an entrance. Add weather, soil-moisture, or tank-level sensing to understand what's happening on site.</p></div>
