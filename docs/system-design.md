@@ -141,7 +141,7 @@ Built-in Bluetooth lets a nearby phone read solar input, battery voltage, charge
 
 The panel can sit on a ground mount or a pole. Choose its direction and tilt for your location and winter needs; check a local solar-resource guide rather than using one angle everywhere. A pole keeps the panel out of working space and can lift it above nearby vegetation, splash, and accidental contact.
 
-For pole mounting, the solar panel needs a support frame. We built both wood and aluminum versions.
+For pole mounting, we recommend the aluminum frame for its durability and weight savings. Our [frame assembly guide]({{ "/docs/build/#solar-panel-assembly" | relative_url }}) covers the aluminum version. We also built a DIY wood frame using similar assembly steps; it is better suited to static placement on the ground than pole mounting.
 
 <div class="frame-comparison">
 <figure class="documentation-photo"><img src="{{ '/assets/images/wood-frame-reference.jpg' | relative_url }}" alt="Rear view of the solar panel with its wooden support frame resting on the ground." width="1200" height="1600" loading="lazy"><figcaption><strong>Wood frame</strong>The wood design is affordable and simple to manufacture. It is heavier, less elegant, and likely to have a shorter service life outdoors.</figcaption></figure>
